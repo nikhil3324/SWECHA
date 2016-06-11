@@ -18,6 +18,7 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var scssLint = require('gulp-scss-lint');
 var jshint = require('gulp-jshint');
+var livereload = require('gulp-livereload');
 
 // CSS.
 gulp.task('css', function() {
@@ -64,6 +65,7 @@ gulp.task('fonts', function() {
 
 // Watch task.
 gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch(config.css.src, ['css']);
     gulp.watch(config.images.src, ['images']);
 });
