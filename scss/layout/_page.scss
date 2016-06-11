@@ -1,2 +1,17 @@
 // Page Layout
 // -----------------------------------------------------------------------------
+
+// Page
+// -----------------------------------------------------------------------------
+body {
+  background: $body-bg $body-bg-image;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+span.site-name {
+  display: inline-block;
+  margin: 10px 3px;
+}

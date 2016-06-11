@@ -3,6 +3,7 @@ base:
   css:
     theme:
       assets/css/masradix.style.css: {}
+      assets/css/nav.css: {}
   js:
     bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
     assets/js/masradix.script.js: {}

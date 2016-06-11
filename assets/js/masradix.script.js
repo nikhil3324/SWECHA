@@ -1,2 +1,32 @@
-!function(n){}(jQuery);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1hc3JhZGl4LnNjcmlwdC5qcyJdLCJuYW1lcyI6WyIkIiwialF1ZXJ5Il0sIm1hcHBpbmdzIjoiQ0FJQSxTQUFBQSxLQUVBQyIsImZpbGUiOiJtYXNyYWRpeC5zY3JpcHQuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBmaWxlXG4gKiBDdXN0b20gc2NyaXB0cyBmb3IgdGhlbWUuXG4gKi9cbihmdW5jdGlvbiAoJCkge1xuICAvLyBBZGQgeW91ciBjb2RlIGhlcmUuXG59KShqUXVlcnkpO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
+/**
+ * @file
+ * Custom scripts for theme.
+ */
+(function ($) {
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+        isClosed = false;
+
+    trigger.click(function () {
+        hamburger_cross();
+    });
+
+    function hamburger_cross() {
+
+        if (isClosed == true) {
+            overlay.hide();
+            trigger.removeClass('is-open');
+            trigger.addClass('is-closed');
+            isClosed = false;
+        } else {
+            overlay.show();
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            isClosed = true;
+        }
+    }
+
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+    });
+})(jQuery);

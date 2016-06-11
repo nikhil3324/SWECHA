@@ -19,7 +19,7 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 // Brand colors
 // -----------------------------------------------------------------------------
 
-$brand-primary:         #428bca !default;
+$brand-primary:  #4a22ca !default;
 $brand-success:         #5cb85c !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
@@ -28,8 +28,9 @@ $brand-info:            #5bc0de !default;
 // Scaffolding
 // -----------------------------------------------------------------------------
 
-$body-bg:               #fff !default;
+$body-bg:               #000 !default;
 $text-color:            $gray-dark !default;
+$body-bg-image:         url('../../screenshot.png') no-repeat center center fixed !default;
 
 // Links
 // -----------------------------------------------------------------------------
@@ -40,7 +41,7 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -----------------------------------------------------------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
