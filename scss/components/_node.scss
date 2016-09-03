@@ -1,2 +1,33 @@
 // Styles for Nodes
 // -----------------------------------------------------------------------------
+article.service-request--teaser {
+  margin: 10px 0;
+  padding: 10px;
+  background: #ddd;
+}
+
+.service-request__field-category,
+.service-request__field-status  {
+  margin: 1px;
+}
+
+.service-request__field-category .label-default,
+.service-request__field-status  .label-default{
+  display:block;
+  width:100%;
+}
+
+article.service-request--teaser.focus {
+  background: #666;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+article.service-request .col-xs-6 {
+    padding: 0;
+}
+.list-markers.leaflet-control {
+  margin: 40px;
+  height: 300px;
+  overflow: scroll
+}

@@ -19,8 +19,8 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 // Brand colors
 // -----------------------------------------------------------------------------
 
-$brand-primary:  #4a22ca !default;
-$brand-success:         #5cb85c !default;
+$brand-primary:         #122458 !default;
+$brand-success:         #1cb84a !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 $brand-info:            #5bc0de !default;
@@ -28,9 +28,11 @@ $brand-info:            #5bc0de !default;
 // Scaffolding
 // -----------------------------------------------------------------------------
 
-$body-bg:               #000 !default;
+$body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
-$body-bg-image:         url('../../screenshot.png') no-repeat center center fixed !default;
+$body-bg-image:         none;
+
+        // url('../../assets/images/wp-4k.jpg') no-repeat center center fixed !default;
 
 // Links
 // -----------------------------------------------------------------------------
