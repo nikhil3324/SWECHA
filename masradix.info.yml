@@ -1,8 +1,7 @@
 name: MasRadix
 description: A theme based on Radix.
 screenshot: screenshot.png
-# core: 8.x
-# version: VERSION
+core: 8.x
 engine: twig
 type: theme
 base theme: radix
@@ -22,9 +21,3 @@ regions:
 
 libraries:
   - masradix/base
-
-# Information added by Drupal.org packaging script on 2016-05-14
-version: '8.x-3.0-alpha2+9-dev'
-core: '8.x'
-project: 'radix'
-datestamp: 1463211559

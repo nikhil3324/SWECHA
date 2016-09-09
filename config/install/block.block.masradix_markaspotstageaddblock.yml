@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - markaspot_blocks
+  theme:
+    - masradix
+id: masradix_markaspotstageaddblock
+theme: masradix
+region: content
+weight: null
+provider: null
+plugin: markaspot_base_add_block
+settings:
+  id: markaspot_base_add_block
+  label: 'Markaspot Stage Add block'
+  provider: markaspot_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+visibility: {  }
