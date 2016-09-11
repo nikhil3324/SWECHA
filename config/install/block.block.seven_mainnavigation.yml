@@ -4,10 +4,10 @@ dependencies:
   config:
     - system.menu.main
   theme:
-    - masradix
-id: masradix_mainnavigation
-theme: masradix
-region: navbar_left
+    - seven
+id: seven_mainnavigation
+theme: seven
+region: '-1'
 weight: -4
 provider: null
 plugin: 'system_menu_block:main'
