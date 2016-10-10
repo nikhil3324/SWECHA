@@ -1,5 +1,5 @@
 name: MasRadix
-description: A theme based on Radix.
+description: Mark-a-Spot Radix Theme.
 screenshot: screenshot.png
 core: 8.x
 engine: twig
