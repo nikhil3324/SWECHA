@@ -38,12 +38,10 @@ article.service-request img {
   transition: opacity .3s ease-in;
 }
 
-
 article.service-request:hover img {
   opacity: 0.6;
   transition: opacity .3s ease-in;
 }
-
 
 article.service-request .node__content,
 article.service-request footer {
@@ -63,10 +61,10 @@ article.service-request footer {
   top: 100px;
   display: block;
   height: 100px;
-  background: -webkit-linear-gradient(left, black , rgba(255,255,255,0));
-  background: -o-linear-gradient(right, black , rgba(255,255,255,0));
-  background: -moz-linear-gradient(right, black , rgba(255,255,255,0));
-  background: linear-gradient(to right, black , rgba(255,255,255,0));
+  background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(right, black, rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(right, black, rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
   color: #fff;
 }
 

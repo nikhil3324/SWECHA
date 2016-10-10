@@ -1,27 +1,26 @@
 // Styles for blocks.
 // -----------------------------------------------------------------------------
 
-
 #block-markaspotmapblock {
-   padding: 10px 160px;
-   background: #000;
-   margin: 1px 0
+  padding: 10px 160px;
+  background: #000;
+  margin: 1px 0
 }
 
 .round-button.col-xs-3 item {
-    display: block;  
+  display: block;
 }
 
 .round-button.col-xs-3 a {
-    text-align: center;
-    display: block;  
-    margin: 10px auto;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
 }
 
 .round-button.col-xs-3 p {
-    text-align: center;
-    display: block;  
-    clear:both
+  text-align: center;
+  display: block;
+  clear: both
 }
 
 .btn-circle {
@@ -33,6 +32,7 @@
   line-height: 1.428571429;
   border-radius: 15px;
 }
+
 .btn-circle.btn-lg {
   width: 50px;
   height: 50px;
@@ -41,6 +41,7 @@
   line-height: 1.33;
   border-radius: 25px;
 }
+
 .btn-circle.btn-xl {
   width: 70px;
   height: 70px;
@@ -50,14 +51,11 @@
   border-radius: 35px;
 }
 
-
-
-
-
 .block.block-markaspot-blocks.block-markaspot-base-add-block {
-    // variable sass
-    background : #fff;
+  // variable sass
+  background: #fff;
 }
+
 .button-sidekick .btn-circle {
   margin: 10px 0 30px 50px;
   border: 0;
@@ -66,21 +64,21 @@
 
 }
 
-.block.block-markaspot-blocks.block-markaspot-base-add-block p a{
-    border: 1px solid black;
-    display: block;
-    text-align: center;
-    line-height: 30px;
-    padding:  10px;
-    height: 50px;
-    background: #000;
-    color: #fff;
-    font-weight: 700;
-    margin: 30px 10px 30px 50px;
-    border: 3px solid #666;
-    -moz-border-radius: 25px 25px 25px 25px;
-    -webkit-border-radius: 25px 25px 25px 25px;
-    border-radius:25px 25px 25px 25px;
+.block.block-markaspot-blocks.block-markaspot-base-add-block p a {
+  border: 1px solid black;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  margin: 30px 10px 30px 50px;
+  border: 3px solid #666;
+  -moz-border-radius: 25px 25px 25px 25px;
+  -webkit-border-radius: 25px 25px 25px 25px;
+  border-radius: 25px 25px 25px 25px;
 }
 
 .block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
@@ -89,32 +87,34 @@
   text-decoration: none;
 }
 
-
 // Add View Block
 .round-button {
 
 }
+
 .round-button-circle {
-    width: 100%;
-    height: 0;
-    margin: 0;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    overflow: hidden;
-    background: #31708f;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  overflow: hidden;
+  background: #31708f;
 }
+
 .round-button-circle:hover {
-  background:#30588e;
+  background: #30588e;
 }
+
 .round-button a {
-  display:block;
+  display: block;
   color: $btn-info-bg;
-  width:100%;
-  padding-top:45%;
-  padding-bottom:50%;
-  text-align:center;
-  text-decoration:none;
+  width: 100%;
+  padding-top: 45%;
+  padding-bottom: 50%;
+  text-align: center;
+  text-decoration: none;
   font-size: large;
 }
 
@@ -122,6 +122,7 @@
 .scroll-to-top.show {
   z-index: 999;
 }
+
 .scroll-to-top.show {
   display: block;
   position: fixed;
@@ -136,6 +137,7 @@
   background-color: #ccc;
   border-color: #bbb;
 }
+
 .scroll-to-top {
   display: none;
   -webkit-transform: translatez(0);
