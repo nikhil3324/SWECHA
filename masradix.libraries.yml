@@ -7,9 +7,6 @@ base:
     bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
     /libraries/waypoints/lib/jquery.waypoints.min.js: {weight: -3}
     /libraries/waypoints/lib/shortcuts/sticky.min.js: {weight: -2, minified: true }
-
-    #//cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.js: {weight: -3}
-    #//cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/shortcuts/sticky.min.js: { weight: -2, minified: true }
     assets/js/masradix.script.js: {}
 
   dependencies:

@@ -1,6 +1,10 @@
-# Installation
+# Mark-a-Spot Radix Theme
 
-RADIX_SUBTHEME_NAME theme uses [Gulp](http://gulpjs.com) to compile Sass. Gulp needs Node.
+This theme is intended for use with the Mark-a-Spot 3.x distro based on Drupal 8.
+
+## Installation
+
+MasRadix theme uses [Gulp](http://gulpjs.com) to compile Sass. Gulp needs Node.
 
 #### Step 1
 Make sure you have Node and npm installed. 
@@ -10,7 +14,7 @@ You can read a guide on how to install node here: https://docs.npmjs.com/getting
 Install bower: `npm install -g bower`.
 
 #### Step 3
-Go to the root of RADIX_SUBTHEME_NAME theme and run the following commands: `npm run setup`.
+Go to the root of MasRadix theme and run the following commands: `npm run setup`.
 
 #### Step 4
 Update `browserSyncProxy` in **config.json**.
