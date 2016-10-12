@@ -9380,9 +9380,13 @@ body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .hamburger {
 .toolbar-tray-vertical {
   width: 22rem !important; }
 
-.block-menu.navigation {
+.block.block--masradix-sitebranding {
   clear: both;
-  margin: 10px 0; }
+  margin: 10px 0;
+  padding: 5px 20px; }
+
+.navbar-brand {
+  float: none; }
 
 img.site-logo {
   width: 50px; }

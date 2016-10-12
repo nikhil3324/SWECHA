@@ -82,31 +82,7 @@ set cols = content.field_status['#field_name'] and content.field_category['#fiel
 %}
 
 
-{%
-set category_color = [
-node.field_category.0.entity.field_category_hex.color|trim('#')
-]
-%}
 
-{%
-set category_icon = [
-node.field_category.0.entity.field_category_icon.value
-
-]%}
-
-
-
-{%
-set status_color = [
-node.field_status.0.entity.field_status_hex.color|trim('#')
-]
-%}
-
-{%
-set status_icon = [
-node.field_status.0.entity.field_status_icon.value
-
-]%}
 
 {# dump(color[0],icon[0]) # }
 {# kint(content.field_status) #}
@@ -135,13 +111,7 @@ node.field_status.0.entity.field_status_icon.value
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_body}}
-
-    {{ content|without('field_status','field_category','field_request_image') }}
+    {{ content }}
   </div>
-
-  <div class="col-xs-{{ cols }} fa fa-{{ status_icon[0] }} {{ 'color-'  ~ status_color[0] }}">{{ content.field_status }}</div>
-  <div class="col-xs-{{ cols }} fa fa-{{ category_icon[0] }} {{  'color-'  ~  category_color[0] }}">{{ content.field_category }}</div>
-
 
 </article>

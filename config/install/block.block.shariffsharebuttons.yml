@@ -16,6 +16,6 @@ settings:
   id: shariff_block
   label: 'Shariff share buttons'
   provider: shariff
-  label_display: visible
+  label_display: '0'
   shariff_default_settings: 1
 visibility: {  }
