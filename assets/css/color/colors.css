@@ -1,0 +1,75 @@
+/* ---------- Color Module Styles ----------- */
+
+body {
+  color: #3b3b3b;
+  background: #fff;
+}
+
+#wrapper,
+.block-masradix-mainnavigation-menu a.is-active {
+  background: #ffffff;
+}
+.tabs ul.primary li a.is-active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.is-active a {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#sidebar-wrapper,
+.btn-default,
+.block--masradix-markaspotstageaddblock p a{
+  background-color: #055a8e;
+  background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
+  background-image: linear-gradient(to bottom, #055a8e 0%, #055a8e 100%);
+}
+a,
+.link,
+.btn-default:hover,
+.btn-default:focus {
+  color: #0071b3;
+}
+
+.region-sidebar .block,
+.region-sidebar li.list-group-item {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #018fe2;
+}
+.btn-default,
+a:active,
+.link:active {
+  color: #23aeff;
+}
+
+#footer {
+  background: #fff;
+}
+
+
+
+.site-name,
+.site-name a {
+  color: #fffeff;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}

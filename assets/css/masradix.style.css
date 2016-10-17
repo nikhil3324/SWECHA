@@ -8528,6 +8528,9 @@ span.site-name {
 .region-map.col-md-12, .region-map.calendar-calendar, .view .row > .region-map.list-group {
   margin: 0 0 20px 0; }
 
+#footer {
+  margin: 36px 0 0 0; }
+
 /**
  * Throbber.
  */
@@ -8548,9 +8551,12 @@ span.site-name {
   .container {
     margin-left: 50px; } }
 
+.region-sidebar .block {
+  padding: 0.2em 0.6em;
+  margin: 0.6em 0; }
+
 #block-markaspotmapblock {
   padding: 10px 160px;
-  background: #000;
   margin: 1px 0; }
 
 .round-button.col-xs-3 item {
@@ -8591,9 +8597,6 @@ span.site-name {
   line-height: 1.33;
   border-radius: 35px; }
 
-.block.block-markaspot-blocks.block-markaspot-base-add-block {
-  background: #fff; }
-
 .button-sidekick .btn-circle {
   margin: 10px 0 30px 50px;
   border: 0;
@@ -8626,15 +8629,13 @@ span.site-name {
   padding-bottom: 100%;
   border-radius: 50%;
   border: 1px solid #fff;
-  overflow: hidden;
-  background: #31708f; }
+  overflow: hidden; }
 
 .round-button-circle:hover {
   background: #30588e; }
 
 .round-button a {
   display: block;
-  color: #5bc0de;
   width: 100%;
   padding-top: 45%;
   padding-bottom: 50%;
