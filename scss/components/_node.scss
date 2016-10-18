@@ -49,6 +49,11 @@ article.service-request footer {
   margin: 0;
 }
 
+
+.service-request--gallery h2 {
+  font-size: medium;
+}
+
 .service-request h2 {
 
   @media (max-width: $screen-xs-max) {
@@ -83,12 +88,12 @@ article.service-request .service-request__field-request-image {
 }
 
 .service-request__field-request-image img {
-  /* display: block; */
-  position: relative;
-  /* max-width: 100%; */
-  height: auto;
-  /* top: -75px; */
-  padding: 0;
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    top: 0px;
+    padding: 0;
 }
 
 .service-request__field-request-image div.image {

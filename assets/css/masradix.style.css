@@ -8713,6 +8713,9 @@ article.service-request footer {
   padding: 10px;
   margin: 0; }
 
+.service-request--gallery h2 {
+  font-size: medium; }
+
 .service-request h2 {
   z-index: 4;
   margin: 0;
@@ -8739,11 +8742,11 @@ article.service-request .service-request__field-request-image {
   padding: 0; }
 
 .service-request__field-request-image img {
-  /* display: block; */
+  display: block;
   position: relative;
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
-  /* top: -75px; */
+  top: 0px;
   padding: 0; }
 
 .service-request__field-request-image div.image {
