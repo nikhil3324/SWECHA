@@ -62,7 +62,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 0px;
+  top: 20px;
   display: block;
   height: 100px;
   background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));
@@ -78,7 +78,7 @@ article.service-request footer {
   display: block;
 }
 
-article.service-request .service-request__field-request-image {
+article.service-request image {
   z-index: 3;
   top: 0;
   overflow: hidden;
@@ -86,7 +86,7 @@ article.service-request .service-request__field-request-image {
   padding: 0;
 }
 
-.service-request__field-request-image img {
+article.service-request img {
     display: block;
     position: relative;
     max-width: 100%;
@@ -95,9 +95,7 @@ article.service-request .service-request__field-request-image {
     padding: 0;
 }
 
-.service-request__field-request-image div.image {
-  min-height: 200px;
-}
+
 
 article.service-request div.col-xs-6 {
   margin: 0;
