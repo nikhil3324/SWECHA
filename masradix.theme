@@ -9,3 +9,12 @@ $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
+
+function masradix_preprocess_field(&$variables, $hook) {
+
+  $element = $variables['element'];
+
+  if ($element['#field_name'] == 'field_request_image') {
+    $variables['items'][0]['content']['#options']['attributes']['class'][] = 'blarg';
+  }
+}

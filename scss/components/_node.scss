@@ -28,7 +28,6 @@ article.service-request {
 }
 
 article.service-request .image {
-  min-height: 200px;
   background: #aaa;
   background-image: url('../default_images/default.jpg')
 }
@@ -63,7 +62,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 100px;
+  top: 0px;
   display: block;
   height: 100px;
   background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));

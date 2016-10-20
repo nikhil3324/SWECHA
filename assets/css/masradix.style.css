@@ -8696,7 +8696,6 @@ article.service-request {
   clear: both; }
 
 article.service-request .image {
-  min-height: 200px;
   background: #aaa;
   background-image: url("../default_images/default.jpg"); }
 
@@ -8720,7 +8719,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 100px;
+  top: 0px;
   display: block;
   height: 100px;
   background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
