@@ -8528,6 +8528,9 @@ span.site-name {
 .region-map.col-md-12, .region-map.calendar-calendar, .view .row > .region-map.list-group {
   margin: 0 0 20px 0; }
 
+.region-content.col-md-8 {
+  margin: 0 0 60px 0; }
+
 #footer {
   margin: 36px 0 0 0; }
 
@@ -8766,14 +8769,14 @@ article.service-request div.col-xs-6 {
 .col-xs-6.fa .color-8b0000, article.service-request .color-8b0000 {
   color: #8b0000; }
 
-.col-xs-6.fa .color-FF0000, article.service-request .color-FF0000 {
+.col-xs-6.fa .color-ff0000, article.service-request .color-ff0000 {
   color: #FF0000; }
 
 .col-xs-6.fa .color-8B0000, article.service-request .color-8B0000 {
   color: #8b0000; }
 
-.col-xs-6.fa .color-FFA500, article.service-request .color-FFA500 {
-  color: #FFA500; }
+.col-xs-6.fa .color-ffa500, article.service-request .color-ffa500 {
+  color: #ff8c4e; }
 
 .col-xs-6.fa .color-008000, article.service-request .color-008000 {
   color: #008000; }
@@ -8781,19 +8784,19 @@ article.service-request div.col-xs-6 {
 .col-xs-6.fa .color-006400, article.service-request .color-006400 {
   color: #006400; }
 
-.col-xs-6.fa .color-0000FF, article.service-request .color-0000FF {
+.col-xs-6.fa .color-0000ff, article.service-request .color-0000ff {
   color: #0000FF; }
 
-.col-xs-6.fa .color-00008B, article.service-request .color-00008B {
+.col-xs-6.fa .color-00008b, article.service-request .color-00008b {
   color: #00008B; }
 
-.col-xs-6.fa .color-A020F0, article.service-request .color-A020F0 {
+.col-xs-6.fa .color-a020f0, article.service-request .color-a020f0 {
   color: #A020F0; }
 
 .col-xs-6.fa .color-871F78, article.service-request .color-871F78 {
   color: #871F78; }
 
-.col-xs-6.fa .color-5F9EA0, article.service-request .color-5F9EA0 {
+.col-xs-6.fa .color-5f9ea0, article.service-request .color-5f9ea0 {
   color: #5F9EA0; }
 
 .col-xs-6.fa .color-ADD8E6, article.service-request .color-ADD8E6 {
@@ -9017,10 +9020,6 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal #map.stuck {
   position: fixed !important;
   right: 0;
   top: 80px; }
-
-body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .leaflet-top,
-body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .leaflet-bottom {
-  z-index: 200; }
 
 body .geolocation-map-canvas.stuck {
   position: fixed;
@@ -9254,16 +9253,16 @@ body.toolbar-vertical .hamburger {
   position: fixed;
   top: 55px; }
 
-body.toolbar-fixed.toolbar-horizontal .hamburger {
+body.toolbar-horizontal .hamburger {
   position: fixed;
   top: 55px; }
 
-body.toolbar-vertical.toolbar-fixed.toolbar-tray-open .hamburger {
+body.toolbar-vertical.toolbar-tray-open .hamburger {
   position: fixed;
   top: 60px;
   left: 220px; }
 
-body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .hamburger {
+body.toolbar-horizontal.toolbar-tray-open .hamburger {
   position: fixed;
   top: 100px; }
 
