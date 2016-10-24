@@ -62,7 +62,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 20px;
+  top: 0px;
   display: block;
   height: 100px;
   background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));
@@ -105,8 +105,8 @@ article.service-request div.col-xs-6 {
   background: $gray-lighter;
 }
 
-.service-request__field-category {
-  border-left: 1px solid $gray-light;
+.service-request__field-status {
+  border-right: 1px solid $gray-light;
 }
 
 .field__item.label.label-default {
@@ -177,6 +177,13 @@ article .col-xs-6.fa {
   padding: 0;
   text-align: center;
   font-size: $font-size-base*1.1
+}
+
+.col-xs-12.fa {
+    line-height: 50px;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 .list-markers.leaflet-control {

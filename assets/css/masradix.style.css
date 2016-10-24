@@ -8554,6 +8554,15 @@ span.site-name {
   .container {
     margin-left: 50px; } }
 
+.region-head.col-md-12, .region-head.calendar-calendar, .view .row > .region-head.list-group {
+  max-height: 130px;
+  /* background: #fda; */
+  padding: 10px;
+  margin: 50px 0;
+  background: url(/themes/masradix/logo.svg) center center no-repeat;
+  background-size: 11%;
+  opacity: 0.7; }
+
 .region-sidebar .block {
   padding: 0.2em 0.6em;
   margin: 0.6em 0; }
@@ -8722,7 +8731,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 20px;
+  top: 0px;
   display: block;
   height: 100px;
   background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
@@ -8758,8 +8767,8 @@ article.service-request div.col-xs-6 {
   padding-top: 10px;
   background: #eeeeee; }
 
-.service-request__field-category {
-  border-left: 1px solid #999999; }
+.service-request__field-status {
+  border-right: 1px solid #999999; }
 
 .field__item.label.label-default {
   background: none;
@@ -8821,6 +8830,12 @@ article .col-xs-6.fa, article article.service-request {
   padding: 0;
   text-align: center;
   font-size: 15.4px; }
+
+.col-xs-12.fa {
+  line-height: 50px;
+  display: block;
+  margin: auto;
+  text-align: center; }
 
 .list-markers.leaflet-control {
   margin: 40px;
