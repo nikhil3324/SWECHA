@@ -14,7 +14,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   $(document).ready(function() {
 
     // Sticky map on top.
-    var $stickyElement = $('#map');
+    var $stickyElement = $('#map, #geolocation-nominatim-map');
     var sticky;
     if ($stickyElement.length) {
       sticky = new Waypoint.Sticky({
@@ -40,11 +40,11 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     
     // Add a button to toggle map display;
     
-    $('#map,  #map_canvas').once().each(function () {
-      var $stickyElement = $('#map, #map_canvas');
+    $('#map,  #geolocation-nominatim-map').once().each(function () {
+      var $stickyElement = $('#map, #geolocation-nominatim-map');
       $stickyElement.append('<div class="grippie leaflet-touch leaflet-bar easy-button-button leaflet-bar-part"><button><span class="fa fa-map"></span></button></div>');
       $( '.grippie' ).click(function() {
-        $( "#map" ).toggle( "fold" );
+        $( "#map, #geolocation-nominatim-map" ).toggle( "fold" );
       });
       
     });

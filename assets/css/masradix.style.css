@@ -8556,9 +8556,8 @@ span.site-name {
 
 .region-head.col-md-12, .region-head.calendar-calendar, .view .row > .region-head.list-group {
   max-height: 130px;
-  /* background: #fda; */
   padding: 10px;
-  margin: 50px 0;
+  margin: 20px 0;
   background: url(/themes/masradix/logo.svg) center center no-repeat;
   background-size: 11%;
   opacity: 0.7; }
@@ -8731,7 +8730,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 0px;
+  top: 20px;
   display: block;
   height: 100px;
   background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
@@ -8859,6 +8858,12 @@ article.service-request .label-default {
   background: none;
   /* vertical-align: baseline; */
   /* border-radius: .25em; */ }
+
+.page-header {
+  margin: 18px 0 18px; }
+  .page-header h1 {
+    margin: 0;
+    text-align: center; }
 
 .view__header {
   background: #ccc;
@@ -9018,7 +9023,8 @@ div#edit-actions {
 
 body .stuck {
   position: fixed !important;
-  width: 100%;
+  width: 100vw;
+  height: 220px !important;
   right: 0;
   top: 0;
   margin: 0;
@@ -9036,19 +9042,11 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal #map.stuck {
   right: 0;
   top: 80px; }
 
-body .geolocation-map-canvas.stuck {
-  position: fixed;
-  width: 100%;
-  height: 220px !important;
-  right: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  box-shadow: -1px 2px 12px #000000;
-  z-index: 4; }
+#edit-field-geolocation-0-map-container legend {
+  display: none; }
 
 #edit-field-geolocation-0 .geolocation-map-canvas {
-  height: 220px !important; }
+  height: 320px !important; }
 
 fieldset#edit-field-geofield-wrapper.stuck legend {
   display: none; }
