@@ -8554,13 +8554,22 @@ span.site-name {
   .container {
     margin-left: 50px; } }
 
-.region-head.col-md-12, .region-head.calendar-calendar, .view .row > .region-head.list-group {
-  max-height: 130px;
-  padding: 10px;
-  margin: 20px 0;
-  background: url(/themes/masradix/logo.svg) center center no-repeat;
-  background-size: 11%;
-  opacity: 0.7; }
+.region-head.col-md-12 .block.block--masradix-sitebranding, .region-head.calendar-calendar .block.block--masradix-sitebranding, .view .row > .region-head.list-group .block.block--masradix-sitebranding {
+  clear: both;
+  margin: 10px 0;
+  padding: 5px 20px;
+  text-align: center; }
+
+.navbar-brand {
+  float: none; }
+
+img.site-logo {
+  width: 12%;
+  margin: auto; }
+
+span.site-name {
+  display: block;
+  margin: 5px auto; }
 
 .region-sidebar .block {
   padding: 0.2em 0.6em;
@@ -9391,16 +9400,5 @@ body.toolbar-horizontal.toolbar-tray-open .hamburger {
 
 .toolbar-tray-vertical {
   width: 22rem !important; }
-
-.block.block--masradix-sitebranding {
-  clear: both;
-  margin: 10px 0;
-  padding: 5px 20px; }
-
-.navbar-brand {
-  float: none; }
-
-img.site-logo {
-  width: 50px; }
 
 /*# sourceMappingURL=masradix.style.css.map */
