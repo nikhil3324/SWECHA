@@ -1,12 +1,14 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - masradix
 id: masradix_sitebranding
 theme: masradix
-region: navbar_left
-weight: -10
+region: head
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:

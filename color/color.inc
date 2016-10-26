@@ -17,6 +17,7 @@ $info = array(
     'titleslogan' => t('Title and slogan'),
     'text' => t('Text color'),
     'link' => t('Link color'),
+    'base' => t('Base color') // https://www.drupal.org/node/1236098#comment-5020582
   ),
   // Pre-defined color schemes.
   'schemes' => array(
@@ -28,10 +29,11 @@ $info = array(
         'bg' => '#ffffff',
         'sidebar' => '#f6f6f2',
         'sidebarborders' => '#ffffff',
-        'footer' => '#fff',
+        'footer' => '#ffffff',
         'titleslogan' => '#fffeff',
         'text' => '#3b3b3b',
         'link' => '#0071B3',
+        'base' => '#ffffff'
       ),
     ),
     'firehouse' => array(
@@ -46,6 +48,7 @@ $info = array(
         'titleslogan' => '#fffeff',
         'text' => '#888888',
         'link' => '#d6121f',
+        'base' => '#ffffff'
       ),
     ),
     'ice' => array(
@@ -60,6 +63,7 @@ $info = array(
         'titleslogan' => '#000000',
         'text' => '#4a4a4a',
         'link' => '#019dbf',
+        'base' => '#ffffff'
       ),
     ),
     'plum' => array(
@@ -74,6 +78,8 @@ $info = array(
         'titleslogan' => '#ffffff',
         'text' => '#301313',
         'link' => '#9d408d',
+        'base' => '#ffffff'
+
       ),
     ),
     'slate' => array(
@@ -88,6 +94,7 @@ $info = array(
         'titleslogan' => '#ffffff',
         'text' => '#3b3b3b',
         'link' => '#0073b6',
+        'base' => '#ffffff'
       ),
     ),
   ),

@@ -16,7 +16,7 @@ article.service-request--teaser {
 }
 
 article.service-request--teaser.focus {
-  background: #c3c3c3;
+  background: #fff;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -24,7 +24,7 @@ article.service-request--teaser.focus {
 article.service-request {
   padding: 0;
   margin: 20px 0 20px 0;
-  clear: both
+  clear: both;
 }
 
 article.service-request .image {
@@ -54,17 +54,18 @@ article.service-request footer {
 }
 
 .service-request h2 {
+  height: 100px;
 
   @media (max-width: $screen-xs-max) {
     font-size: medium;
-  }
+    height: 60px;
 
+  }
   z-index: 4;
   margin: 0;
   position: absolute;
   top: 20px;
   display: block;
-  height: 100px;
   background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));
   background: -o-linear-gradient(right, black, rgba(255, 255, 255, 0));
   background: -moz-linear-gradient(right, black, rgba(255, 255, 255, 0));
@@ -100,8 +101,11 @@ article.service-request img {
 article.service-request div.col-xs-6 {
   margin: 0;
   min-height: 70px;
+  @media (max-width: $screen-xs-max) {
+    min-height: 85px;
+  }
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   background: $gray-lighter;
 }
 
@@ -121,9 +125,6 @@ article.service-request div.col-xs-6 {
   }
   .color-ff0000 {
     color: #FF0000;
-  }
-  .color-8B0000 {
-    color: #8b0000;
   }
   .color-ffa500 {
     color: #ff8c4e;
