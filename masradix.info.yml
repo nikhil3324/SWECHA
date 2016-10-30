@@ -19,5 +19,9 @@ regions:
   sidebar: Sidebar
   footer: Footer
 
+libraries-override:
+  file/drupal.file: false
+
 libraries:
   - masradix/base
+
