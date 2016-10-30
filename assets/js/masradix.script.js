@@ -14,7 +14,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   $(document).ready(function() {
 
     // Sticky map on top.
-    var $stickyElement = $('#map, #geolocation-nominatim-map');
+    var $stickyElement = $('#map');
     var sticky;
     if ($stickyElement.length) {
       sticky = new Waypoint.Sticky({
@@ -40,11 +40,11 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     
     // Add a button to toggle map display;
     
-    $('#map,  #geolocation-nominatim-map').once().each(function () {
-      var $stickyElement = $('#map, #geolocation-nominatim-map');
+    $('#map').once().each(function () {
+      var $stickyElement = $('#map');
       $stickyElement.append('<div class="grippie leaflet-touch leaflet-bar easy-button-button leaflet-bar-part"><button><span class="fa fa-map"></span></button></div>');
       $( '.grippie' ).click(function() {
-        $( "#map, #geolocation-nominatim-map" ).toggle( "fold" );
+        $( "#map" ).toggle( "fold" );
       });
       
     });
@@ -112,6 +112,20 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   })
   
   
-
-
+  $("#edit-field-request-image-0-upload").fileinput({
+    previewFileType: "image",
+    browseClass: "btn btn-success",
+    browseLabel: "Pick Image",
+    browseIcon: "<i class=\"glyphicon glyphicon-picture\"></i> ",
+    removeClass: "btn btn-danger",
+    removeLabel: "Delete",
+    removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
+    uploadClass: "btn btn-info",
+    uploadLabel: "Upload",
+    uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> "
+  });
+  
+  
+  
+  
 })(jQuery, Drupal, this, this.document);
