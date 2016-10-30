@@ -15,21 +15,29 @@ body {
   background-color: #ffffff;
   border-bottom-color: #ffffff;
 }
+
 #sidebar-wrapper,
 .btn-default,
 .block--masradix-markaspotstageaddblock p a,
-.shariff .theme-grey .shariff-button a {
+.shariff-button a {
   background-color: #055a8e;
   background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
   background-image: linear-gradient(to bottom, #055a8e 0%, #055a8e 100%);
   border-color: #3b3b3b;
 }
+.toggled .shariff-button a {
+  background-color: #23aeff !important;
+  background-image: -webkit-linear-gradient(top, #23aeff 0%, #23aeff  100%);
+  color: #ffffff
+}
 a,
 .link,
 .btn-default:hover,
-.btn-default:focus {
+.btn-default:focus{
   color: #23aeff;
 }
+
+.
 .region-sidebar .block,
 .region-sidebar li.list-group-item,
 .shariff .theme-grey .shariff-button a{
@@ -67,6 +75,7 @@ a:active,
 .site-name a {
   color: #23aeff;
 }
+
 
 /* ---------- Color Form ----------- */
 
