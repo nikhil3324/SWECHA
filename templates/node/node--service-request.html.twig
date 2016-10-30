@@ -129,10 +129,8 @@ node.field_status.0.entity.field_status_icon.value
   </div>
   {% if display_submitted %}
     <footer class="node__meta">
-      {{ author_picture }}
       <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+        Submitted by {{ author_name }} on {{ date }}
       </div>
     </footer>
   {% endif %}
