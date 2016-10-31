@@ -1,2 +1,60 @@
 // Styles for Forms
 // -----------------------------------------------------------------------------
+
+.form-control {
+  font-size: 16px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:hover,
+  textarea:hover,
+  input:hover {
+    font-size: 16px;
+  }
+}
+
+
+.leaflet-control-geocoder-form input {
+	width: 120px!important;
+}
+
+div#edit-body-0-format {
+    display: none;
+}
+
+
+
+
+input#edit-preview {
+  display: none;
+}
+
+form .form-item-field-request-image-0 .btn, form .media-widget > a {
+  display: inline-block;
+  @media (max-width: 767px) {
+      width: 40px !important;
+  }
+}
+
+.file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button{
+  display:none!important;
+}
+
+input[name="field_request_image_0_upload_button"]{
+  display:none!important
+}
+
+
+p#edit-field-request-image-0-upload--description {
+    display: none;
+}
