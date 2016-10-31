@@ -15,9 +15,8 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
     // Sticky map on top.
     var $stickyElement = $('#map');
-    var sticky;
     if ($stickyElement.length) {
-      sticky = new Waypoint.Sticky({
+      var sticky = new Waypoint.Sticky({
         element: $stickyElement[0],
         wrapper: '<div class="sticky-wrapper waypoint" />'
       });
@@ -25,7 +24,13 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     
     // Add a close button to exposed filter.
     $('.bef-exposed-form').append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' +  Drupal.t('Close') + '</span></a>')
-  
+
+    var inview = new Waypoint.Inview({
+      enter: function(direction) {
+        $('#map').show('fold');
+      }
+    })
+    
   
   });
   
@@ -109,7 +114,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     },
     offset: '75%'
     
-  })
+  });
   
   
   $("#edit-field-request-image-0-upload").fileinput({
