@@ -1,8 +1,9 @@
 // Styles for Nodes
 // -----------------------------------------------------------------------------
 article.service-request--teaser {
-  background: #ddd;
+  background: $gray-lighter;
 }
+
 
 .service-request__field-category,
 .service-request__field-status {
@@ -23,14 +24,10 @@ article.service-request--teaser.focus {
 
 article.service-request {
   padding: 0;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 60px 0;
   clear: both;
 }
 
-article.service-request .image {
-  background: #aaa;
-  background-image: url('../default_images/default.jpg')
-}
 
 article.service-request img {
   opacity: 1;
@@ -42,34 +39,42 @@ article.service-request:hover img {
   transition: opacity .3s ease-in;
 }
 
-article.service-request .node__content,
+article.service-request--teaser .node__content,
 article.service-request footer {
   padding: 10px;
   margin: 0;
 }
 
+article.service-request footer {
+ font-style: italic;
+ color: $gray-light;
+}
 
 .service-request--gallery h2 {
   font-size: medium;
 }
 
 .service-request h2 {
-  height: 100px;
+  height: 140px;
 
+  @media (max-width: $screen-sm-max) {
+    font-size: medium;
+    height: 120px;
+  }
   @media (max-width: $screen-xs-max) {
     font-size: medium;
     height: 60px;
-
   }
   z-index: 4;
   margin: 0;
   position: absolute;
   top: 20px;
   display: block;
-  background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0));
-  background: -o-linear-gradient(right, black, rgba(255, 255, 255, 0));
-  background: -moz-linear-gradient(right, black, rgba(255, 255, 255, 0));
-  background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 75%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 75%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #fff;
 }
 
@@ -96,9 +101,13 @@ article.service-request img {
     padding: 0;
 }
 
-
+.service-request__field-address {
+    padding: 10px;
+    background: $gray-lighter
+}
 
 article.service-request div.col-xs-6 {
+  border-top: 1px solid $gray-light;
   margin: 0;
   min-height: 70px;
   @media (max-width: $screen-xs-max) {
