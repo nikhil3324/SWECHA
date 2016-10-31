@@ -8,7 +8,7 @@ body .stuck {
   top: 0;
   margin: 0;
   padding: 0;
-  box-shadow: -1px 2px 12px #000000;
+  box-shadow: -1px 2px 4px #666;
   z-index: 999;
 
 }
@@ -48,10 +48,21 @@ fieldset#edit-field-geofield-wrapper.stuck div {
   padding: 0;
 }
 
+fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-field-geolocation-0-map-container {
+    padding: 0;
+}
+
 /* Layer the bar just above the trays and above contextual link triggers. */
 .toolbar-oriented .toolbar-bar {
   z-index: 1502;
 }
+
+// override
+
+.leaflet-control {
+  z-index: inherit;
+}
+
 
 body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .region-map.col-xs-12.stuck {
   position: fixed;
@@ -70,15 +81,25 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal .region-map.col-xs-12.st
   left: 7px;
 }
 
+.leaflet-popup-content {
+    max-width: 180px;
+}
+
+
 #map {
   width: 100%;
   height: 220px;
   position: relative;
 }
 
+#geolocation-nominatim-map{
+  height: 250px!important
+}
+
+
 a.leaflet-control-timecontrol.timecontrol-date.utc {
   position: fixed;
-  right: 70px;
+  left: 60px;
   top: 0;
   opacity: 0.6;
   color: #000;
@@ -89,21 +110,31 @@ a.leaflet-control-timecontrol.timecontrol-date.utc {
   position: fixed;
   background: #000;
   color: #fff;
-  height: 220px;
-  width: 220px;
+  height: 100px;
   padding: 0 20px;
   margin: 0 auto;
-  font: 18px/220px "San Francisco", Arial, Helvetica, sans-serif, Helvetica;
+  font: 18px/36px "San Francisco", Arial, Helvetica, sans-serif, Helvetica;
 }
+
+/*
+
+@media (max-width: 767px)
+.leaflet-bar-timecontrol .timecontrol-date, .leaflet-bar-timecontrol .timecontrol-slider {
+    clear: none;
+    float: none;
+    border-right: none;
+}
+
+*/
+
+
+
 
 .grippie {
   position: fixed;
-  top: 245px;
-  right: 10px;
-  z-index: 9999;
-}
-
-#map.stuck .grippie {
+  top: 265px;
+  left: 15px;
+  z-index: 401;
 }
 
 .grippie span {
@@ -111,3 +142,4 @@ a.leaflet-control-timecontrol.timecontrol-date.utc {
   margin: auto;
   cursor: pointer;
 }
+
