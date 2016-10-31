@@ -5,6 +5,7 @@ base:
       /libraries/bootstrap-fileinput/css/fileinput.min.css: {}
       assets/css/masradix.style.css: {}
       assets/css/color/colors.css: {}
+      assets/css/hacks.css: {}
   js:
     bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
     /libraries/waypoints/lib/jquery.waypoints.min.js: {weight: -3, minified: true }
