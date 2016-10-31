@@ -5,22 +5,29 @@
   background: #ccc;
   padding: 10px;
   width: 50%;
-  height: 50px;
+  height:120px;
   float: right;
   @media (max-width: $screen-xs-max) {
-    width: 100%
+    width: 100%;
+    height: inherit
   }
+}
+
+.view__empty {
+    font-size: large;
+    margin: 60px 10px;
 }
 
 .view__filters {
   background: #ddd;
   /* float: left; */
   width: 50%;
+  height: 120px;
   padding: 10px;
-  height: 50px;
   @media (max-width: $screen-xs-max) {
     clear: both;
-    width: 100%
+    width: 100%;
+    height: inherit
   }
 }
 
@@ -117,7 +124,6 @@ span.result-total {
   padding: 5px;
   color: #555;
   @media (max-width: $screen-xs-max) {
-    font-size: x-small;
     margin: 0 10px 0 0;
   }
 }
@@ -131,7 +137,6 @@ span.result-filter {
   cursor: pointer;
   @media (max-width: $screen-xs-max) {
     margin-top: 3px;
-    font-size: x-small;
   }
 }
 
@@ -139,24 +144,8 @@ span.result-filter {
   clear: both;
 }
 
-input#edit-search-api-fulltext {
-  width: 90%;
-  margin: 0;
-}
-
 .form-item.form-group.form-type-textfield.form-item-search-api-fulltext {
-  margin: 0;
-  width: 65%;
-}
-
-div#edit-actions {
-  float: left;
-}
-
-.form-item.form-group.form-type-textfield.form-item-search-api-fulltext {
-  float: left;
   background: #ddd;
-
 }
 
 .view__content {
