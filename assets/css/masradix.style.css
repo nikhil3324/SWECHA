@@ -8564,7 +8564,7 @@ span.site-name {
   float: none; }
 
 img.site-logo {
-  width: 9%;
+  width: 11%;
   margin: 0 auto; }
 
 span.site-name {
@@ -8575,13 +8575,12 @@ span.site-name {
   padding: 0.2em 0.6em;
   margin: 0.6em 0; }
 
-#block-markaspotmapblock {
-  padding: 10px 160px;
-  margin: 1px 0; }
+.block.block--masradix-markaspotstageaddblock {
+  margin: 50px 0; }
 
 .block.block--userlogin {
   clear: both;
-  margin: 120px 20px 0 20px; }
+  margin: 80px 20px 0 20px; }
 
 .block--userlogin ul {
   clear: left;
@@ -8699,14 +8698,12 @@ span.site-name {
   position: fixed;
   bottom: 12px;
   z-index: 10000;
-  left: 19px; }
+  left: 15px; }
 
 .shariff .orientation-vertical {
   min-width: 37px; }
 
-select,
-textarea,
-input {
+.form-control {
   font-size: 16px; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -8719,7 +8716,7 @@ input {
   select:hover,
   textarea:hover,
   input:hover {
-    font-size: 14px; } }
+    font-size: 16px; } }
 
 .leaflet-control-geocoder-form input {
   width: 120px !important; }
@@ -8727,21 +8724,22 @@ input {
 div#edit-body-0-format {
   display: none; }
 
-p#edit-field-request-image-0-upload--description {
+input#edit-preview {
   display: none; }
 
-.form-type-managed-file .btn, .form-type-managed-file .media-widget > a, form .media-widget > a {
+form .form-item-field-request-image-0 .btn, form .form-item-field-request-image-0 .media-widget > a, form .media-widget > a {
   display: inline-block; }
   @media (max-width: 767px) {
-    .form-type-managed-file .btn, .form-type-managed-file .media-widget > a, form .media-widget > a {
+    form .form-item-field-request-image-0 .btn, form .form-item-field-request-image-0 .media-widget > a, form .media-widget > a {
       width: 40px !important; } }
 
-@media (max-width: 767px) {
-  .button--primary.form-type-submit,
-  .form-submit {
-    width: 100% !important; } }
+.file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button {
+  display: none !important; }
 
-input#edit-preview {
+input[name="field_request_image_0_upload_button"] {
+  display: none !important; }
+
+p#edit-field-request-image-0-upload--description {
   display: none; }
 
 @media (min-width: 768px) {
@@ -8750,7 +8748,7 @@ input#edit-preview {
     margin: 0; } }
 
 article.service-request--teaser {
-  background: #ddd; }
+  background: #eeeeee; }
 
 .service-request__field-category,
 .service-request__field-status {
@@ -8767,12 +8765,8 @@ article.service-request--teaser.focus {
 
 article.service-request {
   padding: 0;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 60px 0;
   clear: both; }
-
-article.service-request .image {
-  background: #aaa;
-  background-image: url("../default_images/default.jpg"); }
 
 article.service-request img {
   opacity: 1;
@@ -8782,23 +8776,37 @@ article.service-request:hover img {
   opacity: 0.6;
   transition: opacity .3s ease-in; }
 
-article.service-request .node__content,
+article.service-request--teaser .node__content,
 article.service-request footer {
   padding: 10px;
   margin: 0; }
+
+article.service-request footer {
+  font-style: italic;
+  color: #999999; }
 
 .service-request--gallery h2 {
   font-size: medium; }
 
 .service-request h2 {
-  height: 100px;
+  height: 140px;
   z-index: 4;
   margin: 0;
   position: absolute;
   top: 20px;
   display: block;
-  background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, transparent 72%, transparent 75%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   color: #fff; }
+  @media (max-width: 991px) {
+    .service-request h2 {
+      font-size: medium;
+      height: 120px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: medium;
@@ -8824,7 +8832,12 @@ article.service-request img {
   top: 0px;
   padding: 0; }
 
+.service-request__field-address {
+  padding: 10px;
+  background: #eeeeee; }
+
 article.service-request div.col-xs-6 {
+  border-top: 1px solid #999999;
   margin: 0;
   min-height: 70px;
   text-align: center;
@@ -8924,32 +8937,41 @@ article.service-request .label-default {
   /* vertical-align: baseline; */
   /* border-radius: .25em; */ }
 
-.page-header {
-  margin: 18px 0 18px; }
-  .page-header h1 {
-    margin: 0;
-    text-align: center; }
+.page-header h1 {
+  text-align: center;
+  margin: 20px 0 30px 0;
+  font-size: x-large; }
+  @media (max-width: 767px) {
+    .page-header h1 {
+      font-size: large;
+      margin: 0; } }
 
 .view__header {
   background: #ccc;
   padding: 10px;
   width: 50%;
-  height: 50px;
+  height: 120px;
   float: right; }
   @media (max-width: 767px) {
     .view__header {
-      width: 100%; } }
+      width: 100%;
+      height: inherit; } }
+
+.view__empty {
+  font-size: large;
+  margin: 60px 10px; }
 
 .view__filters {
   background: #ddd;
   /* float: left; */
   width: 50%;
-  padding: 10px;
-  height: 50px; }
+  height: 120px;
+  padding: 10px; }
   @media (max-width: 767px) {
     .view__filters {
       clear: both;
-      width: 100%; } }
+      width: 100%;
+      height: inherit; } }
 
 .view__filters a,
 .view__filters div.form-item-field-status,
@@ -9004,7 +9026,6 @@ span.result-total {
   color: #555; }
   @media (max-width: 767px) {
     span.result-total {
-      font-size: x-small;
       margin: 0 10px 0 0; } }
 
 span.result-filter {
@@ -9016,25 +9037,12 @@ span.result-filter {
   cursor: pointer; }
   @media (max-width: 767px) {
     span.result-filter {
-      margin-top: 3px;
-      font-size: x-small; } }
+      margin-top: 3px; } }
 
 .view__row {
   clear: both; }
 
-input#edit-search-api-fulltext {
-  width: 90%;
-  margin: 0; }
-
 .form-item.form-group.form-type-textfield.form-item-search-api-fulltext {
-  margin: 0;
-  width: 65%; }
-
-div#edit-actions {
-  float: left; }
-
-.form-item.form-group.form-type-textfield.form-item-search-api-fulltext {
-  float: left;
   background: #ddd; }
 
 .view__content {
@@ -9094,7 +9102,7 @@ body .stuck {
   top: 0;
   margin: 0;
   padding: 0;
-  box-shadow: -1px 2px 12px #000000;
+  box-shadow: -1px 2px 4px #666;
   z-index: 999; }
 
 body.toolbar-tray-open.toolbar-fixed.toolbar-vertical #map.stuck {
@@ -9126,6 +9134,9 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 /* Layer the bar just above the trays and above contextual link triggers. */
 .toolbar-oriented .toolbar-bar {
   z-index: 1502; }
+
+.leaflet-control {
+  z-index: inherit; }
 
 body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .region-map.col-xs-12.stuck {
   position: fixed;
@@ -9181,8 +9192,9 @@ a.leaflet-control-timecontrol.timecontrol-date.utc {
 */
 .grippie {
   position: fixed;
-  top: 245px;
-  left: 20px; }
+  top: 265px;
+  left: 15px;
+  z-index: 401; }
 
 .grippie span {
   display: block;
@@ -9329,7 +9341,7 @@ li.facet-item input {
   height: 32px;
   position: fixed;
   top: 20px;
-  margin-left: 18px;
+  margin-left: 15px;
   width: 32px;
   z-index: 9999; }
 
