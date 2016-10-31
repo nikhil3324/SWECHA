@@ -1,12 +1,6 @@
 // Styles for blocks.
 // -----------------------------------------------------------------------------
 
-
-.region-head.col-md-12 {
-
-}
-
-
 .region-head.col-md-12 .block.block--masradix-sitebranding {
   clear: both;
   margin: 0 0;
@@ -19,7 +13,7 @@
 }
 
 img.site-logo {
-  width: 9%;
+  width: 11%;
   margin: 0 auto
 }
 
@@ -34,14 +28,13 @@ span.site-name {
 }
 
 
-#block-markaspotmapblock {
-  padding: 10px 160px;
-  margin: 1px 0
+.block.block--masradix-markaspotstageaddblock {
+    margin: 50px 0;
 }
 
 .block.block--userlogin {
     clear:both;
-    margin: 120px 20px 0 20px;
+    margin: 80px 20px 0 20px;
 }
 
 .block--userlogin ul {
