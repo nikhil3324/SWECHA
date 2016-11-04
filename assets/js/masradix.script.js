@@ -26,6 +26,8 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     $('.bef-exposed-form').append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' +  Drupal.t('Close') + '</span></a>')
 
     var inview = new Waypoint.Inview({
+      element: $('#map'),
+  
       enter: function(direction) {
         $('#map').show('fold');
       }
