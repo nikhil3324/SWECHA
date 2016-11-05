@@ -24,7 +24,7 @@ article.service-request--teaser.focus {
 
 article.service-request {
   padding: 0;
-  margin: 20px 0 60px 0;
+  margin: 20px 0 100px 0;
   clear: both;
 }
 
@@ -56,6 +56,11 @@ article.service-request footer {
 
 .service-request h2 {
   height: 140px;
+
+  @media (max-width: $screen-md-max) {
+    font-size: x-large;
+    height: 130px;
+  }
 
   @media (max-width: $screen-sm-max) {
     font-size: medium;

@@ -33,11 +33,11 @@ a,
   color: #23aeff;
 }
 
-
+.block.block--masradix-markaspotstageaddblock,
 .region-sidebar .block,
 .region-sidebar li.list-group-item,
 .shariff .theme-grey .shariff-button a{
-  background-color: #f6f6f2;
+  background-color: #eeeeee;
   border-color: #f9f9f9;
 }
 .navbar-left .navbar-nav li:before {

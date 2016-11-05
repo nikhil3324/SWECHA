@@ -3,8 +3,7 @@
 
 .region-head.col-md-12 .block.block--masradix-sitebranding {
   clear: both;
-  margin: 0 0;
-  padding:  5px 20px;
+  margin: 0;
   text-align:center
 }
 
@@ -18,18 +17,18 @@ img.site-logo {
 }
 
 span.site-name {
-    display: block;
-    margin: 5px auto;
+  display: block;
+  margin: 5px auto;
+  font-size: smaller;
 }
 
 .region-sidebar .block {
   padding: 0.2em 0.6em;
-  margin: 0.6em 0;
 }
 
 
 .block.block--masradix-markaspotstageaddblock {
-    margin: 50px 0;
+    margin: 0;
 }
 
 .block.block--userlogin {
@@ -91,7 +90,7 @@ span.site-name {
 
 
 .button-sidekick .btn-circle {
-  margin: 10px 0 30px 50px;
+  margin: 10px 0 30px 20px;
   border: 0;
   font-size: 48px;
   color: #666
