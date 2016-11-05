@@ -22,12 +22,17 @@ article.service-request--teaser.focus {
   transition: all 0.2s ease;
 }
 
-article.service-request {
+article.service-request--gallery {
+  padding: 0;
+  margin: 20px 0 0 0;
+  clear: both;
+}
+
+article.service-request--teaser {
   padding: 0;
   margin: 20px 0 100px 0;
   clear: both;
 }
-
 
 article.service-request img {
   opacity: 1;
@@ -134,7 +139,7 @@ article.service-request div.col-xs-6 {
 }
 
 .col-xs-6.fa {
-  .color-8b0000 {
+  .color-8B0000 {
     color: #8b0000;
   }
   .color-ff0000 {

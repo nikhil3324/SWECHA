@@ -23,13 +23,15 @@ span.site-name {
 }
 
 .region-sidebar .block {
-  padding: 0.2em 0.6em;
+  padding: 0.6em 1.2em;
 }
 
-
-.block.block--masradix-markaspotstageaddblock {
-    margin: 0;
+// Info Block
+.block--markaspotinformationblock {
+    margin: 0 0 20px 0;
 }
+
+// User Login to navbar.
 
 .block.block--userlogin {
     clear:both;
@@ -44,21 +46,7 @@ span.site-name {
 }
 
 
-.round-button.col-xs-3 item {
-  display: block;
-}
-
-.round-button.col-xs-3 a {
-  text-align: center;
-  display: block;
-  margin: 10px auto;
-}
-
-.round-button.col-xs-3 p {
-  text-align: center;
-  display: block;
-  clear: both
-}
+// Info block for front-page.
 
 .btn-circle {
   width: 30px;
@@ -97,21 +85,46 @@ span.site-name {
 
 }
 
+
+// Front page add request.
+
+.block--masradix-markaspotstageaddblock {
+    margin: 0;
+}
+
+.round-button.col-xs-3 item {
+  display: block;
+}
+
+.round-button.col-xs-3 a {
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+}
+
+.round-button.col-xs-3 p {
+  text-align: center;
+  display: block;
+  clear: both
+}
+
 .block--masradix-markaspotstageaddblock p a {
-  border: 1px solid black;
   display: block;
   text-align: center;
   line-height: 30px;
-  padding: 10px;
+  padding: 5px;
   height: 50px;
-  background: #000;
   color: #fff;
   font-weight: 700;
-  margin: 30px 10px 30px 50px;
+  margin: 30px 30px 30px 30px;
   border: 3px solid #666;
   -moz-border-radius: 25px 25px 25px 25px;
   -webkit-border-radius: 25px 25px 25px 25px;
   border-radius: 25px 25px 25px 25px;
+  @media (max-width: $screen-xs-min) {
+    font-size: small;
+    line-height: 16px;
+  }
 }
 
 .block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
@@ -120,10 +133,6 @@ span.site-name {
   text-decoration: none;
 }
 
-// Add View Block
-.round-button {
-
-}
 
 .round-button-circle {
   width: 100%;
@@ -137,16 +146,6 @@ span.site-name {
 
 .round-button-circle:hover {
   background: #30588e;
-}
-
-.round-button a {
-  display: block;
-  width: 100%;
-  padding-top: 45%;
-  padding-bottom: 50%;
-  text-align: center;
-  text-decoration: none;
-  font-size: large;
 }
 
 // Footer

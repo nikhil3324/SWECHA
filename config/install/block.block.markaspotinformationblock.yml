@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - markaspot_blocks
+  theme:
+    - masradix
+id: markaspotinformationblock
+theme: masradix
+region: sidebar
+weight: -6
+provider: null
+plugin: 'Markaspot Info Block'
+settings:
+  id: 'Markaspot Info Block'
+  label: Welcome!
+  provider: markaspot_blocks
+  label_display: visible
+visibility: {  }

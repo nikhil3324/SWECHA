@@ -8572,10 +8572,10 @@ span.site-name {
   font-size: smaller; }
 
 .region-sidebar .block {
-  padding: 0.2em 0.6em; }
+  padding: 0.6em 1.2em; }
 
-.block.block--masradix-markaspotstageaddblock {
-  margin: 0; }
+.block--markaspotinformationblock {
+  margin: 0 0 20px 0; }
 
 .block.block--userlogin {
   clear: both;
@@ -8586,19 +8586,6 @@ span.site-name {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-.round-button.col-xs-3 item {
-  display: block; }
-
-.round-button.col-xs-3 a {
-  text-align: center;
-  display: block;
-  margin: 10px auto; }
-
-.round-button.col-xs-3 p {
-  text-align: center;
-  display: block;
-  clear: both; }
 
 .btn-circle {
   width: 30px;
@@ -8631,19 +8618,37 @@ span.site-name {
   font-size: 48px;
   color: #666; }
 
+.block--masradix-markaspotstageaddblock {
+  margin: 0; }
+
+.round-button.col-xs-3 item {
+  display: block; }
+
+.round-button.col-xs-3 a {
+  text-align: center;
+  display: block;
+  margin: 10px auto; }
+
+.round-button.col-xs-3 p {
+  text-align: center;
+  display: block;
+  clear: both; }
+
 .block--masradix-markaspotstageaddblock p a {
-  border: 1px solid black;
   display: block;
   text-align: center;
   line-height: 30px;
-  padding: 10px;
+  padding: 5px;
   height: 50px;
-  background: #000;
   color: #fff;
   font-weight: 700;
-  margin: 30px 10px 30px 50px;
+  margin: 30px 30px 30px 30px;
   border: 3px solid #666;
   border-radius: 25px 25px 25px 25px; }
+  @media (max-width: 480px) {
+    .block--masradix-markaspotstageaddblock p a {
+      font-size: small;
+      line-height: 16px; } }
 
 .block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
   font-weight: 700;
@@ -8661,15 +8666,6 @@ span.site-name {
 
 .round-button-circle:hover {
   background: #30588e; }
-
-.round-button a {
-  display: block;
-  width: 100%;
-  padding-top: 45%;
-  padding-bottom: 50%;
-  text-align: center;
-  text-decoration: none;
-  font-size: large; }
 
 .scroll-to-top.show {
   z-index: 999; }
@@ -8762,7 +8758,12 @@ article.service-request--teaser.focus {
   background: #fff;
   transition: all 0.2s ease; }
 
-article.service-request {
+article.service-request--gallery {
+  padding: 0;
+  margin: 20px 0 0 0;
+  clear: both; }
+
+article.service-request--teaser {
   padding: 0;
   margin: 20px 0 100px 0;
   clear: both; }
@@ -8858,7 +8859,7 @@ article.service-request div.col-xs-6 {
   font-size: 16px;
   text-align: center; }
 
-.col-xs-6.fa .color-8b0000, article.service-request .color-8b0000 {
+.col-xs-6.fa .color-8B0000, article.service-request .color-8B0000 {
   color: #8b0000; }
 
 .col-xs-6.fa .color-ff0000, article.service-request .color-ff0000 {
