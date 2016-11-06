@@ -63,14 +63,18 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
   z-index: inherit;
 }
 
+.toolbar-vertical.toolbar-fixed .stuck,
+.toolbar-horizontal.toolbar-fixed .stuck,
+.toolbar-vertical.toolbar-fixed .timecontrol-date.utc,
+.toolbar-horizontal.toolbar-fixed .timecontrol-date.utc,
 
-body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .region-map.col-xs-12.stuck {
+ {
   position: fixed;
   right: 0;
   top: 39px;
 }
-
-body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal .region-map.col-xs-12.stuck {
+.toolbar-vertical.toolbar-fixed.toolbar-tray-open .stuck,
+.toolbar-horizontal.toolbar-fixed.toolbar-tray-open .timecontrol-date.utc {
   position: fixed;
   right: 0;
   top: 80px;
@@ -97,25 +101,46 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal .region-map.col-xs-12.st
 }
 
 
-a.leaflet-control-timecontrol.timecontrol-date.utc {
+.timecontrol-date.utc {
   position: fixed;
   left: 60px;
-  top: 0;
+  top: 30px;
+  width: 100px;
+  font-size: medium;
   opacity: 0.6;
   color: #000;
   border: 0;
 }
 
-.stuck a.leaflet-control-timecontrol.timecontrol-date.utc {
+.stuck .timecontrol-date.utc {
   position: fixed;
   background: #000;
   color: #fff;
-  height: 100px;
+  height: 30px;
+  width: 200px;
   padding: 0 20px;
   margin: 0 auto;
-  font: 18px/36px "San Francisco", Arial, Helvetica, sans-serif, Helvetica;
+  @media (max-width: $screen-md) {
+    font-size: small;
+  }
+  @media (max-width: $screen-md) {
+    font-size: small;
+  }
 }
 
+.leaflet-bar-timecontrol a.timecontrol-date.utc,
+ .leaflet-bar-timecontrol a.timecontrol-date.utc:hover {
+    min-width: 120px!important;
+    max-width: 200px!important;
+}
+
+// Timeline makes no sense on smartphone screens.
+// Hiding this feature until there is a better solution for this.
+@media (max-width: $screen-xs) {
+  div.easy-button-container:nth-child(2) {
+      display: none;
+  }
+}
 /*
 
 @media (max-width: 767px)
