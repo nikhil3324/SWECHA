@@ -31,25 +31,25 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
         $('#map').show('fold');
       }
     })
-  
-    var topInview = new Waypoint.Inview({
-      element: $('.pager__item'),
-      entered: function(direction) {
-        $('.scroll-to-top').show().on('click', function(e){
-          var href = $(this).attr('href');
-          $('html, body').animate({
-            scrollTop:$('body').offset().top
-          },500);
-          e.preventDefault();
-        });
-      },
-      exited: function(direction) {
-        if (direction === "up") {
-          $('.scroll-to-top').hide();
+    if($('.pager__item').length > 0){
+      var topInview = new Waypoint.Inview({
+        element: $('.pager__item'),
+        entered: function(direction) {
+          $('.scroll-to-top').show().on('click', function(e){
+            var href = $(this).attr('href');
+            $('html, body').animate({
+              scrollTop:$('body').offset().top
+            },500);
+            e.preventDefault();
+          });
+        },
+        exited: function(direction) {
+          if (direction === "up") {
+            $('.scroll-to-top').hide();
+          }
         }
-      }
-      
-    })
+      });
+    }
   
   });
   
