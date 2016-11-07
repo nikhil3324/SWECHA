@@ -25,14 +25,31 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     // Add a close button to exposed filter.
     $('.bef-exposed-form').append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' +  Drupal.t('Close') + '</span></a>')
 
-    var inview = new Waypoint.Inview({
+    var mapInview = new Waypoint.Inview({
       element: $('#map'),
-  
       enter: function(direction) {
         $('#map').show('fold');
       }
     })
-    
+  
+    var topInview = new Waypoint.Inview({
+      element: $('.pager__item'),
+      entered: function(direction) {
+        $('.scroll-to-top').show().on('click', function(e){
+          var href = $(this).attr('href');
+          $('html, body').animate({
+            scrollTop:$('body').offset().top
+          },500);
+          e.preventDefault();
+        });
+      },
+      exited: function(direction) {
+        if (direction === "up") {
+          $('.scroll-to-top').hide();
+        }
+      }
+      
+    })
   
   });
   
@@ -95,28 +112,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   });
   
   // Footer
-  
-  // hide our element on page load
-  // $('.scroll-to-top').removeClass('show');
-  
-  var waypoints = $('.scroll-to-top').waypoint({
-    handler: function(direction) {
-      if (direction == "down") {
-        $('.scroll-to-top').toggleClass('show');
-        
-        $('.scroll-to-top').on('click', function(e){
-          var href = $(this).attr('href');
-          $('html, body').animate({
-            scrollTop:$(this).offset().top
-          },'slow');
-          e.preventDefault();
-        });
-        
-      }
-    },
-    offset: '75%'
-    
-  });
+
   
   
   $("#edit-field-request-image-0-upload").fileinput({

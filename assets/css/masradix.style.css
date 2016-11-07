@@ -9063,6 +9063,17 @@ span.result-filter {
 .view__content {
   clear: left; }
 
+a.scroll-to-top,
+a.scroll-to-top span {
+  display: none; }
+
+a.scroll-to-top.btn.btn-default.btn-circle.btn-md, .media-widget > a.scroll-to-top.btn-default.btn-circle.btn-md {
+  position: fixed;
+  z-index: 10;
+  bottom: 50px;
+  right: 30px;
+  box-shadow: 0 2px 5px #666; }
+
 /**
  * Throbber.
  */
