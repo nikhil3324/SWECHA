@@ -4,9 +4,9 @@ dependencies:
   module:
     - markaspot_blocks
   theme:
-    - masradix
-id: markaspotinformationblock
-theme: masradix
+    - radix
+id: radix_markaspotinformationblock
+theme: radix
 region: content
 weight: -6
 provider: null
@@ -16,9 +16,4 @@ settings:
   label: Welcome!
   provider: markaspot_blocks
   label_display: visible
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }
