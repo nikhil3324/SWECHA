@@ -24,14 +24,17 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     
     // Add a close button to exposed filter.
     $('.bef-exposed-form').append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' +  Drupal.t('Close') + '</span></a>')
-
-    var mapInview = new Waypoint.Inview({
-      element: $('#map'),
-      enter: function(direction) {
-        $('#map').show('fold');
-      }
-    })
+    if($('#map').length > 0) {
+  
+      var mapInview = new Waypoint.Inview({
+        element: $('#map'),
+        enter: function (direction) {
+          $('#map').show('fold');
+        }
+      })
+    }
     if($('.pager__item').length > 0){
+      console.log("length set");
       var topInview = new Waypoint.Inview({
         element: $('.pager__item'),
         entered: function(direction) {
@@ -66,8 +69,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     
     $('#map').once().each(function () {
       var $stickyElement = $('#map');
-      $stickyElement.append('<div class="grippie leaflet-touch leaflet-bar easy-button-button leaflet-bar-part"><button><span class="fa fa-map"></span></button></div>');
-      $( '.grippie' ).click(function() {
+      $( '.mas-button .fa-map' ).click(function() {
         $( "#map" ).toggle( "fold" );
       });
       
