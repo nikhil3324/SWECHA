@@ -8637,7 +8637,7 @@ span.site-name {
 .block--masradix-markaspotstageaddblock p a {
   display: block;
   text-align: center;
-  line-height: 30px;
+  line-height: 36px;
   padding: 5px;
   height: 50px;
   color: #fff;
@@ -8648,7 +8648,7 @@ span.site-name {
   @media (max-width: 480px) {
     .block--masradix-markaspotstageaddblock p a {
       font-size: small;
-      line-height: 16px; } }
+      line-height: 26px; } }
 
 .block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
   font-weight: 700;
@@ -8692,15 +8692,60 @@ span.site-name {
   margin: 20px 0;
   padding: 0; }
 
+.block--markaspotsideactionblock {
+  width: 20px;
+  position: fixed;
+  top: 300px;
+  z-index: 2;
+  left: 15px; }
+
+.mas-action,
+.shariff .orientation-vertical {
+  min-width: 37px; }
+
+.shariff li a,
+.mas-action li a {
+  background: #eeeeee; }
+
+.mas-action .orientation-vertical li {
+  display: block;
+  width: 100%;
+  margin: 5px 0; }
+
+.mas-action li {
+  height: 35px;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+.mas-action li a {
+  position: relative;
+  display: block;
+  height: 35px;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+.mas-action li .fa {
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle; }
+
+.mas-action ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.mas-action li .share_text {
+  font-size: 12px;
+  vertical-align: middle;
+  line-height: 35px; }
+
 .block--shariffsharebuttons {
   width: 20px;
   position: fixed;
   bottom: 12px;
   z-index: 10000;
   left: 15px; }
-
-.shariff .orientation-vertical {
-  min-width: 37px; }
 
 .form-control {
   font-size: 16px; }
@@ -8749,10 +8794,6 @@ p#edit-field-request-image-0-upload--description {
 article.service-request--teaser {
   background: #eeeeee; }
 
-.service-request__field-category,
-.service-request__field-status {
-  margin: 1px; }
-
 .service-request__field-category .label-default,
 .service-request__field-status .label-default {
   display: block;
@@ -8769,7 +8810,7 @@ article.service-request--gallery {
 
 article.service-request--teaser {
   padding: 0;
-  margin: 20px 0 100px 0;
+  margin: 30px 0 40px 0;
   clear: both; }
 
 article.service-request img {
@@ -8820,6 +8861,10 @@ article.service-request footer {
       font-size: medium;
       height: 60px; } }
 
+.service-request h4.field__label {
+  margin: 20px 0 0 0;
+  clear: left; }
+
 .contextual-region h2 {
   margin: -20px 0; }
 
@@ -8847,79 +8892,86 @@ article.service-request img {
   padding: 10px;
   background: #eeeeee; }
 
-article.service-request div.col-xs-6 {
+article.service-request div.col-sm-6 {
   border-top: 1px solid #bfbfbf;
   margin: 0;
   min-height: 70px;
   text-align: center;
   padding-top: 20px;
-  background: #eeeeee; }
-  @media (max-width: 767px) {
-    article.service-request div.col-xs-6 {
+  background: #eeeeee;
+  font-family: Sa; }
+  @media (max-width: 1199px) {
+    article.service-request div.col-sm-6 {
       min-height: 85px; } }
 
 .service-request__field-status {
   border-right: 1px solid #bfbfbf; }
+  @media (max-width: 768px) {
+    .service-request__field-status {
+      border-right: none; } }
+
+.service-request__field-status div {
+  border-left: none; }
 
 .field__item.label.label-default {
   background: none;
   font-size: 16px;
   text-align: center; }
 
-.col-xs-6.fa .color-8B0000, article.service-request .color-8B0000 {
+.col-sm-6.fa .color-8B0000, article.service-request .color-8B0000 {
   color: #8b0000; }
 
-.col-xs-6.fa .color-ff0000, article.service-request .color-ff0000 {
+.col-sm-6.fa .color-ff0000, article.service-request .color-ff0000 {
   color: #FF0000; }
 
-.col-xs-6.fa .color-ffa500, article.service-request .color-ffa500 {
+.col-sm-6.fa .color-ffa500, article.service-request .color-ffa500 {
   color: #ff8c4e; }
 
-.col-xs-6.fa .color-008000, article.service-request .color-008000 {
+.col-sm-6.fa .color-008000, article.service-request .color-008000 {
   color: #008000; }
 
-.col-xs-6.fa .color-006400, article.service-request .color-006400 {
+.col-sm-6.fa .color-006400, article.service-request .color-006400 {
   color: #006400; }
 
-.col-xs-6.fa .color-0000ff, article.service-request .color-0000ff {
+.col-sm-6.fa .color-0000ff, article.service-request .color-0000ff {
   color: #0000FF; }
 
-.col-xs-6.fa .color-00008b, article.service-request .color-00008b {
+.col-sm-6.fa .color-00008b, article.service-request .color-00008b {
   color: #00008B; }
 
-.col-xs-6.fa .color-a020f0, article.service-request .color-a020f0 {
+.col-sm-6.fa .color-a020f0, article.service-request .color-a020f0 {
   color: #A020F0; }
 
-.col-xs-6.fa .color-871F78, article.service-request .color-871F78 {
+.col-sm-6.fa .color-871F78, article.service-request .color-871F78 {
   color: #871F78; }
 
-.col-xs-6.fa .color-5f9ea0, article.service-request .color-5f9ea0 {
+.col-sm-6.fa .color-5f9ea0, article.service-request .color-5f9ea0 {
   color: #5F9EA0; }
 
-.col-xs-6.fa .color-ADD8E6, article.service-request .color-ADD8E6 {
+.col-sm-6.fa .color-ADD8E6, article.service-request .color-ADD8E6 {
   color: #ADD8E6; }
 
-.col-xs-6.fa .color-D3D3D3, article.service-request .color-D3D3D3 {
+.col-sm-6.fa .color-D3D3D3, article.service-request .color-D3D3D3 {
   color: #D3D3D3; }
 
-.col-xs-6.fa .color-808080, article.service-request .color-808080 {
+.col-sm-6.fa .color-808080, article.service-request .color-808080 {
   color: #808080; }
 
-.col-xs-6.fa .color-000000, article.service-request .color-000000 {
+.col-sm-6.fa .color-000000, article.service-request .color-000000 {
   color: #000000; }
 
-.col-xs-6.fa .color-F5F5DC, article.service-request .color-F5F5DC {
+.col-sm-6.fa .color-F5F5DC, article.service-request .color-F5F5DC {
   color: #F5F5DC; }
 
-.col-xs-6.fa .color-FFFFFF, article.service-request .color-FFFFFF {
+.col-sm-6.fa .color-FFFFFF, article.service-request .color-FFFFFF {
   color: #FFFFFF; }
 
-article .col-xs-6.fa, article article.service-request {
+article .col-sm-6.fa, article article.service-request {
   padding: 0;
   text-align: center;
   font-size: 17.6px; }
 
-.col-xs-12.fa {
+.col-sm-12.fa {
   line-height: 50px;
   display: block;
   margin: auto;
@@ -8937,8 +8989,9 @@ article .col-xs-6.fa, article article.service-request {
 
 article.service-request .label-default {
   display: block;
-  padding: .2em .6em .3em;
+  padding: 0 .6em .3em;
   font-size: 20px;
+  font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 1;
   color: inherit;
@@ -8947,6 +9000,17 @@ article.service-request .label-default {
   background: none;
   /* vertical-align: baseline; */
   /* border-radius: .25em; */ }
+
+.paragraph.color-_b0000 {
+  border-left: 10px solid #8b0000; }
+
+.paragraph.color-_08000 {
+  border-left: 10px solid #008000; }
+
+.paragraph.paragraph--type--status {
+  background: #eeeeee;
+  padding: 10px;
+  margin: 10px 0; }
 
 .page-header h1 {
   text-align: center;
@@ -8989,7 +9053,7 @@ article.service-request .label-default {
       height: inherit; } }
 
 .view__filters a,
-.view__filters div.form-item-field-status,
+.view__filters div.form-item-field-status-term,
 .view__filters div.form-item-field-category {
   display: none; }
 
@@ -9534,5 +9598,10 @@ body.toolbar-horizontal.toolbar-tray-open .hamburger {
 
 .toolbar-tray-vertical {
   width: 22rem !important; }
+
+.service-request__field-status-note .field__item {
+  background: #ddd;
+  margin: 10px 0;
+  padding: 10px; }
 
 /*# sourceMappingURL=masradix.style.css.map */
