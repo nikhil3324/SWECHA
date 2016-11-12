@@ -8838,7 +8838,7 @@ article.service-request footer {
   z-index: 4;
   margin: 0;
   position: absolute;
-  top: 20px;
+  top: 30px;
   display: block;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
   /* FF3.6-15 */
@@ -8848,14 +8848,18 @@ article.service-request footer {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   color: #fff; }
-  @media (max-width: 1199px) {
+  @media (max-width: 992px) {
+    .service-request h2 {
+      font-size: x-large;
+      height: 130px; } }
+  @media (max-width: 1200px) {
     .service-request h2 {
       font-size: x-large;
       height: 130px; } }
   @media (max-width: 991px) {
     .service-request h2 {
-      font-size: medium;
-      height: 120px; } }
+      font-size: large;
+      height: 150px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: medium;
