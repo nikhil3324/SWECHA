@@ -29,11 +29,13 @@ function masradix_preprocess_paragraph(&$variables) {
 
 function masradix_preprocess_node(&$variables) {
 
-  foreach ($variables['node']->field_status_notes as $item) {
-    if ($item->entity) {
-      $variables['mas_status']['label'] =   $item->entity->field_status_term[0]->entity->label();
-      $variables['mas_status']['icon']  =   $item->entity->field_status_term[0]->entity->field_status_icon->value;
-      $variables['mas_status']['color'] =   str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
+  if (isset($variables['node']->field_status_notes)) {
+    foreach ($variables['node']->field_status_notes as $item) {
+      if ($item->entity) {
+        $variables['mas_status']['label'] =   $item->entity->field_status_term[0]->entity->label();
+        $variables['mas_status']['icon']  =   $item->entity->field_status_term[0]->entity->field_status_icon->value;
+        $variables['mas_status']['color'] =   str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
+      }
     }
   }
 
