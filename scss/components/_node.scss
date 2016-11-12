@@ -18,7 +18,7 @@ article.service-request--teaser.focus {
 
 article.service-request--gallery {
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 30px 0 0 0;
   clear: both;
 }
 
@@ -80,9 +80,9 @@ article.service-request footer {
   top: 30px;
   display: block;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
-  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 75%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 75%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 72%, rgba(0,0,0,0) 65%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 65%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #fff;
 }
