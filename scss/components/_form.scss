@@ -25,7 +25,16 @@
 
 
 .leaflet-control-geocoder-form input {
+
+  @media (max-width: $screen-sm-max) {
+	width: 260px!important;
+  }
+  @media (max-width: $screen-xs-max) {
+	width: 200px!important;
+  }
+  @media (max-width: $screen-xs-min) {
 	width: 120px!important;
+  }
 }
 
 div#edit-body-0-format {

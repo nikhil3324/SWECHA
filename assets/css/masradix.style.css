@@ -8762,8 +8762,17 @@ span.site-name {
   input:hover {
     font-size: 16px; } }
 
-.leaflet-control-geocoder-form input {
-  width: 120px !important; }
+@media (max-width: 991px) {
+  .leaflet-control-geocoder-form input {
+    width: 260px !important; } }
+
+@media (max-width: 767px) {
+  .leaflet-control-geocoder-form input {
+    width: 200px !important; } }
+
+@media (max-width: 480px) {
+  .leaflet-control-geocoder-form input {
+    width: 120px !important; } }
 
 div#edit-body-0-format {
   display: none; }
@@ -9257,9 +9266,6 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
   width: 100%;
   height: 220px;
   position: relative; }
-
-#geolocation-nominatim-map {
-  height: 250px !important; }
 
 .timecontrol-date.utc {
   position: fixed;
