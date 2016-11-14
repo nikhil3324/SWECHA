@@ -21,7 +21,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
         wrapper: '<div class="sticky-wrapper waypoint" />'
       });
     }
-    
+
     // Add a close button to exposed filter.
     $('.bef-exposed-form').append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' +  Drupal.t('Close') + '</span></a>')
     if($('#map').length > 0) {
