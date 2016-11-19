@@ -11,8 +11,5 @@
   "support": {
     "issues": "https://github.com/markaspot/masradix",
     "source": "https://github.com/markaspot/masradix.git"
-  },
-  "require": {
-    "markaspot/api_key_auth": "*@dev"
   }
 }
