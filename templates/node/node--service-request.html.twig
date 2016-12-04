@@ -82,18 +82,14 @@ set cols = mas_status and content.field_category['#field_name'] ? 6 : 12
 %}
 
 
-{%
-set category_color = [
-  node.field_category.0.entity.field_category_hex.color|trim('#')
-]
-%}
+
 
 {%
 set category_icon = [
-node.field_category.0.entity.field_category_icon.value
+  node.field_category.0.entity.field_category_icon.value
+]
 
-]%}
-
+%}
 
 {{ attach_library('classy/node') }}
 <article {{attributes.addClass(classes).addClass('color-' ~ mas_status['color'])}}>
@@ -123,8 +119,8 @@ node.field_category.0.entity.field_category_icon.value
     {{ content|without('field_status_notes','field_category','field_request_image') }}
   </div>
   <div class="container">
-    <div class="service-request__field-status col-sm-{{ cols }} {{ 'color-'  ~  mas_status['color'] }}"><div class="field__item label label-default"><span class="fa fa-{{ mas_status['icon'] }} "></span><div class="field__item label label-default">{{ mas_status['label'] }}</div></div></div>
-    <div class="service-request__field-category col-sm-{{ cols }} {{  'color-'  ~  category_color[0] }}"><div class="field__item label label-default"><span class="fa fa-{{ category_icon[0] }}"></span>{{ content.field_category }}</div></div>
+    <div class="service-request__field-status col-sm-{{ cols }} {{ 'color-'  ~  mas_status['color'] }}"><div class="field__item label label-default"><span class="fa {{ mas_status['icon'] }} "></span><div class="field__item label label-default">{{ mas_status['label'] }}</div></div></div>
+    <div class="service-request__field-category col-sm-{{ cols }} {{  'color-'  ~  mas_category['color'] }}"><div class="field__item label label-default"><span class="fa {{ mas_category['icon'] }}"></span><div class="field__item label label-default">{{ mas_category['label'] }}</div></div></div>
   </div>
   <div>
     {{ content.field_status_notes }}

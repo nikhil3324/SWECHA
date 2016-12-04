@@ -29,6 +29,16 @@ function masradix_preprocess_paragraph(&$variables) {
 
 function masradix_preprocess_node(&$variables) {
 
+  if (isset($variables['node']->field_category)) {
+    foreach ($variables['node']->field_category as $item) {
+      if ($item->entity) {
+        $variables['mas_category']['label'] =   $item->entity->label();
+        $variables['mas_category']['icon']  =   $item->entity->field_category_icon->value;
+        $variables['mas_category']['color'] =   str_replace('#', '', $item->entity->field_category_hex->color);
+      }
+    }
+  }
+
   if (isset($variables['node']->field_status_notes)) {
     foreach ($variables['node']->field_status_notes as $item) {
       if ($item->entity) {
