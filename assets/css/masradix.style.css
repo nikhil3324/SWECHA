@@ -8843,7 +8843,7 @@ article.service-request footer {
   font-size: medium; }
 
 .service-request h2 {
-  height: 140px;
+  height: 163px;
   z-index: 4;
   margin: 0;
   position: absolute;
@@ -8864,11 +8864,11 @@ article.service-request footer {
   @media (max-width: 1200px) {
     .service-request h2 {
       font-size: x-large;
-      height: 130px; } }
+      height: 140px; } }
   @media (max-width: 991px) {
     .service-request h2 {
       font-size: large;
-      height: 150px; } }
+      height: 163px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: medium;

@@ -42,6 +42,10 @@ a,
   border-color: #f9f9f9;
 }
 
+.block.block--markaspotbuiltwithblock {
+  background: none;
+}
+
 .navbar-left .navbar-nav li:before {
   background-color: #1d84c3;
 }
