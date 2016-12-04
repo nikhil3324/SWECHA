@@ -54,7 +54,7 @@ article.service-request footer {
 }
 
 .service-request h2 {
-  height: 140px;
+  height: 163px;
 
   @media (max-width: $screen-md-min) {
     font-size: x-large;
@@ -63,12 +63,12 @@ article.service-request footer {
 
   @media (max-width: $screen-lg-min) {
     font-size: x-large;
-    height: 130px;
+    height: 140px;
   }
 
   @media (max-width: $screen-sm-max) {
     font-size: large;
-    height: 150px;
+    height: 163px;
   }
   @media (max-width: $screen-xs-max) {
     font-size: medium;
