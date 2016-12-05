@@ -23,5 +23,6 @@ libraries-override:
   file/drupal.file: false
 
 libraries:
+  - markaspot_map/font-awesome
   - masradix/base
 
