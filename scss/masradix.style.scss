@@ -22,6 +22,7 @@
 @import "base/mixins";
 @import "base/helpers";
 
+
 // Bootstrap reset and dependencies
 // -----------------------------------------------------------------------------
 @import "bootstrap/normalize";
@@ -73,10 +74,6 @@
 // -----------------------------------------------------------------------------
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
-
-// FontAwesome
-// -----------------------------------------------------------------------------
-@import "../../libraries/Font-Awesome/scss/font-awesome";
 
 // Bootswatch
 // -----------------------------------------------------------------------------
