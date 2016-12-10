@@ -38,7 +38,7 @@ article.service-request:hover img {
   transition: opacity .3s ease-in;
 }
 
-article.service-request--teaser .node__content,
+article.service-request--teaser .content,
 article.service-request footer {
   padding: 10px;
   margin: 0;
@@ -46,6 +46,7 @@ article.service-request footer {
 
 article.service-request footer {
  font-style: italic;
+ padding: 10px 0px;
  color: $gray-light;
 }
 
@@ -54,7 +55,7 @@ article.service-request footer {
 }
 
 .service-request h2 {
-  height: 163px;
+  height: 153px;
 
   @media (max-width: $screen-md-min) {
     font-size: x-large;
@@ -63,12 +64,12 @@ article.service-request footer {
 
   @media (max-width: $screen-lg-min) {
     font-size: x-large;
-    height: 140px;
+    height: 130px;
   }
 
   @media (max-width: $screen-sm-max) {
     font-size: large;
-    height: 163px;
+    height: 150px;
   }
   @media (max-width: $screen-xs-max) {
     font-size: medium;

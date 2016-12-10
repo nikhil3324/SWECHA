@@ -6832,20 +6832,21 @@ article.service-request:hover img {
   opacity: 0.6;
   transition: opacity .3s ease-in; }
 
-article.service-request--teaser .node__content,
+article.service-request--teaser .content,
 article.service-request footer {
   padding: 10px;
   margin: 0; }
 
 article.service-request footer {
   font-style: italic;
+  padding: 10px 0px;
   color: #bfbfbf; }
 
 .service-request--gallery h2 {
   font-size: medium; }
 
 .service-request h2 {
-  height: 163px;
+  height: 153px;
   z-index: 4;
   margin: 0;
   position: absolute;
@@ -6866,11 +6867,11 @@ article.service-request footer {
   @media (max-width: 1200px) {
     .service-request h2 {
       font-size: x-large;
-      height: 140px; } }
+      height: 130px; } }
   @media (max-width: 991px) {
     .service-request h2 {
       font-size: large;
-      height: 163px; } }
+      height: 150px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: medium;
