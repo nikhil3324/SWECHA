@@ -21,3 +21,12 @@ Update `browserSyncProxy` in **config.json**.
 
 #### Step 5
 Run the following command to compile Sass and watch for changes: `gulp`.
+
+#### Docksal
+Using Docksal, install bower and gulp:
+
+```
+$ fin exec npm install bower -g
+$ fin exec npm install gulp -g
+$ fin exec gulp
+```
