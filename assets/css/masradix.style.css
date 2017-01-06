@@ -6871,7 +6871,7 @@ article.service-request footer {
   @media (max-width: 991px) {
     .service-request h2 {
       font-size: large;
-      height: 150px; } }
+      height: 145px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: medium;
@@ -7224,8 +7224,8 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-horizontal #map.stuck {
 #edit-field-geolocation-0-map-container legend {
   display: none; }
 
-#edit-field-geolocation-0 .geolocation-map-canvas {
-  height: 320px !important; }
+div#geolocation-nominatim-map {
+  transition: all .5s linear; }
 
 fieldset#edit-field-geofield-wrapper.stuck legend {
   display: none; }
@@ -7314,6 +7314,23 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 }
 
 */
+.leaflet-control-locate span.fa.fa-map-marker {
+  border: 0; }
+
+.leaflet-control-locate a {
+  background: #d9edf7;
+  border: 0; }
+
+.leaflet-control-locate a:last-child {
+  border-radius: 0; }
+
+.leaflet-control-locate a:first-child {
+  border-radius: 0; }
+
+.leaflet-bottom.leaflet-right {
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box; }
+
 .grippie {
   position: fixed;
   top: 265px;
