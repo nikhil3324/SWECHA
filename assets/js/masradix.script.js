@@ -53,7 +53,19 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
         }
       });
     }
-  
+    // Map resizing:
+    var map = $('div#geolocation-nominatim-map');
+    var search  = $('.leaflet-control-geocoder.leaflet-bar input');
+    map.height('150px');
+    search.focus(function(){
+      map.height('400px');
+    });
+
+    search.blur(function(){
+      map.height('150px');
+    });
+
+
   });
   
   

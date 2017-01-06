@@ -35,9 +35,10 @@ body.toolbar-tray-open.toolbar-fixed.toolbar-vertical .leaflet-bottom {
   display:none
 }
 
-#edit-field-geolocation-0 .geolocation-map-canvas {
-  height: 320px !important;
+div#geolocation-nominatim-map {
+  transition: all .5s linear;
 }
+
 
 fieldset#edit-field-geofield-wrapper.stuck legend {
   display: none;
@@ -144,6 +145,28 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 
 */
 
+
+// Styles for locate button
+.leaflet-control-locate span.fa.fa-map-marker {
+    border: 0;
+}
+
+.leaflet-control-locate a {
+    background: #d9edf7;
+    border: 0; 
+}
+
+.leaflet-control-locate a:last-child {
+    border-radius: 0;
+}
+.leaflet-control-locate a:first-child {
+    border-radius: 0;
+}
+
+.leaflet-bottom.leaflet-right {
+    border: 0px solid rgba(0,0,0,0.2); 
+    background-clip: padding-box;
+}
 
 
 
