@@ -5479,6 +5479,7 @@ button.close {
     @media all and (transform-3d), (-webkit-transform-3d) {
       .carousel-inner > .item {
         transition: transform 0.6s ease-in-out;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         -ms-perspective: 1000px;
         -o-perspective: 1000px;
@@ -7340,10 +7341,46 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 .toolbar-tray-open .grippie {
   top: 320px; }
 
-.grippie span {
-  display: block;
-  margin: auto;
-  cursor: pointer; }
+div.log {
+  position: absolute;
+  display: none;
+  z-index: 800;
+  width: 220px;
+  background: rgba(0, 0, 0, 0.63);
+  list-style: none;
+  height: 100%; }
+
+div.log_header {
+  position: absolute;
+  width: 220px;
+  list-style: none; }
+  div.log_header span.left {
+    font-family: monospace;
+    color: #fff;
+    margin: 60px; }
+  div.log_header span.right {
+    font-family: monospace;
+    color: #fff; }
+
+ul.log_list {
+  top: 20px;
+  position: absolute;
+  color: #fff;
+  list-style: none;
+  padding-left: 50px;
+  font-family: monospace;
+  height: 100%;
+  overflow: scroll; }
+
+ul.log_list .time {
+  display: inline-block;
+  margin: 2px 10px;
+  width: 100px; }
+
+ul.log_list .count {
+  display: inline-block;
+  text-align: right;
+  width: 20px; }
 
 /*-------------------------------*/
 /*           VARIABLES           */

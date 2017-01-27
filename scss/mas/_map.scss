@@ -182,9 +182,54 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 
 }
 
-.grippie span {
-  display: block;
-  margin: auto;
-  cursor: pointer;
+div.log{
+  position: absolute;
+  display:none;
+  z-index: 800;
+  width: 220px;  
+  background: rgba(0, 0, 0, 0.63);
+  list-style: none;
+  height: 100%;
 }
 
+div.log_header{
+  position: absolute;
+  width: 220px;  
+  list-style: none;
+  span.left {
+      font-family: monospace;
+      color: #fff;
+      margin: 60px;
+  }
+
+  span.right {
+    font-family: monospace;
+    color: #fff;
+  }
+
+}
+
+
+ul.log_list {
+  top: 20px;
+  position: absolute;
+  color: #fff;
+  list-style: none;
+  padding-left: 50px;
+  font-family:monospace;
+  height: 100%;
+  overflow:scroll;
+}
+
+ul.log_list .time {
+  display: inline-block;
+  margin: 2px 10px;
+  width: 100px;
+}
+
+
+ul.log_list .count {
+  display: inline-block;
+  text-align: right;
+  width: 20px;
+}
