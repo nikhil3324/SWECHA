@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * Theme functions
+ * Theme functions.
  */
 
 // Include all files from the includes directory.
@@ -10,6 +11,9 @@ foreach (glob($includes_path) as $filename) {
   require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
 
+/**
+ * Implements hook_preprocess_field().
+ */
 function masradix_preprocess_field(&$variables, $hook) {
 
   $element = $variables['element'];
@@ -19,22 +23,28 @@ function masradix_preprocess_field(&$variables, $hook) {
   }
 }
 
+/**
+ * Implements hook_preprocess_entity().
+ */
 function masradix_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
   $variables['status'] = $paragraph->status_note;
   $variables['statusColor'] = str_replace('#', '', $paragraph->field_status_term[0]->entity->field_status_hex->color);
 
-  // tutorial https://www.webwash.net/display-paragraphs-edge-to-edge-using-bootstrap-in-drupal-8.
+  // Tutorial https://www.webwash.net/display-paragraphs-edge-to-edge-using-bootstrap-in-drupal-8.
 }
 
+/**
+ * Implements hook_preprocess_node().
+ */
 function masradix_preprocess_node(&$variables) {
 
   if (isset($variables['node']->field_category)) {
     foreach ($variables['node']->field_category as $item) {
       if ($item->entity) {
-        $variables['mas_category']['label'] =   $item->entity->name->value;
-        $variables['mas_category']['icon']  =   $item->entity->field_category_icon->value;
-        $variables['mas_category']['color'] =   str_replace('#', '', $item->entity->field_category_hex->color);
+        $variables['mas_category']['label'] = $item->entity->name->value;
+        $variables['mas_category']['icon']  = $item->entity->field_category_icon->value;
+        $variables['mas_category']['color'] = str_replace('#', '', $item->entity->field_category_hex->color);
       }
     }
   }
@@ -42,9 +52,9 @@ function masradix_preprocess_node(&$variables) {
   if (isset($variables['node']->field_status_notes)) {
     foreach ($variables['node']->field_status_notes as $item) {
       if ($item->entity) {
-        $variables['mas_status']['label'] =   $item->entity->field_status_term[0]->entity->name->value;
-        $variables['mas_status']['icon']  =   $item->entity->field_status_term[0]->entity->field_status_icon->value;
-        $variables['mas_status']['color'] =   str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
+        $variables['mas_status']['label'] = $item->entity->field_status_term[0]->entity->name->value;
+        $variables['mas_status']['icon']  = $item->entity->field_status_term[0]->entity->field_status_icon->value;
+        $variables['mas_status']['color'] = str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
       }
     }
   }

@@ -41,7 +41,6 @@ db_offline ? 'db-offline',
   <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
-      <js-placeholder token="{{ placeholder_token|raw }}">
         </head>
 <body{{ attributes.addClass(body_classes) }}>
 <a href="#main-content" class="visually-hidden focusable">
@@ -52,6 +51,8 @@ db_offline ? 'db-offline',
   {{ page }}
   {{ page_bottom }}
 </div>
+<js-placeholder token="{{ placeholder_token|raw }}">
 <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
 </body>
 </html>
