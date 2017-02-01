@@ -6566,10 +6566,12 @@ span.site-name {
   float: none; }
 
 img.site-logo {
+  float: none;
   width: 11%;
   margin: 0 auto; }
 
 span.site-name {
+  float: none;
   display: block;
   margin: 5px auto;
   font-size: smaller; }
@@ -7037,6 +7039,8 @@ article.service-request .label-default {
     .page-header h1 {
       font-size: large;
       margin: 0; } }
+  .page-header h1 .navbar-brand > img {
+    display: block; }
 
 .view-id-stats span.badge {
   display: inline-block;
