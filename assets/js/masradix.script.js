@@ -56,7 +56,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
     var search  = $('.leaflet-control-geocoder.leaflet-bar input');
-    map.height('150px');
+    map.height('180px');
     search.focus(function(){
       map.height('400px');
     });

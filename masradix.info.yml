@@ -21,6 +21,8 @@ regions:
 
 libraries-override:
   file/drupal.file: false
+  radix/bootstrap: false
+  radix/style: false
 
 libraries:
   - markaspot_map/font-awesome

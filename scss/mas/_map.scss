@@ -146,6 +146,10 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 */
 
 
+.leaflet-control-geocoder {
+  background: #fff!important;
+}
+
 // Styles for locate button
 .leaflet-control-locate span.fa.fa-map-marker {
     border: 0;
@@ -164,7 +168,7 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 }
 
 .leaflet-bottom.leaflet-right {
-    border: 0px solid rgba(0,0,0,0.2); 
+    border: 0 solid rgba(0,0,0,0.2);
     background-clip: padding-box;
 }
 
