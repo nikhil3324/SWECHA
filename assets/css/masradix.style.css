@@ -7322,10 +7322,6 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 .leaflet-control-locate span.fa.fa-map-marker {
   border: 0; }
 
-.leaflet-control-locate a {
-  background: #d9edf7;
-  border: 0; }
-
 .leaflet-control-locate a:last-child {
   border-radius: 0; }
 

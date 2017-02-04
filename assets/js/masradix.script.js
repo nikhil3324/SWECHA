@@ -53,16 +53,18 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
         }
       });
     }
+
+
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
     var search  = $('.leaflet-control-geocoder.leaflet-bar input');
-    map.height('180px');
+    map.height('210px');
     search.focus(function(){
       map.height('400px');
     });
 
     search.blur(function(){
-      map.height('150px');
+      map.height('2100px');
     });
 
 
@@ -72,9 +74,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   //  Handle Result filter click
   $( document ).ajaxStop(function() {
     $('[data-toggle="filter"]').click(function () {
-      
       $('.view__filters').toggleClass('exposed ajax');
-      
     });
     
     // Add a button to toggle map display;

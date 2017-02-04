@@ -16,6 +16,18 @@ body {
   border-bottom-color: #ffffff;
 }
 
+
+.leaflet-control-locate {
+  border-color: #a3e5ff !important;
+}
+
+.btn.btn-success.btn-file,
+.leaflet-control-locate a {
+  color: #7bceff;
+  background-color: #055a8e;
+}
+
+
 #sidebar-wrapper,
 .button,
 .btn-default,
@@ -30,7 +42,7 @@ a,
 .link,
 .btn-default:hover,
 .btn-default:focus{
-  color: #23aeff;
+  color: #7bceff;
 }
 
 .shariff-button a,
@@ -62,12 +74,12 @@ a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: #23aeff;
+  color: #7bceff;
 }
 .btn-default,
 a:active,
 .link:active {
-  color: #23aeff;
+  color: #7bceff;
 }
 
 #footer {
@@ -76,7 +88,7 @@ a:active,
 
 .site-name,
 .site-name a {
-  color: #23aeff;
+  color: #7bceff;
 }
 
 
