@@ -31,7 +31,7 @@ body {
 #sidebar-wrapper,
 .button,
 .btn-default,
-.block--masradix-markaspotstageaddblock p a {
+.add-block p a {
   background-color: #055a8e;
   background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
   background-image: linear-gradient(to bottom, #055a8e 0%, #055a8e 100%);
@@ -47,7 +47,7 @@ a,
 
 .shariff-button a,
 .mas-action a,
-.block.block--masradix-markaspotstageaddblock,
+.add-block,
 .region-sidebar .block,
 .region-sidebar li.list-group-item {
   background-color: #eeeeee;

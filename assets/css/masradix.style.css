@@ -6620,7 +6620,7 @@ span.site-name {
   font-size: 48px;
   color: #666; }
 
-.block--masradix-markaspotstageaddblock {
+.add-block {
   margin: 0; }
 
 .round-button.col-xs-3 item {
@@ -6636,7 +6636,7 @@ span.site-name {
   display: block;
   clear: both; }
 
-.block--masradix-markaspotstageaddblock p a {
+.add-block p a {
   display: block;
   text-align: center;
   line-height: 36px;
@@ -6648,11 +6648,11 @@ span.site-name {
   border: 3px solid #666;
   border-radius: 25px 25px 25px 25px; }
   @media (max-width: 480px) {
-    .block--masradix-markaspotstageaddblock p a {
+    .add-block p a {
       font-size: small;
       line-height: 26px; } }
 
-.block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
+.add-block p a:hover {
   font-weight: 700;
   background: #222;
   text-decoration: none; }

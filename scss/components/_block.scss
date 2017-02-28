@@ -91,7 +91,7 @@ span.site-name {
 
 // Front page add request.
 
-.block--masradix-markaspotstageaddblock {
+.add-block {
     margin: 0;
 }
 
@@ -111,7 +111,7 @@ span.site-name {
   clear: both
 }
 
-.block--masradix-markaspotstageaddblock p a {
+.add-block p a {
   display: block;
   text-align: center;
   line-height: 36px;
@@ -130,7 +130,7 @@ span.site-name {
   }
 }
 
-.block.block-markaspot-blocks.block-markaspot-base-add-block p a:hover {
+.add-block p a:hover {
   font-weight: 700;
   background: #222;
   text-decoration: none;
