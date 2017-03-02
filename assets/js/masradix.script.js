@@ -13,6 +13,24 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
   $(document).ready(function() {
 
+
+
+    var slideout = new Slideout({
+      'panel': document.getElementById('page-content-wrapper'),
+      'menu': document.getElementById('menu'),
+      'padding': 250,
+      'tolerance': 170,
+      'duration': 200,
+      'easing': 'cubic-bezier(.32,2,.55,.27)'
+    });
+
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle();
+    });
+
+
+
     // Sticky map on top.
     var $stickyElement = $('#map');
     if ($stickyElement.length) {

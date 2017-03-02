@@ -1,160 +1,44 @@
-// Styles for sidenav
-// --------------------------------------------------
-@import "https://daneden.github.io/animate.css/animate.min.css"; /*-------------------------------*/
-/*           VARIABLES           */
-/*-------------------------------*/
-
-.nav .open > a {
-  background-color: transparent;
-}
-
-.nav .open > a:hover {
-  background-color: transparent;
-}
-
-.nav .open > a:focus {
-  background-color: transparent;
-}
-
-/*-------------------------------*/
-/*           Wrappers            */
-/*-------------------------------*/
-#wrapper {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  padding-left: 0;
-  transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-  padding-left: 250px;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-  margin-right: -250px;
-  position: absolute;
-}
-
-#sidebar-wrapper {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  background: #1a1a1a;
+body {
+  width: 100%;
   height: 100%;
-  left: 250px;
-  margin-left: -250px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transition: all 0.5s ease;
-  width: 0;
-  z-index: 1000;
 }
 
-#sidebar-wrapper::-webkit-scrollbar {
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
   display: none;
 }
 
-#page-content-wrapper {
-  width: 95%;
-}
-
-/*-------------------------------*/
-/*     Sidebar nav styles        */
-/*-------------------------------*/
-.block-system-branding-block {
-  min-height: 100px;
-}
-
-.navbar-left .navbar-nav {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-  width: 250px;
-}
-
-.navbar-left ul li.facet-item,
-.navbar-left .navbar-nav li {
-  display: inline-block;
-  line-height: 20px;
-  position: relative;
-  width: 100%;
-}
-
-.navbar-left ul li.facet-item:before,
-.navbar-left .navbar-nav li:before {
-  background-color: #000;
-  content: '';
-  height: 100%;
+.slideout-menu-left {
   left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 3px;
-  z-index: -1;
 }
 
-.navbar-left ul li.facet-item:hover:before,
-.navbar-left .navbar-nav li:hover:before {
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 100%;
+.slideout-menu-right {
+  right: 0;
 }
 
-.navbar-left ul li.facet-item a,
-.navbar-left .navbar-nav li a {
-  display: block;
-  padding: 10px 15px 10px 20px;
-  text-decoration: none;
-}
-
-.navbar-left ul li.open.facet-item:hover:before,
-.navbar-left .navbar-nav li.open:hover before {
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 100%;
-}
-
-li.facet-item label {
-  padding: 10px;
-  color: #fff;
-  font-weight: normal;
-}
-
-li.facet-item input {
-  margin: 0 0 0 10px;
-}
-
-.navbar-left .navbar-nav .dropdown-menu {
-  background-color: #222222;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
+.slideout-panel {
   position: relative;
-  width: 100%;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
 }
 
-.navbar-fixed-top {
-  top: inherit;
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
 }
 
-.navbar-left .navbar-nav li a:hover, .navbar-left .navbar-nav li a:active, .navbar-left .navbar-nav li a:focus, .navbar-left .navbar-nav li.open a:hover, .navbar-left .navbar-nav li.open a:active, .navbar-left .navbar-nav li.open a:focus {
-  background-color: transparent;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.navbar-left .navbar-nav > .sidebar-brand {
-  font-size: 20px;
-  height: 65px;
-  line-height: 44px;
+.slideout-open .slideout-menu {
+  display: block;
 }
 
 /*-------------------------------*/
@@ -314,26 +198,100 @@ body.toolbar-horizontal.toolbar-tray-open .hamburger {
 }
 
 /*-------------------------------*/
-/*          Dark Overlay         */
+/*     Sidebar nav styles        */
 /*-------------------------------*/
-.overlay {
-  position: fixed;
-  display: none;
+.block-system-branding-block {
+  min-height: 100px;
+}
+
+.navbar-left .navbar-nav {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  width: 250px;
+}
+
+.navbar-left ul li.facet-item,
+.navbar-left .navbar-nav li {
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
   width: 100%;
+}
+
+.navbar-left ul li.facet-item:before,
+.navbar-left .navbar-nav li:before {
+  background-color: #000;
+  content: '';
   height: 100%;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
 }
 
-.toolbar-horizontal .overlay {
-  z-index: 1000;
+.navbar-left ul li.facet-item:hover:before,
+.navbar-left .navbar-nav li:hover:before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
 }
 
-.toolbar-tray-vertical {
-  width: 22rem !important;
+.navbar-left ul li.facet-item a,
+.navbar-left .navbar-nav li a {
+  display: block;
+  padding: 10px 15px 10px 20px;
+  text-decoration: none;
 }
 
+.navbar-left ul li.open.facet-item:hover:before,
+.navbar-left .navbar-nav li.open:hover before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
+}
+
+li.facet-item label {
+  padding: 10px;
+  color: #fff;
+  font-weight: normal;
+}
+
+li.facet-item input {
+  margin: 0 0 0 10px;
+}
+
+.navbar-left .navbar-nav .dropdown-menu {
+  background-color: #222222;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.navbar-fixed-top {
+  top: inherit;
+}
+
+.navbar-left .navbar-nav li a:hover, .navbar-left .navbar-nav li a:active, .navbar-left .navbar-nav li a:focus, .navbar-left .navbar-nav li.open a:hover, .navbar-left .navbar-nav li.open a:active, .navbar-left .navbar-nav li.open a:focus {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-left .navbar-nav > .sidebar-brand {
+  font-size: 20px;
+  height: 65px;
+  line-height: 44px;
+}
+
+// Box on the left side:
+div#page-content-wrapper {
+  box-shadow: 10px 3px 6px rgb(0, 0, 0), 0 3px 6px rgba(0,0,0,0.23);
+}
