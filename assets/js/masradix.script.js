@@ -18,10 +18,8 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     var slideout = new Slideout({
       'panel': document.getElementById('page-content-wrapper'),
       'menu': document.getElementById('menu'),
-      'padding': 250,
-      'tolerance': 170,
-      'duration': 200,
-      'easing': 'cubic-bezier(.32,2,.55,.27)'
+      'padding': 256,
+      'tolerance': 70
     });
 
     // Toggle button
