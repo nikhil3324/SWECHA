@@ -111,11 +111,9 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     var search = $('.leaflet-control-geocoder.leaflet-bar input');
     var locateControl = $('.leaflet-control-locate a');
     map.height('210px');
-    locateControl.click(function () {
-      map.height('400px');
-    });
-    search.focus(function () {
-      map.height('400px');
+
+    search.click(function () {
+      map.animate({height:'400px'}, 100);
     });
 
     search.blur(function () {

@@ -6776,6 +6776,10 @@ span.site-name {
   .leaflet-control-geocoder-form input {
     width: 120px !important; } }
 
+#locateMe {
+  text-decoration: underline;
+  cursor: pointer; }
+
 div#edit-body-0-format,
 input#edit-preview,
 input.form-type-file,
@@ -6784,7 +6788,8 @@ input.form-type-file,
 
 .image-widget {
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  float: none; }
 
 .image-preview {
   margin: 10px 0;
@@ -7427,9 +7432,6 @@ ul.log_list .count {
 
 #sidebar-wrapper::-webkit-scrollbar {
   display: none; }
-
-#page-content-wrapper {
-  width: 95%; }
 
 /*-------------------------------*/
 /*     Sidebar nav styles        */

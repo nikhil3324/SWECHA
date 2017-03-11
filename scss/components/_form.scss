@@ -23,7 +23,6 @@
   }
 }
 
-
 .leaflet-control-geocoder-form input {
 
   @media (max-width: $screen-sm-max) {
@@ -37,6 +36,11 @@
   }
 }
 
+#locateMe {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 div#edit-body-0-format,
 input#edit-preview,
 input.form-type-file,
@@ -47,6 +51,7 @@ input.form-type-file,
 .image-widget {
   padding-left: 0;
   padding-right: 0;
+  float:none
 }
 
 .image-preview {
