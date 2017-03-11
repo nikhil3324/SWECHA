@@ -6,7 +6,7 @@
 }
 
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
   select:focus,
   textarea:focus,
   input:focus {
@@ -15,7 +15,7 @@
 }
 
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
   select:hover,
   textarea:hover,
   input:hover {
@@ -27,43 +27,48 @@
 .leaflet-control-geocoder-form input {
 
   @media (max-width: $screen-sm-max) {
-	width: 260px!important;
+    width: 260px!important;
   }
   @media (max-width: $screen-xs-max) {
-	width: 200px!important;
+    width: 200px!important;
   }
   @media (max-width: $screen-xs-min) {
-	width: 120px!important;
+    width: 120px!important;
   }
 }
 
-div#edit-body-0-format {
-    display: none;
-}
-
-
-
-
-input#edit-preview {
-  display: none;
-}
-
-form .form-item-field-request-image-0 .btn, form .media-widget > a {
-  display: inline-block;
-  @media (max-width: 767px) {
-      width: 40px !important;
-  }
-}
-
+div#edit-body-0-format,
+input#edit-preview,
+input.form-type-file,
 .file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button{
   display:none!important;
 }
 
+.image-widget {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.image-preview {
+  margin: 10px 0;
+  max-width: 250px;
+}
+
+#edit-field-request-image-wrapper input {
+  margin: 10px 0;
+
+}
+
+input#edit-field-request-image-0-upload,
 input[name="field_request_image_0_upload_button"]{
   display:none!important
 }
 
-
 p#edit-field-request-image-0-upload--description {
-    display: none;
+  visibility: hidden;
+  max-height: 50px;
+}
+
+p#edit-field-request-image-0-upload--description .visible {
+  visibility: visible!important;
 }

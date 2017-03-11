@@ -11,27 +11,5 @@
   "support": {
     "issues": "https://github.com/markaspot/masradix",
     "source": "https://github.com/markaspot/masradix.git"
-  },
-  "require": {
-    "kartik-v/bootstrap-fileinput": "dev-master"
-  },
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "kartik-v/bootstrap-fileinput",
-        "version": "master",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/kartik-v/bootstrap-fileinput/archive/master.zip",
-          "type": "zip"
-        },
-        "require": {
-          "composer/installers": "~1.0"
-        }
-      }
-    }
-  ]
-
-
+  }
 }

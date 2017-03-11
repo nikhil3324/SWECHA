@@ -6776,26 +6776,33 @@ span.site-name {
   .leaflet-control-geocoder-form input {
     width: 120px !important; } }
 
-div#edit-body-0-format {
-  display: none; }
-
-input#edit-preview {
-  display: none; }
-
-form .form-item-field-request-image-0 .btn, form .form-item-field-request-image-0 .media-widget > a, form .media-widget > a {
-  display: inline-block; }
-  @media (max-width: 767px) {
-    form .form-item-field-request-image-0 .btn, form .form-item-field-request-image-0 .media-widget > a, form .media-widget > a {
-      width: 40px !important; } }
-
+div#edit-body-0-format,
+input#edit-preview,
+input.form-type-file,
 .file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button {
   display: none !important; }
 
+.image-widget {
+  padding-left: 0;
+  padding-right: 0; }
+
+.image-preview {
+  margin: 10px 0;
+  max-width: 250px; }
+
+#edit-field-request-image-wrapper input {
+  margin: 10px 0; }
+
+input#edit-field-request-image-0-upload,
 input[name="field_request_image_0_upload_button"] {
   display: none !important; }
 
 p#edit-field-request-image-0-upload--description {
-  display: none; }
+  visibility: hidden;
+  max-height: 50px; }
+
+p#edit-field-request-image-0-upload--description .visible {
+  visibility: visible !important; }
 
 @media (min-width: 768px) {
   .navbar-nav {

@@ -5,6 +5,8 @@
  * Theme functions.
  */
 
+use Drupal\Core\Render\Element;
+
 // Include all files from the includes directory.
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
@@ -12,7 +14,7 @@ foreach (glob($includes_path) as $filename) {
 }
 
 /**
- * Implements hook_preprocess_field().
+ * Implements theme_preprocess_field().
  */
 function masradix_preprocess_field(&$variables, $hook) {
 
@@ -21,6 +23,55 @@ function masradix_preprocess_field(&$variables, $hook) {
   if ($element['#field_name'] == 'field_request_image') {
     $variables['items'][0]['content']['#options']['attributes']['class'][] = '';
   }
+}
+
+/**
+ * Implements theme_preprocess_form_element().
+ */
+function masradix_preprocess_form_element(&$variables) {
+  $element = &$variables['element'];
+
+  if (!empty($variables['label'])) {
+    if (!empty($element['#label_prefix'])) {
+      $variables['label']['#prefix'] = $element['#label_prefix'];
+    }
+    if (!empty($element['#label_suffix'])) {
+      $variables['label']['#suffix'] = $element['#label_suffix'];
+    }
+  }
+}
+
+/**
+ * Prepares variables for image widget templates.
+ *
+ * Default template: image-widget.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: A render element representing the image field widget.
+ */
+function masradix_preprocess_image_widget(&$variables) {
+  $element = $variables['element'];
+  $variables['attributes'] = array(
+    'class' => array(
+      'col-lg-12 col-sm-12 col-12',
+      'image-widget',
+      'js-form-managed-file',
+      'form-managed-file',
+      'clearfix',
+    ),
+  );
+
+  if (!empty($element['fids']['#value'])) {
+    $file = reset($element['#files']);
+    $element['file_' . $file->id()]['filename']['#suffix'] = ' <span class="file-size badge">(' . format_size($file->getSize()) . ')</span> ';
+  }
+
+  $variables['data'] = array();
+  foreach (Element::children($element) as $child) {
+    $variables['data'][$child] = $element[$child];
+  }
+
 }
 
 /**
@@ -35,7 +86,7 @@ function masradix_preprocess_paragraph(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_node().
+ * Implements theme_preprocess_node().
  */
 function masradix_preprocess_node(&$variables) {
 
