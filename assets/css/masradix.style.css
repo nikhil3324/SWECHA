@@ -7397,13 +7397,6 @@ ul.log_list .count {
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/
-#wrapper {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  padding-left: 0;
-  transition: all 0.5s ease; }
-
 #wrapper.toggled {
   padding-left: 250px; }
 
@@ -7415,16 +7408,13 @@ ul.log_list .count {
   position: absolute; }
 
 #sidebar-wrapper {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  transition: all 0.2s ease;
   background: #1a1a1a;
   height: 100%;
   left: 250px;
   margin-left: -250px;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all 0.5s ease;
   width: 0;
   z-index: 1000; }
 
