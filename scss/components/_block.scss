@@ -19,9 +19,13 @@ img.site-logo {
 
 
 span.site-name {
+  display:none
+}
+
+span.site-slogan {
   float: none;
   display: block;
-  margin: 5px auto;
+  margin: 8px auto;
   font-size: smaller;
 }
 
