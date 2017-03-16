@@ -7,7 +7,9 @@
 // Taking care of flickering controls on touch devices.
 // https://github.com/Leaflet/Leaflet/issues/1198
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
-
+document.ontouchmove = function(event){
+  event.preventDefault();
+}
 
 (function ($, Drupal, window, document) {
 
