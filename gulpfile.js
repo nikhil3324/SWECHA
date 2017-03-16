@@ -1,6 +1,5 @@
 // Include gulp.
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
 var config = require('./config.json');
 
 // Include plugins.
@@ -43,7 +42,6 @@ gulp.task('css', function() {
         .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.css.dest))
-        .pipe(browserSync.reload({ stream: true, match: '**/*.css' }));
 });
 
 // Compress images.
@@ -72,9 +70,7 @@ gulp.task('watch', function() {
 
 // Static Server + Watch
 gulp.task('serve', ['css', 'fonts', 'watch'], function() {
-    browserSync.init({
-        proxy: config.browserSyncProxy
-    });
+
 });
 
 // Run drush to clear the theme registry.

@@ -35,21 +35,21 @@ span.site-slogan {
 
 // Info Block
 .block--markaspotinformationblock {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 // User Login to navbar.
 
 .block.block--userlogin {
-    clear:both;
-    margin: 80px 20px 0 20px;
+  clear:both;
+  margin: 80px 20px 0 20px;
 }
 
 .block--userlogin ul {
-    clear: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  clear: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -96,7 +96,7 @@ span.site-slogan {
 // Front page add request.
 
 .add-block {
-    margin: 0;
+  margin: 0;
 }
 
 .round-button.col-xs-3 item {
@@ -122,21 +122,17 @@ span.site-slogan {
   padding: 5px;
   height: 50px;
   color: #fff;
-  font-weight: 700;
   margin: 30px 30px 30px 30px;
-  border: 3px solid #666;
+  border: 1px solid #666;
   -moz-border-radius: 25px 25px 25px 25px;
   -webkit-border-radius: 25px 25px 25px 25px;
   border-radius: 25px 25px 25px 25px;
   @media (max-width: $screen-xs-min) {
     font-size: small;
-    line-height: 26px;
   }
 }
 
 .add-block p a:hover {
-  font-weight: 700;
-  background: #222;
   text-decoration: none;
 }
 
@@ -207,13 +203,13 @@ span.site-slogan {
 
 .shariff li a,
 .mas-action li a {
-    background: $gray-lighter;
+  background: $gray-lighter;
 }
 
 .mas-action .orientation-vertical li {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
 }
 .mas-action li {
   height: 35px;

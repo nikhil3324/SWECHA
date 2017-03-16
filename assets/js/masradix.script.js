@@ -7,12 +7,12 @@
 // Taking care of flickering controls on touch devices.
 // https://github.com/Leaflet/Leaflet/issues/1198
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
-document.ontouchmove = function(event){
-  event.preventDefault();
-}
 
 (function ($, Drupal, window, document) {
-
+  document.ontouchmove = function(event){
+    console.log(event);
+    event.preventDefault();
+  }
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
   $(document).on('change', ':file', function () {
     var input = $(this),
@@ -35,6 +35,14 @@ document.ontouchmove = function(event){
 
     });
 
+    $('.button-add p a').click(function(e){
+      if (!$(".page--logged-in")[0]){
+        e.preventDefault();
+        hamburger_cross();
+        $('#wrapper').toggleClass('toggled');
+      }
+    });
+
 
     // NavSidebar scripts
     var trigger = $('.hamburger'),
@@ -45,20 +53,12 @@ document.ontouchmove = function(event){
     });
 
     function hamburger_cross() {
-      var $map = $('#map');
-
       if (isClosed == true) {
-        if ($map.is(':hidden')) {
-          $map.toggle("fold");
-        }
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
       }
       else {
-        if ($map.is(':visible')) {
-          $map.toggle("fold");
-        }
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
