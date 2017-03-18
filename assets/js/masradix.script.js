@@ -3,13 +3,12 @@
  * Custom scripts for theme.
  */
 
-
 // Taking care of flickering controls on touch devices.
 // https://github.com/Leaflet/Leaflet/issues/1198
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
 (function ($, Drupal, window, document) {
-  document.ontouchmove = function(event){
+  document.ontouchmove = function (event) {
     console.log(event);
     event.preventDefault();
   }
@@ -35,16 +34,15 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
     });
 
-    $('.button-add p a').click(function(e){
-      if (!$(".page--logged-in")[0]){
+    $('.button-add p a').click(function (e) {
+      if (!$(".page--logged-in")[0]) {
         e.preventDefault();
         hamburger_cross();
         $('#wrapper').toggleClass('toggled');
       }
     });
 
-
-    // NavSidebar scripts
+    // NavSidebar scripts.
     var trigger = $('.hamburger'),
       isClosed = false;
 
@@ -54,11 +52,18 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
     function hamburger_cross() {
       if (isClosed == true) {
+        document.ontouchmove = function (event) {
+          return true;
+        };
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
+
       }
       else {
+        document.ontouchmove = function (event) {
+          event.preventDefault();
+        };
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
@@ -106,7 +111,6 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
       });
     }
 
-
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
     var form = $('.node-service-request-form input');
@@ -125,18 +129,15 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
       map.height('210px');
     });
 
-
   });
 
-
-  //  Handle Result filter click
+  // Handle Result filter click.
   $(document).ajaxStop(function () {
     $('[data-toggle="filter"]').click(function () {
       $('.view__filters').toggleClass('exposed ajax');
     });
 
-    // Add a button to toggle map display;
-
+    // Add a button to toggle map display;.
     $('#map').once().each(function () {
       var $stickyElement = $('#map');
       $('.mas-button .fa-map').click(function () {
@@ -147,20 +148,16 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
   });
 
-
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled');
   });
 
-  // Footer
-
-
+  // Footer.
   /*
    $(".form-type-file").fileinput({
    uploadUrl: '?element_parents=field_request_image/widget/0&ajax_form=1&_wrapper_format=drupal_ajax&_wrapper_format=drupal_ajax',
    uploadAsync: true
    });
    */
-
 
 })(jQuery, Drupal, this, this.document);
