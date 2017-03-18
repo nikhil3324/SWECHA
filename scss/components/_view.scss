@@ -158,6 +158,16 @@ span.result-filter {
   clear: left;
 }
 
+
+/*
+Category and Status statistics
+ */
+.list-group-item span.fa {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+
 a.scroll-to-top,
 a.scroll-to-top span {
   display: none;

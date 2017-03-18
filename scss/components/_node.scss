@@ -2,6 +2,9 @@
 // -----------------------------------------------------------------------------
 article.service-request--teaser {
   background: $gray-lighter;
+  box-shadow:
+    0 1px 3px rgba(0,0,0, 0.12),
+    0 1px 2px rgba(0,0,0, 0.24);
 }
 
 .service-request__field-category .label-default,
@@ -54,6 +57,12 @@ article.service-request footer {
   font-size: medium;
 }
 
+.service-request--gallery img {
+  box-shadow:
+    0 1px 3px rgba(0,0,0, 0.12),
+    0 1px 2px rgba(0,0,0, 0.24);
+}
+
 .service-request h2 {
   height: 153px;
 
@@ -72,7 +81,7 @@ article.service-request footer {
     height: 145px;
   }
   @media (max-width: $screen-xs-max) {
-    font-size: medium;
+    font-size: x-small;
     height: 60px;
   }
   z-index: 4;
@@ -86,6 +95,7 @@ article.service-request footer {
   background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 72%,rgba(0,0,0,0) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #fff;
+  width: 60%;
 }
 
 
