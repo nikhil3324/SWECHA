@@ -8,10 +8,7 @@
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
 (function ($, Drupal, window, document) {
-  document.ontouchmove = function (event) {
-    console.log(event);
-    event.preventDefault();
-  }
+
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
   $(document).on('change', ':file', function () {
     var input = $(this),
