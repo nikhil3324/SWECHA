@@ -6918,7 +6918,7 @@ article.service-request footer {
 
 article.service-request footer {
   font-style: italic;
-  padding: 10px 0px;
+  margin: 10px;
   color: #bfbfbf; }
 
 .service-request--gallery h2 {
