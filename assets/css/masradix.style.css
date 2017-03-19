@@ -5873,6 +5873,10 @@ button.close {
   margin-right: 3pt;
   /* LTR */ }
 
+.toolbar .toolbar-bar, .toolbar .toolbar-tray {
+  position: relative;
+  z-index: 9000; }
+
 .comment {
   margin-top: 15px; }
   .comment .user-picture {
@@ -6891,7 +6895,7 @@ article.service-request--teaser {
 
 article.service-request--teaser.focus {
   background: #fff;
-  transition: all 0.2s ease; }
+  transition: all 0.1s ease; }
 
 article.service-request--gallery {
   padding: 0;
@@ -6905,11 +6909,11 @@ article.service-request--teaser {
 
 article.service-request img {
   opacity: 1;
-  transition: opacity .3s ease-in; }
+  transition: opacity .1s ease-in; }
 
 article.service-request:hover img {
   opacity: 0.6;
-  transition: opacity .3s ease-in; }
+  transition: opacity .1s ease-in; }
 
 article.service-request--teaser .content,
 article.service-request footer {
@@ -6937,7 +6941,7 @@ article.service-request footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, transparent 72%, transparent 65%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, transparent 45%, transparent 65%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
@@ -6959,6 +6963,9 @@ article.service-request footer {
     .service-request h2 {
       font-size: x-small;
       height: 60px; } }
+
+.service-request h2 a:hover {
+  text-decoration: none; }
 
 .service-request h4.field__label {
   margin: 20px 0 0 0;
@@ -7521,7 +7528,6 @@ ul.log_list .count {
 
 .navbar-left ul li.facet-item:before,
 .navbar-left .navbar-nav li:before {
-  background-color: #000;
   content: '';
   height: 100%;
   left: 0;
@@ -7556,7 +7562,6 @@ li.facet-item input {
   margin: 0 0 0 10px; }
 
 .navbar-left .navbar-nav .dropdown-menu {
-  background-color: #222222;
   border-radius: 0;
   border: none;
   box-shadow: none;
