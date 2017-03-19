@@ -41,7 +41,7 @@ body {
 .btn-default:active,
 .btn-default.active,
 .open > .btn-default.dropdown-toggle {
-  color: #23aeff;
+  color: #4eaee2;
   filter: brightness(85%);
   position: relative;
   overflow: hidden;
@@ -62,7 +62,7 @@ body {
 .btn-default:active,
 .btn-default:hover,
 .btn-default:focus{
-  color: #23aeff;
+  color: #1d84c3;
   border-color: #055a8e;
   background-color: inherit!important;
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .navbar a {
-  color: #23aeff;
+  color: #018fe2;
 }
 
 .toggled .shariff-button a,
@@ -105,11 +105,11 @@ a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: #018fe2;
+  color: #1d84c3;
 }
 a:active,
 .link:active {
-  color: #23aeff;
+  color: #0071b3;
 }
 
 #footer {

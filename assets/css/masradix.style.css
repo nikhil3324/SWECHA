@@ -5873,10 +5873,6 @@ button.close {
   margin-right: 3pt;
   /* LTR */ }
 
-.toolbar .toolbar-bar, .toolbar .toolbar-tray {
-  position: relative;
-  z-index: 9000; }
-
 .comment {
   margin-top: 15px; }
   .comment .user-picture {
