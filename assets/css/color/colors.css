@@ -41,7 +41,7 @@ body {
 .btn-default:active,
 .btn-default.active,
 .open > .btn-default.dropdown-toggle {
-  color: #4eaee2;
+  color: #1d84c3;
   filter: brightness(85%);
   position: relative;
   overflow: hidden;
@@ -84,11 +84,7 @@ body {
 }
 
 .navbar a {
-  color: #018fe2;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: #018fe2;
+  color: #1d84c3;
 }
 
 .toggled .shariff-button a,
@@ -98,7 +94,7 @@ body {
 }
 .block.block--userlogin,
 .navbar-inverse.navbar-nav > li > a {
-  color: #018fe2;
+  color: #f9f9f9;
 }
 
 a,
