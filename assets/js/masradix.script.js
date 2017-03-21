@@ -19,7 +19,12 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
   $(document).ready(function () {
 
-    $(".btn-default, .add-block p a").click(function(e){
+    // toggle report map;
+    $('.mas-button .fa-map').click(function () {
+      $('#geolocation-nominatim-map').toggle('fold');
+    });
+
+    $('.btn-default, .add-block p a').click(function(e){
       var rippler = $(this);
       // create .ink element if it doesn't exist
       if(rippler.find(".ink").length == 0) {
@@ -109,7 +114,7 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     }
 
     // Add a close button to exposed filter.
-    $('.bef-exposed-form')
+    $('.views-exposed-form')
       .append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' + Drupal.t('Close') + '</span></a>')
     if ($('#map').length > 0) {
 
@@ -166,9 +171,12 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
       $('.view__filters').toggleClass('exposed ajax');
     });
 
+    if($('[data-drupal-selector="edit-reset"]')[0]) {
+      $('.view__filters').addClass('exposed ajax');
+    }
     // Add a button to toggle map display;.
     $('#map').once().each(function () {
-      var $stickyElement = $('#map');
+      // var $stickyElement = $('#map');
       $('.mas-button .fa-map').click(function () {
         $("#map").toggle("fold");
       });
@@ -180,13 +188,5 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled');
   });
-
-  // Footer.
-  /*
-   $(".form-type-file").fileinput({
-   uploadUrl: '?element_parents=field_request_image/widget/0&ajax_form=1&_wrapper_format=drupal_ajax&_wrapper_format=drupal_ajax',
-   uploadAsync: true
-   });
-   */
 
 })(jQuery, Drupal, this, this.document);

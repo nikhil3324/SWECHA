@@ -6967,9 +6967,6 @@ article.service-request footer {
   margin: 20px 0 0 0;
   clear: left; }
 
-.contextual-region h2 {
-  margin: -30px 0; }
-
 .service-request h2 a {
   color: #fff;
   margin: 20px 10px;
@@ -7142,7 +7139,9 @@ article.service-request .label-default {
 
 .view__empty {
   font-size: large;
-  margin: 60px 10px; }
+  clear: both;
+  margin-top: 280px;
+  position: absolute; }
 
 .view__filters {
   background: #bfbfbf;
@@ -7155,15 +7154,18 @@ article.service-request .label-default {
       clear: both;
       width: 100%;
       height: inherit; } }
+  .view__filters .close {
+    float: right;
+    font-size: small;
+    font-weight: normal;
+    line-height: 1;
+    text-shadow: none;
+    opacity: 1; }
 
 .view__filters a,
 .view__filters div.form-item-field-status-term,
 .view__filters div.form-item-field-category {
   display: none; }
-
-.view__filters a {
-  width: 40px;
-  height: 30px; }
 
 .view__filters a span {
   display: none; }
