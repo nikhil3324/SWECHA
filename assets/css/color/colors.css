@@ -71,7 +71,8 @@ body {
 .mas-action a,
 .add-block,
 .region-sidebar .block,
-.region-sidebar li.list-group-item {
+.region-sidebar li.list-group-item,
+.form-item-field-request-image-0 {
   background-color: #eeeeee;
 }
 

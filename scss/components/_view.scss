@@ -36,7 +36,8 @@
   @media (max-width: $screen-xs-max) {
     clear: both;
     width: 100%;
-    height: inherit
+    height: inherit;
+    top: 40px;
   }
   .close {
     float: right;
@@ -70,7 +71,7 @@
 
 .view__filters.exposed {
   position: absolute;
-  width: 70%;
+  width: 49%;
   height: inherit;
   box-shadow: 1px 1px 5px #555;
   z-index: 10;

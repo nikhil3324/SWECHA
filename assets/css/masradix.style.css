@@ -6852,6 +6852,10 @@ input.form-type-file,
 .file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button {
   display: none !important; }
 
+.form-item-field-request-image-0 {
+  border-radius: 4px;
+  padding: 10px 10px 0 10px; }
+
 .image-widget {
   padding-left: 0;
   padding-right: 0;
@@ -7153,7 +7157,8 @@ article.service-request .label-default {
     .view__filters {
       clear: both;
       width: 100%;
-      height: inherit; } }
+      height: inherit;
+      top: 40px; } }
   .view__filters .close {
     float: right;
     font-size: small;
@@ -7179,7 +7184,7 @@ article.service-request .label-default {
 
 .view__filters.exposed {
   position: absolute;
-  width: 70%;
+  width: 49%;
   height: inherit;
   box-shadow: 1px 1px 5px #555;
   z-index: 10;
