@@ -19,6 +19,19 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
   $(document).ready(function () {
 
+    var slideout = new Slideout({
+      'panel': document.getElementById('page-content-wrapper'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70
+    });
+
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle();
+    });
+
+
     // toggle report map;
     $('.mas-button .fa-map').click(function () {
       $('#geolocation-nominatim-map').toggle('fold');

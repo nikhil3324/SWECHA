@@ -142,6 +142,9 @@ article.service-request div.col-sm-6 {
   @media (max-width: $screen-md-max) {
     min-height: 85px;
   }
+  @media (max-width: $screen-sm-max) {
+    min-height: 45px;
+  }
   text-align: center;
   padding-top: 20px;
   background: $gray-lighter;
@@ -164,7 +167,6 @@ article.service-request div.col-sm-6 {
 
 .field__item.label.label-default {
   background: none;
-  font-size: $font-size-base;
   text-align: center;
 }
 
@@ -242,23 +244,12 @@ article .col-sm-6.fa {
   overflow: scroll
 }
 
-.service-request__field-category,
-.service-request__field-status {
-  font-family: $font-family-sans-serif;
-  font-size: $font-size-large;
-}
-
 article.service-request .label-default {
   display: block;
   padding: 0 .6em .3em;
-  font-size: $font-size-large;
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
   line-height: 1;
   color: inherit;
   text-align: center;
   white-space: normal;
   background: none;
-  /* vertical-align: baseline; */
-  /* border-radius: .25em; */
 }

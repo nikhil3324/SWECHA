@@ -6534,10 +6534,129 @@ ul.dropdown-menu li {
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff"); }
 
+/* vietnamese */
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot");
-  src: url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff") format("woff"), url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg"); }
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGBtvTbjs3T7OK9b50AXe70D3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGDvlGRZ3uCFbvUJSJFyaVCX3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGIAPdqzPmKFFIYQ-46z3JxY.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCD5K6T8I4oZ1X3Xvlj_UeP3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGDOFnJNygIkrHciC8BWzbCz3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCP2LEk6lMzYsRqr3dHFImA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlCxe5Tewm2_XWfbGchcXw4g.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlIa1YDtoarzwSXxTHggEXMw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGMZXFz2iDKd7GJNSaxRYiSj3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGKyGJhAh-RE0BxGcd_izyev3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGMzFoXZ-Kj537nB_-9jJhlA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGMms7UHsIbjUxEJqIwog-i_3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGO4s1Ux4PuImWPk5fSr6HPL3rGVtsTkPsbDajuO5ueQw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGJkF8H8ye47wsfpWywda8og.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12.8px; } }
 
 body {
   background: #fff none;
@@ -6699,18 +6818,21 @@ span.site-slogan {
 .add-block {
   margin: 0; }
 
-.round-button.col-xs-3 item {
-  display: block; }
+.round-button.col-sm-3 {
+  text-align: center; }
 
-.round-button.col-xs-3 a {
+.round-button.col-sm-3 item {
+  display: block;
+  text-align: cen; }
+
+.round-button.col-sm-3 a {
   text-align: center;
   display: block;
   margin: 10px auto; }
 
-.round-button.col-xs-3 p {
+.round-button.col-sm-3 p {
   text-align: center;
-  display: block;
-  clear: both; }
+  display: block; }
 
 .add-block p a {
   display: block;
@@ -6762,7 +6884,7 @@ span.site-slogan {
 .block--markaspotsideactionblock {
   width: 20px;
   position: fixed;
-  top: 300px;
+  bottom: 10px;
   z-index: 2;
   left: 15px; }
 
@@ -6819,9 +6941,6 @@ span.site-slogan {
 
 .view.view--front-gallery {
   clear: left; }
-
-.form-control {
-  font-size: 16px; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select:focus,
@@ -7011,6 +7130,9 @@ article.service-request div.col-sm-6 {
   @media (max-width: 1199px) {
     article.service-request div.col-sm-6 {
       min-height: 85px; } }
+  @media (max-width: 991px) {
+    article.service-request div.col-sm-6 {
+      min-height: 45px; } }
 
 .service-request__field-status {
   border-right: 1px solid #bfbfbf; }
@@ -7023,7 +7145,6 @@ article.service-request div.col-sm-6 {
 
 .field__item.label.label-default {
   background: none;
-  font-size: 16px;
   text-align: center; }
 
 .col-sm-6.fa .color-8B0000, article.service-request .color-8B0000 {
@@ -7090,24 +7211,14 @@ article .col-sm-6.fa, article article.service-request {
   height: 300px;
   overflow: scroll; }
 
-.service-request__field-category,
-.service-request__field-status {
-  font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px; }
-
 article.service-request .label-default {
   display: block;
   padding: 0 .6em .3em;
-  font-size: 20px;
-  font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
   line-height: 1;
   color: inherit;
   text-align: center;
   white-space: normal;
-  background: none;
-  /* vertical-align: baseline; */
-  /* border-radius: .25em; */ }
+  background: none; }
 
 .paragraph.color-_b0000 {
   border-left: 10px solid #8b0000; }

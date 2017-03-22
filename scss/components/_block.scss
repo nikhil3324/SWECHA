@@ -55,6 +55,7 @@ span.site-slogan {
 
 // Info block for front-page.
 
+
 .btn-circle {
   width: 30px;
   height: 30px;
@@ -98,20 +99,25 @@ span.site-slogan {
   margin: 0;
 }
 
-.round-button.col-xs-3 item {
-  display: block;
+.round-button.col-sm-3 {
+  text-align: center;
 }
 
-.round-button.col-xs-3 a {
+
+.round-button.col-sm-3 item {
+  display: block;
+  text-align:cen
+}
+
+.round-button.col-sm-3 a {
   text-align: center;
   display: block;
   margin: 10px auto;
 }
 
-.round-button.col-xs-3 p {
+.round-button.col-sm-3 p {
   text-align: center;
   display: block;
-  clear: both
 }
 
 .add-block p a {
@@ -181,7 +187,7 @@ span.site-slogan {
 .block--markaspotsideactionblock {
   width: 20px;
   position: fixed;
-  top: 300px;
+  bottom: 10px;
   z-index: 2;
   left: 15px;
 }
