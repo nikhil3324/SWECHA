@@ -11,8 +11,13 @@
  * A partial implementation of the Ruby display functions from Compass:
  * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
  */
-/* -- Ripple effect -------------------------------- */
 @import "https://daneden.github.io/animate.css/animate.min.css";
+body {
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch; }
+
+/* -- Ripple effect -------------------------------- */
 .btn-default {
   position: relative;
   overflow: hidden;
