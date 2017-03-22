@@ -3,7 +3,7 @@
 body .stuck {
   position: fixed !important;
   width: 100vw;
-  height: 220px!important;
+  height: 180px!important;
   right: 0;
   top: 0;
   margin: 0;
@@ -80,8 +80,8 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
 }
 
 .stuck .leaflet-left.leaflet-top {
-  top: 80px;
-  left: 7px;
+  top: 50px;
+  left: 4px;
 }
 
 .leaflet-popup-content {

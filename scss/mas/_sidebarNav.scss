@@ -154,7 +154,7 @@ li.facet-item input {
   display: block;
   height: 32px;
   position: fixed;
-  top: 20px;
+  top: 10px;
   margin-left: 15px;
   width: 32px;
   z-index: 1001;
@@ -183,7 +183,7 @@ body.toolbar-horizontal .hamburger {
 
 body.toolbar-vertical.toolbar-tray-open .hamburger {
   position: fixed;
-  top: 60px;
+  top: 50px;
   left: 220px;
 }
 
@@ -236,19 +236,19 @@ body.toolbar-horizontal.toolbar-tray-open .hamburger {
 
 .hamburger.is-closed .hamb-top {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(104, 127, 160, 0.7);
+  background-color: #2c4a85;
   top: 5px;
 }
 
 .hamburger.is-closed .hamb-middle {
-  background-color: rgba(104, 127, 160, 0.7);
+  background-color: #2c4a85;
   margin-top: -2px;
   top: 50%;
 }
 
 .hamburger.is-closed .hamb-bottom {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(104, 127, 160, 0.7);
+  background-color: #2c4a85;
   bottom: 5px;
 }
 

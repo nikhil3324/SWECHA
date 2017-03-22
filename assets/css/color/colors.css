@@ -28,7 +28,9 @@ body {
   background-color: #055a8e;
 }
 
-
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
 #sidebar-wrapper {
   background-color: #055a8e;
   background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
