@@ -44,7 +44,7 @@ body {
 .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #1d84c3;
-  filter: brightness(85%);
+  filter: brightness(75%);
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0,0,0);
