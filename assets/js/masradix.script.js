@@ -6,6 +6,42 @@
 // Taking care of flickering controls on touch devices.
 // https://github.com/Leaflet/Leaflet/issues/1198
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
+var slideout = new Slideout({
+  'panel': document.getElementById('page-content-wrapper'),
+  'menu': document.getElementById('sidebar-wrapper'),
+  'padding': 256,
+  'tolerance': 70,
+  'side': 'right'
+});
+
+// Toggle button
+document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();
+});
+
+var fixed = document.querySelector('.fixed-header');
+
+slideout.on('translate', function(translated) {
+  fixed.style.transform = 'translateX(' + translated + 'px)';
+});
+
+slideout.on('beforeopen', function () {
+  fixed.style.transition = 'transform 300ms ease';
+  fixed.style.transform = 'translateX(-256px)';
+});
+
+slideout.on('beforeclose', function () {
+  fixed.style.transition = 'transform 300ms ease';
+  fixed.style.transform = 'translateX(0px)';
+});
+
+slideout.on('open', function () {
+  fixed.style.transition = '';
+});
+
+slideout.on('close', function () {
+  fixed.style.transition = '';
+});
 
 (function ($, Drupal, window, document) {
 
@@ -19,18 +55,14 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
   $(document).ready(function () {
 
-    var slideout = new Slideout({
-      'panel': document.getElementById('page-content-wrapper'),
-      'menu': document.getElementById('menu'),
-      'padding': 256,
-      'tolerance': 70
-    });
+
 
     // Toggle button
+    /*
     document.querySelector('.toggle-button').addEventListener('click', function() {
       slideout.toggle();
     });
-
+    */
 
     // toggle report map;
     $('.mas-button .fa-map').click(function () {

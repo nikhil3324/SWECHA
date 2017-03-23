@@ -7,22 +7,29 @@
 
 <!-- Sidebar -->
 <div class="overlay"></div>
-<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+<nav class="navbar navbar-inverse" id="sidebar-wrapper" role="navigation">
   {% if page.navbar_left %}
-    <div class="navbar-left">
+    <div class="navbar-right">
       {{ page.navbar_left }}
+    </div>
+  {% endif %}
+  {% if page.navbar_right %}
+    <div class="navbar-right">
+        {{ page.navbar_right }}
     </div>
   {% endif %}
 </nav>
 <!-- /#sidebar-wrapper -->
 <div id="hero"></div>
-
+<header class="fixed-header">
+    <button type="button" class="hamburger is-closed animated toggle-button" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+    </button>
+</header>
 <div id="page-content-wrapper">
-  <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
-    <span class="hamb-top"></span>
-    <span class="hamb-middle"></span>
-    <span class="hamb-bottom"></span>
-  </button>
+
   <div class="container">
     <div class="row">
       {% if page.head %}

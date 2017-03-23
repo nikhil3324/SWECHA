@@ -16,42 +16,13 @@
   background-color: transparent;
 }
 
-/*-------------------------------*/
-/*           Wrappers            */
-/*-------------------------------*/
 
-#wrapper.toggled {
-  padding-left: 250px;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-  margin-right: -250px;
-  position: absolute;
-}
-
-#sidebar-wrapper {
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background: #1a1a1a;
-  height: 100%;
-  left: 250px;
-  margin-left: -250px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 0;
-  z-index: 1000;
-}
+/*
 
 #sidebar-wrapper::-webkit-scrollbar {
   display: none;
 }
-
+*/
 /*-------------------------------*/
 /*     Sidebar nav styles        */
 /*-------------------------------*/
@@ -59,23 +30,22 @@
   min-height: 100px;
 }
 
-.navbar-left .navbar-nav {
+.navbar-nav {
   list-style: none;
   margin: 20px 0;
   padding: 0;
   width: 250px;
 }
 
-.navbar-left ul li.facet-item,
-.navbar-left .navbar-nav li {
+.navbar .navbar-nav li {
   display: inline-block;
   line-height: 20px;
   position: relative;
   width: 100%;
 }
 
-.navbar-left ul li.facet-item:before,
-.navbar-left .navbar-nav li:before {
+
+.navbar-nav li:before {
   content: '';
   height: 100%;
   left: 0;
@@ -87,38 +57,25 @@
   z-index: -1;
 }
 
-.navbar-left ul li.facet-item:hover:before,
-.navbar-left .navbar-nav li:hover:before {
+.navbar-nav li:hover:before {
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
   width: 100%;
 }
 
-.navbar-left ul li.facet-item a,
-.navbar-left .navbar-nav li a {
+.navbar-nav li a {
   display: block;
   padding: 10px 15px 10px 20px;
   text-decoration: none;
 }
 
-.navbar-left ul li.open.facet-item:hover:before,
-.navbar-left .navbar-nav li.open:hover before {
+.navbar-nav li.open:hover before {
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
   width: 100%;
 }
 
-li.facet-item label {
-  padding: 10px;
-  color: #fff;
-  font-weight: normal;
-}
-
-li.facet-item input {
-  margin: 0 0 0 10px;
-}
-
-.navbar-left .navbar-nav .dropdown-menu {
+.navbar-nav .dropdown-menu {
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -128,20 +85,25 @@ li.facet-item input {
   width: 100%;
 }
 
-.navbar-fixed-top {
-  top: inherit;
-}
-
-.navbar-left .navbar-nav li a:hover, .navbar-left .navbar-nav li a:active, .navbar-left .navbar-nav li a:focus, .navbar-left .navbar-nav li.open a:hover, .navbar-left .navbar-nav li.open a:active, .navbar-left .navbar-nav li.open a:focus {
+.navbar-nav li a:hover, .navbar-left .navbar-nav li a:active, .navbar-left .navbar-nav li a:focus, .navbar-left .navbar-nav li.open a:hover, .navbar-left .navbar-nav li.open a:active, .navbar-left .navbar-nav li.open a:focus {
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
 }
 
-.navbar-left .navbar-nav > .sidebar-brand {
+.navbar-nav > .sidebar-brand {
   font-size: 20px;
   height: 65px;
   line-height: 44px;
+}
+
+.fixed-header {
+  position: fixed;
+  width: 30px;
+  right: 10px;
+  height: 30px;
+  backface-visibility: hidden;
+  z-index: 2;
 }
 
 /*-------------------------------*/
@@ -153,9 +115,7 @@ li.facet-item input {
   border: none;
   display: block;
   height: 32px;
-  position: fixed;
-  top: 10px;
-  margin-left: 15px;
+  margin: 15px;
   width: 32px;
   z-index: 1001;
 }
@@ -324,3 +284,45 @@ body.toolbar-horizontal.toolbar-tray-open .hamburger {
   width: 22rem !important;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
