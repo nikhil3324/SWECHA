@@ -6743,10 +6743,13 @@ span.site-name {
   100% {
     opacity: 0; } }
 
-@media (max-width: 768px) {
+/*
+@media (max-width: $screen-sm) {
   .container {
-    margin-left: 50px; } }
-
+    margin-left: 50px;
+  }
+}
+*/
 .region-head.col-md-12 .block.block--masradix-sitebranding, .region-head.calendar-calendar .block.block--masradix-sitebranding, .view .row > .region-head.list-group .block.block--masradix-sitebranding {
   clear: both;
   margin: 0;
@@ -7125,14 +7128,15 @@ article.service-request div.col-sm-6 {
   min-height: 70px;
   text-align: center;
   padding-top: 20px;
-  background: #eeeeee;
-  font-family: Sa; }
+  background: #eeeeee; }
   @media (max-width: 1199px) {
     article.service-request div.col-sm-6 {
       min-height: 85px; } }
   @media (max-width: 991px) {
     article.service-request div.col-sm-6 {
       min-height: 45px; } }
+  article.service-request div.col-sm-6 .label {
+    font-size: 100%; }
 
 .service-request__field-status {
   border-right: 1px solid #bfbfbf; }
@@ -7373,6 +7377,10 @@ a.scroll-to-top.btn.btn-default.btn-circle.btn-md, .media-widget > a.scroll-to-t
   right: 30px;
   box-shadow: 0 2px 5px #666; }
 
+@media (max-width: 991px) {
+  #footer nav li a {
+    font-size: x-small; } }
+
 div#hero {
   position: fixed;
   top: 25%;
@@ -7409,6 +7417,9 @@ div#hero {
  */
 body .stuck {
   position: fixed !important;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
   width: 100vw;
   height: 180px !important;
   right: 0;
@@ -7464,10 +7475,6 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
   position: fixed;
   right: 0;
   top: 80px; }
-
-.stuck .leaflet-left.leaflet-top {
-  top: 50px;
-  left: 4px; }
 
 .leaflet-popup-content {
   max-width: 180px; }
@@ -7615,7 +7622,7 @@ ul.log_list .count {
   list-style: none;
   margin: 20px 0;
   padding: 0;
-  width: 250px; }
+  width: 256px; }
 
 .navbar .navbar-nav li {
   display: inline-block;
@@ -7668,11 +7675,14 @@ ul.log_list .count {
 .fixed-header {
   position: fixed;
   width: 30px;
-  right: 10px;
-  height: 30px;
+  right: 15px;
+  top: 25px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   z-index: 2; }
+
+.map-stuck .leaflet-bar-timecontrol {
+  right: 60px; }
 
 /*-------------------------------*/
 /*       Hamburger-Cross         */
@@ -7682,9 +7692,7 @@ ul.log_list .count {
   border: none;
   display: block;
   height: 32px;
-  margin: 15px;
-  width: 32px;
-  z-index: 1001; }
+  width: 32px; }
 
 .view__header .hamburger {
   background: transparent;
@@ -7696,22 +7704,14 @@ ul.log_list .count {
   width: 22px;
   top: 3px; }
 
-body.toolbar-vertical .hamburger {
-  position: fixed;
-  top: 55px; }
-
+body.toolbar-vertical .hamburger,
 body.toolbar-horizontal .hamburger {
   position: fixed;
   top: 55px; }
 
-body.toolbar-vertical.toolbar-tray-open .hamburger {
-  position: fixed;
-  top: 50px;
-  left: 220px; }
-
-body.toolbar-horizontal.toolbar-tray-open .hamburger {
-  position: fixed;
-  top: 100px; }
+body.toolbar-vertical #sidebar-wrapper,
+body.toolbar-horizontal #sidebar-wrapper {
+  top: 38px; }
 
 .hamburger:hover {
   outline: none; }
@@ -7850,10 +7850,10 @@ body {
 .slideout-panel {
   position: relative;
   z-index: 1;
-  will-change: transform;
   background-color: #FFF;
   /* A background-color is required */
-  min-height: 100vh; }
+  min-height: 100vh;
+  box-shadow: 4px 0 1px -2px rgba(0, 0, 0, 0.68); }
 
 .slideout-open,
 .slideout-open body,

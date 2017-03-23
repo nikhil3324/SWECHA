@@ -148,7 +148,9 @@ article.service-request div.col-sm-6 {
   text-align: center;
   padding-top: 20px;
   background: $gray-lighter;
-  font-family: Sa
+  .label{
+    font-size: 100%;
+  }
 }
 
 .service-request__field-status {

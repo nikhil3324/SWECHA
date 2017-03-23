@@ -82,7 +82,7 @@ body {
   background: none;
 }
 
-.navbar-nav li:before {
+.navbar-nav li:after {
   background-color: #1d84c3;
 }
 

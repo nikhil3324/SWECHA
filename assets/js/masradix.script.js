@@ -157,19 +157,27 @@ slideout.on('close', function () {
         wrapper: '<div class="sticky-wrapper waypoint" />'
       });
     }
+    $('.mas-action').hide();
+
+
 
     // Add a close button to exposed filter.
     $('.views-exposed-form')
       .append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' + Drupal.t('Close') + '</span></a>')
     if ($('#map').length > 0) {
-
-      var mapInview = new Waypoint.Inview({
+      var mapInview = new Waypoint({
         element: $('#map'),
         enter: function (direction) {
-          $('#map').show('fold');
+
+          // $('body').addClass('map-stuck');
+        },
+        handler: function(direction) {
+          $('body').addClass('map-stuck');
+          $('.mas-action').fadeIn(1300);
         }
       })
     }
+
     if ($('.pager__item').length > 0) {
       var topInview = new Waypoint.Inview({
         element: $('.pager__item'),
