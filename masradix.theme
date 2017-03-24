@@ -99,15 +99,31 @@ function masradix_preprocess_node(&$variables) {
       }
     }
   }
+  if (theme_get_setting('status') != FALSE) {
 
-  if (isset($variables['node']->field_status_notes)) {
-    foreach ($variables['node']->field_status_notes as $item) {
-      if ($item->entity) {
-        $variables['mas_status']['label'] = $item->entity->field_status_term[0]->entity->name->value;
-        $variables['mas_status']['icon']  = $item->entity->field_status_term[0]->entity->field_status_icon->value;
-        $variables['mas_status']['color'] = str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
+    if (isset($variables['node']->field_status_notes)) {
+      foreach ($variables['node']->field_status_notes as $item) {
+        if ($item->entity) {
+          $variables['mas_status']['label'] = $item->entity->field_status_term[0]->entity->name->value;
+          $variables['mas_status']['icon']  = $item->entity->field_status_term[0]->entity->field_status_icon->value;
+          $variables['mas_status']['color'] = str_replace('#', '', $item->entity->field_status_term[0]->entity->field_status_hex->color);
+        }
       }
     }
   }
+}
 
+
+function masradix_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['status'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Status '),
+    '#default_value' => theme_get_setting('status'),
+    '#description'   => t("Show status on node details and teaser"),
+  );
 }

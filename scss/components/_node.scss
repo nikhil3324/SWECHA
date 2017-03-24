@@ -135,6 +135,9 @@ article.service-request img {
     background: $gray-lighter
 }
 
+
+
+article.service-request div.col-sm-12,
 article.service-request div.col-sm-6 {
   border-top: 1px solid $gray-light;
   margin: 0;
@@ -153,6 +156,8 @@ article.service-request div.col-sm-6 {
   }
 }
 
+
+
 .service-request__field-status {
   border-right: 1px solid $gray-light;
 
@@ -164,6 +169,11 @@ article.service-request div.col-sm-6 {
 
 .service-request__field-status div{
   border-left: none;
+}
+
+// Unactive status:
+.service-request__field-status.col-sm-12.color- {
+    display: none;
 }
 
 

@@ -14,35 +14,6 @@ var slideout = new Slideout({
   'side': 'right'
 });
 
-// Toggle button
-document.querySelector('.toggle-button').addEventListener('click', function() {
-  slideout.toggle();
-});
-
-var fixed = document.querySelector('.fixed-header');
-
-slideout.on('translate', function(translated) {
-  fixed.style.transform = 'translateX(' + translated + 'px)';
-});
-
-slideout.on('beforeopen', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(-256px)';
-});
-
-slideout.on('beforeclose', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(0px)';
-});
-
-slideout.on('open', function () {
-  fixed.style.transition = '';
-});
-
-slideout.on('close', function () {
-  fixed.style.transition = '';
-});
-
 (function ($, Drupal, window, document) {
 
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
@@ -54,15 +25,39 @@ slideout.on('close', function () {
   });
 
   $(document).ready(function () {
-
-
-
     // Toggle button
-    /*
     document.querySelector('.toggle-button').addEventListener('click', function() {
       slideout.toggle();
     });
-    */
+
+
+    var fixed = document.querySelector('.fixed-header');
+
+    slideout.on('translate', function(translated) {
+      fixed.style.transform = 'translateX(' + translated + 'px)';
+    });
+
+    slideout.on('beforeopen', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(-256px)';
+    });
+
+    slideout.on('beforeclose', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(0px)';
+    });
+
+    slideout.on('open', function () {
+      hamburger_cross();
+      fixed.style.transition = '';
+    });
+
+    slideout.on('close', function () {
+      hamburger_cross();
+      fixed.style.transition = '';
+    });
+
+
 
     // toggle report map;
     $('.mas-button .fa-map').click(function () {
@@ -116,8 +111,6 @@ slideout.on('close', function () {
     $('.button-add p a').click(function (e) {
       if (!$(".page--logged-in")[0]) {
         e.preventDefault();
-        hamburger_cross();
-        $('#wrapper').toggleClass('toggled');
       }
     });
 
@@ -125,11 +118,8 @@ slideout.on('close', function () {
     var trigger = $('.hamburger'),
       isClosed = false;
 
-    trigger.click(function () {
-      hamburger_cross();
-    });
-
     function hamburger_cross() {
+      console.log("cross");
       if (isClosed == true) {
         document.ontouchmove = function (event) {
           return true;

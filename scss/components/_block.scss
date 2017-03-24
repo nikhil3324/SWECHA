@@ -26,7 +26,7 @@ span.site-slogan {
   float: none;
   display: block;
   margin: 8px auto;
-  font-size: smaller;
+  font-size: x-small;
 }
 
 .region-sidebar .block {
@@ -245,15 +245,8 @@ span.site-slogan {
 }
 
 
-
-// Shariff Overrides
-
-.block--shariffsharebuttons {
-  width: 20px;
-  position: fixed;
-  bottom: 12px;
-  z-index: 10000;
-  left: 15px;
+.block-content--mas-custom {
+  margin: 50px 0;
 }
 
 .block-content--masradix-direct-links.mas-custom {
