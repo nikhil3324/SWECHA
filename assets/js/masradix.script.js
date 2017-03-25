@@ -14,8 +14,9 @@ var slideout = new Slideout({
   'side': 'right'
 });
 
-(function ($, Drupal, window, document) {
-
+(function ($, Drupal, drupalSettings, window, document) {
+  var route = drupalSettings.path.currentPath;
+  console.log(route);
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
   $(document).on('change', ':file', function () {
     var input = $(this),
@@ -29,7 +30,26 @@ var slideout = new Slideout({
     document.querySelector('.toggle-button').addEventListener('click', function() {
       slideout.toggle();
     });
+    $notifications = $('.notifications');
 
+    // taken from http://imakewebthings.com/waypoints/
+    function notify(text) {
+         var $notification = $('<li />').text(text).css({
+        left: 320
+      });
+      $notifications.append($notification);
+      $notification.animate({
+        left: 0
+      }, 300, function() {
+        $(this).delay(6000).animate({
+          left: 320
+        }, 200, function() {
+          $(this).slideUp(100, function() {
+            $(this).remove()
+          })
+        })
+      })
+    }
 
     var fixed = document.querySelector('.fixed-header');
 
@@ -59,10 +79,6 @@ var slideout = new Slideout({
 
 
 
-    // toggle report map;
-    $('.mas-button .fa-map').click(function () {
-      $('#geolocation-nominatim-map').toggle('fold');
-    });
 
     $('.btn-default, .add-block p a').click(function(e){
       var rippler = $(this);
@@ -92,7 +108,7 @@ var slideout = new Slideout({
         top: y+'px',
         left:x+'px'
       }).addClass("animate");
-    })
+    });
 
 
 
@@ -108,18 +124,11 @@ var slideout = new Slideout({
 
     });
 
-    $('.button-add p a').click(function (e) {
-      if (!$(".page--logged-in")[0]) {
-        e.preventDefault();
-      }
-    });
-
     // NavSidebar scripts.
     var trigger = $('.hamburger'),
       isClosed = false;
 
     function hamburger_cross() {
-      console.log("cross");
       if (isClosed == true) {
         document.ontouchmove = function (event) {
           return true;
@@ -131,7 +140,7 @@ var slideout = new Slideout({
       }
       else {
         document.ontouchmove = function (event) {
-          event.preventDefault();
+          //event.preventDefault();
         };
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
@@ -147,46 +156,44 @@ var slideout = new Slideout({
         wrapper: '<div class="sticky-wrapper waypoint" />'
       });
     }
-    $('.mas-action').hide();
-
-
-
     // Add a close button to exposed filter.
     $('.views-exposed-form')
       .append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' + Drupal.t('Close') + '</span></a>')
     if ($('#map').length > 0) {
-      var mapInview = new Waypoint({
+      var mapInview = new Waypoint.Inview({
         element: $('#map'),
-        enter: function (direction) {
-
-          // $('body').addClass('map-stuck');
-        },
-        handler: function(direction) {
+        entered: function(direction) {
           $('body').addClass('map-stuck');
-          $('.mas-action').fadeIn(1300);
+        },
+        exited: function(direction){
+          if (route == 'requests') {
+            "message" in sessionStorage ? 0 :
+              notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tab the markers.')),
+              sessionStorage.setItem("message",true);
+          }
         }
       })
     }
 
-    if ($('.pager__item').length > 0) {
-      var topInview = new Waypoint.Inview({
-        element: $('.pager__item'),
-        entered: function (direction) {
-          $('.scroll-to-top').show().on('click', function (e) {
-            var href = $(this).attr('href');
-            $('html, body').animate({
-              scrollTop: $('body').offset().top
-            }, 500);
-            e.preventDefault();
-          });
-        },
-        exited: function (direction) {
-          if (direction === "up") {
-            $('.scroll-to-top').hide();
-          }
+    var topInview = new Waypoint.Inview({
+      element: $('.block--shariffsharebuttons, .pager__item'),
+      entered: function (direction) {
+        $('.mas-action').fadeIn(400);
+        $('.scroll-to-top').show().on('click', function (e) {
+          var href = $(this).attr('href');
+          $('html, body').animate({
+            scrollTop: $('body').offset().top
+          }, 500);
+          e.preventDefault();
+        });
+      },
+      exited: function (direction) {
+        if (direction === "up") {
+          $('.mas-action, .scroll-to-top').hide();
         }
-      });
-    }
+      }
+    });
+
 
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
@@ -219,11 +226,7 @@ var slideout = new Slideout({
     }
     // Add a button to toggle map display;.
     $('#map').once().each(function () {
-      // var $stickyElement = $('#map');
-      $('.mas-button .fa-map').click(function () {
-        $("#map").toggle("fold");
-      });
-
+      // need this for later
     });
 
   });
@@ -232,4 +235,4 @@ var slideout = new Slideout({
     $('#wrapper').toggleClass('toggled');
   });
 
-})(jQuery, Drupal, this, this.document);
+})(jQuery, Drupal, drupalSettings, this, this.document);
