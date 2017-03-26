@@ -25,13 +25,13 @@ var slideout = new Slideout({
   });
 
   $(document).ready(function () {
-    // Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function() {
+    // Toggle button.
+    document.querySelector('.toggle-button').addEventListener('click', function () {
       slideout.toggle();
     });
     $notifications = $('.notifications');
 
-    // taken from http://imakewebthings.com/waypoints/
+    // Taken from http://imakewebthings.com/waypoints/
     function notify(text) {
          var $notification = $('<li />').text(text).css({
         left: 320
@@ -39,11 +39,11 @@ var slideout = new Slideout({
       $notifications.append($notification);
       $notification.animate({
         left: 0
-      }, 300, function() {
+      }, 300, function () {
         $(this).delay(6000).animate({
           left: 320
-        }, 200, function() {
-          $(this).slideUp(100, function() {
+        }, 200, function () {
+          $(this).slideUp(100, function () {
             $(this).remove()
           })
         })
@@ -52,7 +52,7 @@ var slideout = new Slideout({
 
     var fixed = document.querySelector('.fixed-header');
 
-    slideout.on('translate', function(translated) {
+    slideout.on('translate', function (translated) {
       fixed.style.transform = 'translateX(' + translated + 'px)';
     });
 
@@ -74,40 +74,34 @@ var slideout = new Slideout({
       fixed.style.transition = '';
     });
 
-
-
-
-    $('.btn-default, .add-block p a').click(function(e){
+    $('.btn-default, .add-block p a').click(function (e) {
       var rippler = $(this);
-      // create .ink element if it doesn't exist
-      if(rippler.find(".ink").length == 0) {
+      // Create .ink element if it doesn't exist.
+      if (rippler.find(".ink").length == 0) {
         rippler.append("<span class='ink'></span>");
       }
 
       var ink = rippler.find(".ink");
 
-      // prevent quick double clicks
+      // Prevent quick double clicks.
       ink.removeClass("animate");
 
-      // set .ink diametr
-      if(!ink.height() && !ink.width())
-      {
-        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+      // Set .ink diametr.
+      if (!ink.height() && !ink.width()) {
+      var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
         ink.css({height: d, width: d});
       }
 
-      // get click coordinates
-      var x = e.pageX - rippler.offset().left - ink.width()/2;
-      var y = e.pageY - rippler.offset().top - ink.height()/2;
+      // Get click coordinates.
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
 
-      // set .ink position and add class .animate
+      // Set .ink position and add class .animate.
       ink.css({
-        top: y+'px',
-        left:x+'px'
+        top: y + 'px',
+        left:x + 'px'
       }).addClass("animate");
     });
-
-
 
     // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
     $(':file').on('fileselect', function (event, numFiles, label) {
@@ -137,10 +131,10 @@ var slideout = new Slideout({
     if ($('#map').length > 0) {
       var mapInview = new Waypoint.Inview({
         element: $('#map'),
-        entered: function(direction) {
+        entered: function (direction) {
           $('body').addClass('map-stuck');
         },
-        exited: function(direction){
+        exited: function (direction) {
           if (route === 'requests') {
             "message" in sessionStorage ? 0 :
               notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tab the markers.')),
@@ -169,7 +163,6 @@ var slideout = new Slideout({
       }
     });
 
-
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
     var form = $('.node-service-request-form input');
@@ -196,12 +189,12 @@ var slideout = new Slideout({
       $('.view__filters').toggleClass('exposed ajax');
     });
 
-    if($('[data-drupal-selector="edit-reset"]')[0]) {
+    if ($('[data-drupal-selector="edit-reset"]')[0]) {
       $('.view__filters').addClass('exposed ajax');
     }
     // Add a button to toggle map display;.
     $('#map').once().each(function () {
-      // need this for later
+      // Need this for later.
     });
 
   });
