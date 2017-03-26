@@ -16,7 +16,6 @@ var slideout = new Slideout({
 
 (function ($, Drupal, drupalSettings, window, document) {
   var route = drupalSettings.path.currentPath;
-  console.log(route);
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
   $(document).on('change', ':file', function () {
     var input = $(this),
@@ -149,12 +148,14 @@ var slideout = new Slideout({
     }
 
     // Sticky map on top.
-    var $stickyElement = $('#map');
-    if ($stickyElement.length) {
-      var sticky = new Waypoint.Sticky({
-        element: $stickyElement[0],
-        wrapper: '<div class="sticky-wrapper waypoint" />'
-      });
+    if (route === 'requests') {
+      var $stickyElement = $('#map');
+      if ($stickyElement.length) {
+        var sticky = new Waypoint.Sticky({
+          element: $stickyElement[0],
+          wrapper: '<div class="sticky-wrapper waypoint" />'
+        });
+      }
     }
     // Add a close button to exposed filter.
     $('.views-exposed-form')
@@ -166,7 +167,7 @@ var slideout = new Slideout({
           $('body').addClass('map-stuck');
         },
         exited: function(direction){
-          if (route == 'requests') {
+          if (route === 'requests') {
             "message" in sessionStorage ? 0 :
               notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tab the markers.')),
               sessionStorage.setItem("message",true);
