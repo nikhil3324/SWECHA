@@ -67,12 +67,10 @@ var slideout = new Slideout({
     });
 
     slideout.on('open', function () {
-      hamburger_cross();
       fixed.style.transition = '';
     });
 
     slideout.on('close', function () {
-      hamburger_cross();
       fixed.style.transition = '';
     });
 
@@ -122,30 +120,6 @@ var slideout = new Slideout({
       }
 
     });
-
-    // NavSidebar scripts.
-    var trigger = $('.hamburger'),
-      isClosed = false;
-
-    function hamburger_cross() {
-      if (isClosed == true) {
-        document.ontouchmove = function (event) {
-          return true;
-        };
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-
-      }
-      else {
-        document.ontouchmove = function (event) {
-          //event.preventDefault();
-        };
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
-    }
 
     // Sticky map on top.
     if (route === 'requests') {

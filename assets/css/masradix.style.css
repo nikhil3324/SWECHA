@@ -11,7 +11,6 @@
  * A partial implementation of the Ruby display functions from Compass:
  * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
  */
-@import "https://daneden.github.io/animate.css/animate.min.css";
 body {
   overflow-y: scroll;
   /* has to be scroll, not auto */
@@ -7650,9 +7649,6 @@ ul.log_list .count {
   text-align: right;
   color: rgba(0, 0, 0, 0.2); }
 
-/*-------------------------------*/
-/*           VARIABLES           */
-/*-------------------------------*/
 .nav .open > a {
   background-color: transparent; }
 
