@@ -7757,15 +7757,6 @@ body.toolbar-vertical #sidebar-wrapper,
 body.toolbar-horizontal #sidebar-wrapper {
   top: 38px; }
 
-.hamburger:hover {
-  outline: none; }
-
-.hamburger:focus {
-  outline: none; }
-
-.hamburger:active {
-  outline: none; }
-
 .hamburger.is-closed:before {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: all 0.35s ease-in-out;
