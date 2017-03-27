@@ -7457,7 +7457,7 @@ fieldset#edit-field-geofield-wrapper.stuck div {
   padding: 0; }
 
 fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-field-geolocation-0-map-container {
-  padding: 0; }
+  padding: 0 30px; }
 
 /* Layer the bar just above the trays and above contextual link triggers. */
 .toolbar-oriented .toolbar-bar {

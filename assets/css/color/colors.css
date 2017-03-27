@@ -73,6 +73,7 @@ body {
 .add-block,
 .region-sidebar .block,
 .region-sidebar li.list-group-item,
+fieldset#edit-field-geolocation-0-map-container,
 .form-item-field-request-image-0 {
   background-color: #eeeeee;
 }
