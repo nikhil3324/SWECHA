@@ -192,8 +192,13 @@ span.site-slogan {
   left: 15px;
 }
 
+// Foooter navbar.
 
-// Shariff and action buttons
+.block--footer li a span {
+    margin: 0 5px 0 0;
+}
+
+// Shariff and action buttons.
 
 .mas-action,
 .shariff .orientation-vertical {

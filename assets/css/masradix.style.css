@@ -6902,6 +6902,9 @@ span.site-slogan {
   z-index: 2;
   left: 15px; }
 
+.block--footer li a span {
+  margin: 0 5px 0 0; }
+
 .mas-action,
 .shariff .orientation-vertical {
   min-width: 37px; }
