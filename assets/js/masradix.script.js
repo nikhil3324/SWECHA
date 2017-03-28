@@ -14,20 +14,49 @@ var slideout = new Slideout({
   'side': 'right'
 });
 
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+var target = document.querySelector('[data-drupal-views-infinite-scroll-content-wrapper]');
+
+// create an observer instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'childList') {
+      Pace.restart();
+    }
+  });
+});
+
+var config = { attributes: true, childList: true, characterData: true };
+// pass in the target node, as well as the observer options
+if (target) {
+  observer.observe(target, config);
+}
 
 (function ($, Drupal, drupalSettings, window, document) {
 
-  var route = drupalSettings.path.currentPath;
-  // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
-  $(document).on('change', ':file', function () {
-    var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [numFiles, label]);
-    Pace.restart();
-  });
-
   $(document).ready(function () {
+
+    // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
+    $(document).on('change', ':file', function () {
+      var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+      Pace.restart();
+    });
+
+    // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
+    $(':file').on('fileselect', function (event, numFiles, label) {
+
+      var input = $(this).parents('.input-group').find(':text'),
+        log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+      if (input.length) {
+        input.val(log);
+      }
+
+    });
+
     // Toggle button.
     document.querySelector('.toggle-button').addEventListener('click', function () {
       slideout.toggle();
@@ -106,17 +135,9 @@ var slideout = new Slideout({
       }).addClass("animate");
     });
 
-    // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
-    $(':file').on('fileselect', function (event, numFiles, label) {
 
-      var input = $(this).parents('.input-group').find(':text'),
-        log = numFiles > 1 ? numFiles + ' files selected' : label;
 
-      if (input.length) {
-        input.val(log);
-      }
-
-    });
+    var route = drupalSettings.path.currentPath;
 
     // Sticky map on top.
     if (route === 'requests') {
