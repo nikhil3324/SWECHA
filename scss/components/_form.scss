@@ -22,13 +22,13 @@
 .leaflet-control-geocoder-form input {
 
   @media (max-width: $screen-sm-max) {
-    width: 260px!important;
+    width: 280px!important;
   }
   @media (max-width: $screen-xs-max) {
-    width: 200px!important;
+    width: 220px!important;
   }
   @media (max-width: $screen-xs-min) {
-    width: 120px!important;
+    width: 180px!important;
   }
 }
 

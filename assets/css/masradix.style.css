@@ -6969,15 +6969,15 @@ span.site-slogan {
 
 @media (max-width: 991px) {
   .leaflet-control-geocoder-form input {
-    width: 260px !important; } }
+    width: 280px !important; } }
 
 @media (max-width: 767px) {
   .leaflet-control-geocoder-form input {
-    width: 200px !important; } }
+    width: 220px !important; } }
 
 @media (max-width: 480px) {
   .leaflet-control-geocoder-form input {
-    width: 120px !important; } }
+    width: 180px !important; } }
 
 #locateMe {
   text-decoration: underline;
@@ -7460,7 +7460,7 @@ fieldset#edit-field-geofield-wrapper.stuck div {
   padding: 0; }
 
 fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-field-geolocation-0-map-container {
-  padding: 0 30px; }
+  padding: 5px; }
 
 /* Layer the bar just above the trays and above contextual link triggers. */
 .toolbar-oriented .toolbar-bar {
@@ -7759,6 +7759,9 @@ body.toolbar-horizontal .hamburger {
 body.toolbar-vertical #sidebar-wrapper,
 body.toolbar-horizontal #sidebar-wrapper {
   top: 38px; }
+
+nav.block.block--menu.block--benutzermenu {
+  margin: 10px; }
 
 .hamburger.is-closed:before {
   -webkit-transform: translate3d(0, 0, 0);
