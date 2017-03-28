@@ -40,6 +40,8 @@ span.site-name {
 /**
  * Throbber.
  */
+
+/*
 .ajax-progress .throbber,
 .ajax-progress-fullscreen .throbber {
   visibility: visible;
@@ -50,26 +52,11 @@ span.site-name {
   width: 100%;
   height: 100%;
   text-align: left;
-  background: #fff;
+  background: #000;
   opacity: .5;
   transition: opacity 1s ease;
 }
 
-/**
- * Throbber.
- */
-.ajax-progress-fullscreen {
-  visibility: visible;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  background: #fff;
-  opacity: 0.6;
-}
 
 // Ajax Stuff
 .ajax-progress-fullscreen {
@@ -132,7 +119,7 @@ span.site-name {
 }
 
 
-/*
+
 @media (max-width: $screen-sm) {
   .container {
     margin-left: 50px;

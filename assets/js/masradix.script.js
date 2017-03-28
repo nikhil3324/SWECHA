@@ -14,7 +14,9 @@ var slideout = new Slideout({
   'side': 'right'
 });
 
+
 (function ($, Drupal, drupalSettings, window, document) {
+
   var route = drupalSettings.path.currentPath;
   // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
   $(document).on('change', ':file', function () {
@@ -22,6 +24,7 @@ var slideout = new Slideout({
       numFiles = input.get(0).files ? input.get(0).files.length : 1,
       label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
     input.trigger('fileselect', [numFiles, label]);
+    Pace.restart();
   });
 
   $(document).ready(function () {
