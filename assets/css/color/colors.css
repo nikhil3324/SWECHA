@@ -28,7 +28,10 @@ body {
   background-color: #055a8e;
 }
 
-
+.notifications li,
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
 #sidebar-wrapper {
   background-color: #055a8e;
   background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
@@ -38,78 +41,89 @@ body {
 .button,
 .btn-default,
 .add-block p a,
-.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle
-{
-  border-color: rgba(0, 0, 0, 0.1);
+.btn-default:active,
+.pager li > a, .pager li > span,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+  color: #7bceff;
   filter: brightness(85%);
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0,0,0);
   background-color: #055a8e;
+  border-color: #055a8e;
   background-image: -webkit-linear-gradient(top, #055a8e 0%, #055a8e 100%);
   background-image: linear-gradient(to bottom, #055a8e 0%, #055a8e 100%);
-   box-shadow: 
-        0 1px 3px rgba(0,0,0, 0.12),
-        0 1px 2px rgba(0,0,0, 0.24);
-
+  box-shadow:
+      0 1px 3px rgba(0,0,0, 0.12),
+      0 1px 2px rgba(0,0,0, 0.24);
 }
 
-
-
-a,
-.link,
 .btn-circle:hover,
 .btn-default:active,
 .btn-default:hover,
 .btn-default:focus{
-  color: #7bceff;
-  border-color: rgba(0, 0, 0, 0.05);
-}
-
-
-{
-  color: inherit!important;
+  color: #1d84c3;
+  border-color: #055a8e;
   background-color: inherit!important;
-  border-color: inherit!important;
 }
 
 .shariff-button a,
 .mas-action a,
 .add-block,
 .region-sidebar .block,
-.region-sidebar li.list-group-item {
+.region-sidebar li.list-group-item,
+fieldset#edit-field-geolocation-0-map-container,
+.form-item-field-request-image-0 {
   background-color: #eeeeee;
-  border-color: #f9f9f9;
 }
 
 .block.block--markaspotbuiltwithblock {
   background: none;
 }
 
-.navbar-left .navbar-nav li:before {
-  background-color: #1d84c3;
+.nav.navbar-nav li:hover:before {
+    background-color: #1d84c3;
+}
+
+.notifications li,
+.navbar a {
+  color: #1d84c3;
 }
 
 .toggled .shariff-button a,
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+.nav.navbar-nav > .active > a, .nav.navbar-nav > .active > a:hover, .nav.navbar-nav > .active > a:focus {
   color: #f9f9f9;
   background-color: #1d84c3;
 }
 .block.block--userlogin,
-.navbar-inverse.navbar-nav > li > a {
+.nav.navbar-nav > li > a {
   color: #f9f9f9;
 }
+
+a,
+.link,
+.result-filter {
+  color: #0071b3;
+}
+
+p a {
+  text-decoration: underline;
+  -moz-text-decoration-color: rgba(0, 113, 179, 0.5); /* Code for Firefox */
+  text-decoration-color: rgba(0, 113, 179, 0.5);
+  
+}
+
+
 a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: #7bceff;
+  color: #1d84c3;
 }
-
-.btn-default,
 a:active,
 .link:active {
-  color: #7bceff;
+  color: #0071b3;
 }
 
 #footer {

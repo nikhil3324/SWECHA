@@ -6,50 +6,44 @@
 // Taking care of flickering controls on touch devices.
 // https://github.com/Leaflet/Leaflet/issues/1198
 window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
+var slideout = new Slideout({
+  'panel': document.getElementById('page-content-wrapper'),
+  'menu': document.getElementById('sidebar-wrapper'),
+  'padding': 256,
+  'tolerance': 70,
+  'side': 'right'
+});
 
-(function ($, Drupal, window, document) {
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+var target = document.querySelector('[data-drupal-views-infinite-scroll-content-wrapper]');
 
-  // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
-  $(document).on('change', ':file', function () {
-    var input = $(this),
-      numFiles = input.get(0).files ? input.get(0).files.length : 1,
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [numFiles, label]);
+// create an observer instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'childList') {
+      Pace.restart();
+    }
   });
+});
+
+var config = { attributes: true, childList: true, characterData: true };
+// pass in the target node, as well as the observer options
+if (target) {
+  observer.observe(target, config);
+}
+
+(function ($, Drupal, drupalSettings, window, document) {
 
   $(document).ready(function () {
 
-    $(".btn-default, .add-block p a").click(function(e){
-      var rippler = $(this);
-      // create .ink element if it doesn't exist
-      if(rippler.find(".ink").length == 0) {
-        rippler.append("<span class='ink'></span>");
-      }
-
-      var ink = rippler.find(".ink");
-
-      // prevent quick double clicks
-      ink.removeClass("animate");
-
-      // set .ink diametr
-      if(!ink.height() && !ink.width())
-      {
-        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
-        ink.css({height: d, width: d});
-      }
-
-      // get click coordinates
-      var x = e.pageX - rippler.offset().left - ink.width()/2;
-      var y = e.pageY - rippler.offset().top - ink.height()/2;
-
-      // set .ink position and add class .animate
-      ink.css({
-        top: y+'px',
-        left:x+'px'
-      }).addClass("animate");
-    })
-
-
+    // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
+    $(document).on('change', ':file', function () {
+      var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+      Pace.restart();
+    });
 
     // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
     $(':file').on('fileselect', function (event, numFiles, label) {
@@ -63,82 +57,135 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
 
     });
 
-    $('.button-add p a').click(function (e) {
-      if (!$(".page--logged-in")[0]) {
-        e.preventDefault();
-        hamburger_cross();
-        $('#wrapper').toggleClass('toggled');
-      }
+    // Toggle button.
+    document.querySelector('.toggle-button').addEventListener('click', function () {
+      slideout.toggle();
     });
+    $notifications = $('.notifications');
 
-    // NavSidebar scripts.
-    var trigger = $('.hamburger'),
-      isClosed = false;
-
-    trigger.click(function () {
-      hamburger_cross();
-    });
-
-    function hamburger_cross() {
-      if (isClosed == true) {
-        document.ontouchmove = function (event) {
-          return true;
-        };
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-
-      }
-      else {
-        document.ontouchmove = function (event) {
-          event.preventDefault();
-        };
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
+    // Taken from http://imakewebthings.com/waypoints/
+    function notify(text) {
+         var $notification = $('<li />').text(text).css({
+        left: 320
+      });
+      $notifications.append($notification);
+      $notification.animate({
+        left: 0
+      }, 300, function () {
+        $(this).delay(6000).animate({
+          left: 320
+        }, 200, function () {
+          $(this).slideUp(100, function () {
+            $(this).remove()
+          })
+        })
+      })
     }
+
+    var fixed = document.querySelector('.fixed-header');
+
+    slideout.on('translate', function (translated) {
+      fixed.style.transform = 'translateX(' + translated + 'px)';
+    });
+
+    slideout.on('beforeopen', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(-256px)';
+    });
+
+    slideout.on('beforeclose', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(0px)';
+    });
+
+    slideout.on('open', function () {
+      fixed.style.transition = '';
+    });
+
+    slideout.on('close', function () {
+      fixed.style.transition = '';
+    });
+
+    $('.btn-default, .add-block p a').click(function (e) {
+      var rippler = $(this);
+      // Create .ink element if it doesn't exist.
+      if (rippler.find(".ink").length == 0) {
+        rippler.append("<span class='ink'></span>");
+      }
+
+      var ink = rippler.find(".ink");
+
+      // Prevent quick double clicks.
+      ink.removeClass("animate");
+
+      // Set .ink diametr.
+      if (!ink.height() && !ink.width()) {
+      var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        ink.css({height: d, width: d});
+      }
+
+      // Get click coordinates.
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
+
+      // Set .ink position and add class .animate.
+      ink.css({
+        top: y + 'px',
+        left:x + 'px'
+      }).addClass("animate");
+    });
+
+
+
+    var route = drupalSettings.path.currentPath;
 
     // Sticky map on top.
-    var $stickyElement = $('#map');
-    if ($stickyElement.length) {
-      var sticky = new Waypoint.Sticky({
-        element: $stickyElement[0],
-        wrapper: '<div class="sticky-wrapper waypoint" />'
-      });
+    if (route === 'requests') {
+      var $stickyElement = $('#map');
+      if ($stickyElement.length) {
+        var sticky = new Waypoint.Sticky({
+          element: $stickyElement[0],
+          wrapper: '<div class="sticky-wrapper waypoint" />'
+        });
+      }
     }
-
     // Add a close button to exposed filter.
-    $('.bef-exposed-form')
+    $('.views-exposed-form')
       .append('<a data-toggle="filter" class="btn btn-default close fa fa-close"><span>' + Drupal.t('Close') + '</span></a>')
     if ($('#map').length > 0) {
-
       var mapInview = new Waypoint.Inview({
         element: $('#map'),
-        enter: function (direction) {
-          $('#map').show('fold');
+        entered: function (direction) {
+          $('body').addClass('map-stuck');
+        },
+        exited: function (direction) {
+          if (route === 'requests') {
+            "message" in sessionStorage ? 0 :
+              notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tap the markers.')),
+              sessionStorage.setItem("message",true);
+          }
         }
       })
     }
-    if ($('.pager__item').length > 0) {
-      var topInview = new Waypoint.Inview({
-        element: $('.pager__item'),
-        entered: function (direction) {
-          $('.scroll-to-top').show().on('click', function (e) {
-            var href = $(this).attr('href');
-            $('html, body').animate({
-              scrollTop: $('body').offset().top
-            }, 500);
-            e.preventDefault();
-          });
-        },
-        exited: function (direction) {
-          if (direction === "up") {
-            $('.scroll-to-top').hide();
-          }
+
+    var topInview = new Waypoint.Inview({
+      element: $('.block--shariffsharebuttons, .pager__item'),
+      entered: function (direction) {
+        $('.mas-action').fadeIn(400);
+        $('.scroll-to-top').show().on('click', function (e) {
+          var href = $(this).attr('href');
+          $('html, body').animate({
+            scrollTop: $('body').offset().top
+          }, 500);
+          e.preventDefault();
+        });
+      },
+      exited: function (direction) {
+        if (direction === "up") {
+          $('.mas-action, .scroll-to-top').hide();
         }
-      });
-    }
+      }
+    });
 
     // Map resizing:
     var map = $('div#geolocation-nominatim-map');
@@ -166,13 +213,12 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
       $('.view__filters').toggleClass('exposed ajax');
     });
 
+    if ($('[data-drupal-selector="edit-reset"]')[0]) {
+      $('.view__filters').addClass('exposed ajax');
+    }
     // Add a button to toggle map display;.
     $('#map').once().each(function () {
-      var $stickyElement = $('#map');
-      $('.mas-button .fa-map').click(function () {
-        $("#map").toggle("fold");
-      });
-
+      // Need this for later.
     });
 
   });
@@ -181,12 +227,4 @@ window.L_DISABLE_3D = 'ontouchstart' in document.documentElement;
     $('#wrapper').toggleClass('toggled');
   });
 
-  // Footer.
-  /*
-   $(".form-type-file").fileinput({
-   uploadUrl: '?element_parents=field_request_image/widget/0&ajax_form=1&_wrapper_format=drupal_ajax&_wrapper_format=drupal_ajax',
-   uploadAsync: true
-   });
-   */
-
-})(jQuery, Drupal, this, this.document);
+})(jQuery, Drupal, drupalSettings, this, this.document);

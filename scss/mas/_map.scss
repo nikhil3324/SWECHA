@@ -2,10 +2,13 @@
 // --------------------------------------------------
 body .stuck {
   position: fixed !important;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
   width: 100vw;
-  height: 220px!important;
+  height: 180px!important;
   right: 0;
-  top: 0;
+  top:0;
   margin: 0;
   padding: 0;
   box-shadow: -1px 2px 4px #666;
@@ -50,8 +53,9 @@ fieldset#edit-field-geofield-wrapper.stuck div {
 }
 
 fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-field-geolocation-0-map-container {
-    padding: 0;
+  padding: 5px;
 }
+
 
 /* Layer the bar just above the trays and above contextual link triggers. */
 .toolbar-oriented .toolbar-bar {
@@ -77,11 +81,6 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
   position: fixed;
   right: 0;
   top: 80px;
-}
-
-.stuck .leaflet-left.leaflet-top {
-  top: 80px;
-  left: 7px;
 }
 
 .leaflet-popup-content {
@@ -226,9 +225,28 @@ ul.log_list .time {
   width: 100px;
 }
 
-
 ul.log_list .count {
   display: inline-block;
   text-align: right;
   width: 20px;
+}
+
+.notifications {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+.notifications li {
+  min-width: 100%;
+  display: block;
+  position: relative;
+  padding: 6px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.notifications li:first-child {
+  border-top: 0;
+
 }

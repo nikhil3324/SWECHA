@@ -20,8 +20,10 @@
 }
 
 .view__empty {
-    font-size: large;
-    margin: 60px 10px;
+  font-size: large;
+  clear: both;
+  margin-top: 280px;
+  position: absolute;
 }
 
 .view__filters {
@@ -30,10 +32,21 @@
   width: 50%;
   height: 120px;
   padding: 10px;
+
   @media (max-width: $screen-xs-max) {
     clear: both;
     width: 100%;
-    height: inherit
+    height: inherit;
+    top: 40px;
+  }
+  .close {
+    float: right;
+    font-size: small;
+    font-weight: normal;
+    line-height: 1;
+    text-shadow: none;
+    opacity: 1;
+
   }
 }
 
@@ -41,11 +54,6 @@
 .view__filters div.form-item-field-status-term,
 .view__filters div.form-item-field-category {
   display: none;
-}
-
-.view__filters a {
-  width: 40px;
-  height: 30px
 }
 
 .view__filters a span {
@@ -63,7 +71,7 @@
 
 .view__filters.exposed {
   position: absolute;
-  width: 70%;
+  width: 49%;
   height: inherit;
   box-shadow: 1px 1px 5px #555;
   z-index: 10;
@@ -166,18 +174,6 @@ Category and Status statistics
   display: inline-block;
   width: 30px;
   text-align: center;
-}
-
-a.scroll-to-top,
-a.scroll-to-top span {
-  display: none;
-}
-
-a.scroll-to-top.btn.btn-default.btn-circle.btn-md {
-    position: fixed;
-    z-index:10;
-    bottom: 50px;
-    right: 30px;
-    box-shadow: 0 2px 5px #666;
+  opacity: 0.5;
 }
 
