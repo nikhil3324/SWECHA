@@ -161,7 +161,7 @@ if (target) {
         exited: function (direction) {
           if (route === 'requests') {
             "message" in sessionStorage ? 0 :
-              notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tab the markers.')),
+              notify(Drupal.t('You can follow the requests location while scrolling up and down. Alternatively, tap the markers.')),
               sessionStorage.setItem("message",true);
           }
         }
