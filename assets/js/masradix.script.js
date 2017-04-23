@@ -34,17 +34,35 @@ if (target) {
 
 (function ($, Drupal, drupalSettings, window, document) {
 
+  function toDesktop(width){
+    var nav = $(".navbar-default");
+    var branding = $(".block--masradix-sitebranding");
+    if (width >= 1200) {
+      $(".navbar-default > div").removeClass(".navbar-left");
+      $("a.navbar-brand").prependTo(nav);
+      nav.addClass("container");
+      $(".fixed-header").hide();
+    } else {
+      $("a.navbar-brand").prependTo(branding);
+      // nav.removeClass("container");
+      $(".fixed-header").show();
+    }
+
+  }
+  // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
+  $(document).on('change', ':file', function () {
+    var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+    Pace.restart();
+  });
   $(document).ready(function () {
 
-    // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
-    $(document).on('change', ':file', function () {
-      var input = $(this),
-        numFiles = input.get(0).files ? input.get(0).files.length : 1,
-        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-      input.trigger('fileselect', [numFiles, label]);
-      Pace.restart();
+    toDesktop($(window).width());
+    $(window).resize(function() {
+      toDesktop($(this).width());
     });
-
     // https://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3
     $(':file').on('fileselect', function (event, numFiles, label) {
 
