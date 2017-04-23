@@ -11,7 +11,7 @@ dependencies:
     - masradix
 id: masradix_direct-links
 theme: masradix
-region: footer
+region: content
 weight: 0
 provider: null
 plugin: 'block_content:c049959f-cc6e-18806-a118-9959fcc6eb97663a118422a2fc408'

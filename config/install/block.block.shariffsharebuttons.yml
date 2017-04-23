@@ -8,7 +8,7 @@ dependencies:
     - masradix
 id: shariffsharebuttons
 theme: masradix
-region: footer
+region: sidebar
 weight: 0
 provider: null
 plugin: shariff_block
