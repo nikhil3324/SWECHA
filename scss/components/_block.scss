@@ -72,7 +72,6 @@ span.site-slogan {
   border-radius: 25px;
 }
 
-
 .btn-circle.btn-xl {
   width: 70px;
   height: 70px;
@@ -89,6 +88,10 @@ span.site-slogan {
   font-size: 48px;
 }
 
+a.btn-circle span {
+  text-indent: -9999px;
+  display: inline-block;
+}
 
 // Front page add request.
 
@@ -101,9 +104,9 @@ span.site-slogan {
 }
 
 
-.round-button.col-sm-3 item {
+.round-button.col-sm-3 {
   display: block;
-  text-align:cen
+  text-align:center
 }
 
 .round-button.col-sm-3 a {
@@ -138,7 +141,6 @@ span.site-slogan {
 .add-block p a:hover {
   text-decoration: none;
 }
-
 
 .round-button-circle {
   width: 100%;
