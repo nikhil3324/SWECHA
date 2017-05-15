@@ -20,8 +20,3 @@ settings:
   use_site_name: true
   use_site_slogan: true
 visibility:
-  request_path:
-    id: request_path
-    pages: '/report'
-    negate: true
-    context_mapping: {  }
