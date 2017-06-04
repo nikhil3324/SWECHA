@@ -149,6 +149,7 @@ span.result-filter {
   padding: 5px;
   font-weight: 700;
   cursor: pointer;
+  text-transform: uppercase;
   @media (max-width: $screen-xs-max) {
     margin-top: 3px;
   }

@@ -7067,6 +7067,14 @@ article.service-request img {
   opacity: 1;
   transition: opacity .1s ease-in; }
 
+.page--service-request article.service-request {
+  background: #fff; }
+
+.page--service-request article.service-request .image {
+  float: left;
+  margin: 0px 10px 10px 0;
+  width: 40%; }
+
 article.service-request:hover img {
   opacity: 0.6;
   transition: opacity .1s ease-in; }
@@ -7088,37 +7096,41 @@ article.service-request footer {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .service-request h2 {
-  height: 153px;
+  height: 155px;
   z-index: 4;
   margin: 0;
   position: absolute;
   top: 30px;
   display: block;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+62 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+84 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, transparent 45%, transparent 65%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.07) 75%, transparent 84%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+  color: #fff;
   color: #fff;
   width: 60%; }
   @media (max-width: 992px) {
     .service-request h2 {
       font-size: x-large;
-      height: 130px; } }
+      height: 120px; } }
   @media (max-width: 1200px) {
     .service-request h2 {
       font-size: x-large;
-      height: 130px; } }
+      height: 129px; } }
   @media (max-width: 991px) {
     .service-request h2 {
       font-size: large;
-      height: 145px; } }
+      height: 150px; } }
   @media (max-width: 767px) {
     .service-request h2 {
       font-size: x-small;
       height: 60px; } }
+
+article.service-request--teaser.contextual-region h2 {
+  top: 0; }
 
 .service-request h2 a:hover {
   text-decoration: none; }
@@ -7380,7 +7392,8 @@ span.result-filter {
   margin: 0 0 0 10px;
   padding: 5px;
   font-weight: 700;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: uppercase; }
   @media (max-width: 767px) {
     span.result-filter {
       margin-top: 3px; } }
