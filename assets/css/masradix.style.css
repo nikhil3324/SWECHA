@@ -7081,7 +7081,7 @@ article.service-request:hover img {
 
 article.service-request--teaser .content,
 article.service-request footer {
-  padding: 10px;
+  padding: 10px 0;
   margin: 0; }
 
 article.service-request footer {
@@ -7160,8 +7160,18 @@ article.service-request img {
   padding: 0; }
 
 .service-request__field-address {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
+  float: left;
+  margin: 10px 0;
   background: #eeeeee; }
+
+.service-request__field-address:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f041"; }
+
+.service-request__field-address .field__label {
+  font-size: small;
+  color: #bfbfbf; }
 
 article.service-request div.col-sm-12,
 article.service-request div.col-sm-6 {
@@ -7182,6 +7192,9 @@ article.service-request div.col-sm-6 {
   article.service-request div.col-sm-12 .label,
   article.service-request div.col-sm-6 .label {
     font-size: 100%; }
+
+.service-request__field-status-notes {
+  margin: 20px 0; }
 
 .service-request__field-status {
   border-right: 1px solid #bfbfbf; }
