@@ -51,21 +51,23 @@ article.service-request:hover img {
   transition: opacity .1s ease-in;
 }
 
-article.service-request--teaser .content,
 article.service-request footer {
-  padding: 10px 0;
-  margin: 0;
+ font-style: italic;
+ margin: 10px 0;
+ padding: 0;
+ color: $gray-light;
+}
+
+article.service-request--teaser .content,
+article.service-request--teaser footer {
+  padding: 10px;
+  margin: 0; 
 }
 
 .category-status {
   clear: left;
 }
 
-article.service-request footer {
- font-style: italic;
- margin: 0;
- color: $gray-light;
-}
 
 .service-request--gallery h2 {
   font-size: medium;
