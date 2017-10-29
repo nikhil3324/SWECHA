@@ -61,10 +61,12 @@ function masradix_preprocess_image_widget(&$variables) {
       'clearfix',
     ),
   );
-
+  if($element['#preview_image_style'] == "thumbnail") {
+    $variables['attributes']['class'][] = "img-circle";
+  }
   if (!empty($element['fids']['#value'])) {
     $file = reset($element['#files']);
-    $element['file_' . $file->id()]['filename']['#suffix'] = ' <span class="file-size badge">(' . format_size($file->getSize()) . ')</span> ';
+    $element['file_' . $file->id()]['filename']['#suffix'] = ' <span class="file-size badge">' . format_size($file->getSize()) . '</span> ';
   }
 
   $variables['data'] = array();

@@ -7,7 +7,7 @@
     margin-left: 5px;
 }
 
-.view__header {
+.view--requests .view__header {
   background: $gray-lighter;
   padding: 10px;
   width: 50%;
@@ -19,14 +19,16 @@
   }
 }
 
-.view__empty {
+
+.view--requests .view__empty {
   font-size: large;
   clear: both;
   margin-top: 280px;
   position: absolute;
 }
 
-.view__filters {
+
+.view--requests .view__filters {
   background: $gray-light;
   /* float: left; */
   width: 50%;
@@ -50,11 +52,13 @@
   }
 }
 
-.view__filters a,
+
+.view--requests .view__filters a,
 .view__filters div.form-item-field-status-term,
 .view__filters div.form-item-field-category {
   display: none;
 }
+
 
 .view__filters a span {
   display: none;

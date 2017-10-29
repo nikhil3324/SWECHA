@@ -6786,7 +6786,6 @@ span.site-name {
 
 img.site-logo {
   float: none;
-  width: 12%;
   margin: 0 auto; }
 
 span.site-name {
@@ -6974,6 +6973,9 @@ a.btn-circle span {
 .view.view--front-gallery {
   clear: left; }
 
+.img-circle img {
+  border-radius: 50%; }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   select:focus,
   textarea:focus,
@@ -7019,10 +7021,17 @@ input.form-type-file,
 
 .image-preview {
   margin: 10px 0;
-  max-width: 250px; }
+  max-width: 250px;
+  float: left; }
+
+span.file-size.badge,
+span.file.file--image {
+  float: right;
+  display: inline-block;
+  margin: 40px 10px; }
 
 #edit-field-request-image-wrapper input {
-  margin: 10px 0; }
+  margin: 30px 10px; }
 
 input#edit-field-request-image-0-upload,
 input[name="field_request_image_0_upload_button"] {
@@ -7315,36 +7324,36 @@ article.service-request .label-default {
   display: inline-block;
   margin-left: 5px; }
 
-.view__header {
+.view--requests .view__header {
   background: #eeeeee;
   padding: 10px;
   width: 50%;
   height: 120px;
   float: right; }
   @media (max-width: 767px) {
-    .view__header {
+    .view--requests .view__header {
       width: 100%;
       height: inherit; } }
 
-.view__empty {
+.view--requests .view__empty {
   font-size: large;
   clear: both;
   margin-top: 280px;
   position: absolute; }
 
-.view__filters {
+.view--requests .view__filters {
   background: #bfbfbf;
   /* float: left; */
   width: 50%;
   height: 120px;
   padding: 10px; }
   @media (max-width: 767px) {
-    .view__filters {
+    .view--requests .view__filters {
       clear: both;
       width: 100%;
       height: inherit;
       top: 40px; } }
-  .view__filters .close {
+  .view--requests .view__filters .close {
     float: right;
     font-size: small;
     font-weight: normal;
@@ -7352,7 +7361,7 @@ article.service-request .label-default {
     text-shadow: none;
     opacity: 1; }
 
-.view__filters a,
+.view--requests .view__filters a,
 .view__filters div.form-item-field-status-term,
 .view__filters div.form-item-field-category {
   display: none; }

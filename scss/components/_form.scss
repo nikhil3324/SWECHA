@@ -59,10 +59,20 @@ input.form-type-file,
 .image-preview {
   margin: 10px 0;
   max-width: 250px;
+  float:left
 }
 
+
+span.file-size.badge,
+span.file.file--image {
+  float: right;
+  display: inline-block;
+  margin: 40px 10px;
+}
+
+
 #edit-field-request-image-wrapper input {
-  margin: 10px 0;
+  margin: 30px 10px;
 
 }
 
