@@ -2,6 +2,9 @@ img.site-logo {
   float: none;
   margin: 0 auto;
   max-width: 120px;
+  @media (min-width: 1200px) {
+    max-height: 50px;
+  }
 }
 
 .region-head.col-md-12 .block.block--masradix-sitebranding {
