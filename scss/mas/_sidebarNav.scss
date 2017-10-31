@@ -337,6 +337,19 @@ body {
     border: 0;
   }
 
+  a.navbar-brand {
+    margin: 0;
+  }
+
+  .navbar-brand img.site-logo {
+    margin: 0 0 -10px 10px;
+  }
+
+  .navbar-brand {
+      float: left!important;
+  }
+
+
   .block.block--userlogin {
     display: none;
   }
