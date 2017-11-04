@@ -27,6 +27,7 @@ Using Docksal, install bower and gulp:
 
 ```
 $ fin exec npm install bower -g
-$ fin exec npm install gulp -g
-$ fin exec gulp
+$ fin exec npm install gulp 
+$ fin exec npm install
+
 ```

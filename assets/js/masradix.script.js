@@ -36,14 +36,14 @@ if (target) {
 
   function toDesktop(width){
     var nav = $(".navbar-default");
-    var head = $(".region-head");
+    var branding = $(".block--masradix-sitebranding");
     if (width >= 1200) {
       $(".navbar-default > div").removeClass(".navbar-left");
       $("a.navbar-brand").prependTo(nav);
       nav.addClass("container");
       $(".fixed-header").hide();
     } else {
-      $("a.navbar-brand").prependTo(head);
+      $("a.navbar-brand").prependTo(branding);
       // nav.removeClass("container");
       $(".fixed-header").show();
     }
@@ -83,7 +83,7 @@ if (target) {
 
     // Taken from http://imakewebthings.com/waypoints/
     function notify(text) {
-      var $notification = $('<li />').text(text).css({
+         var $notification = $('<li />').text(text).css({
         left: 320
       });
       $notifications.append($notification);
@@ -138,7 +138,7 @@ if (target) {
 
       // Set .ink diametr.
       if (!ink.height() && !ink.width()) {
-        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+      var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
         ink.css({height: d, width: d});
       }
 
@@ -187,7 +187,7 @@ if (target) {
     }
 
     var topInview = new Waypoint.Inview({
-      element: $('.shariff, .pager__item'),
+      element: $('.block--shariffsharebuttons, .pager__item'),
       entered: function (direction) {
         $('.mas-action').fadeIn(400);
         $('.scroll-to-top').show().on('click', function (e) {
