@@ -68,6 +68,7 @@ body {
   background-color: inherit!important;
 }
 
+
 .shariff-button a,
 .mas-action a,
 .add-block,
@@ -95,7 +96,7 @@ fieldset#edit-field-geolocation-0-map-container,
   color: #f9f9f9;
   background-color: #1d84c3;
 }
-.block.block--userlogin,
+.block .user-login-form,
 .nav.navbar-nav > li > a {
   color: #f9f9f9;
 }

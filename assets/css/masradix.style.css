@@ -8006,7 +8006,7 @@ body {
     margin: 0 0 -10px 10px; }
   .navbar-brand {
     float: left !important; }
-  .block.block--userlogin {
+  .block .user-login-form {
     display: none; }
   .navbar-inner {
     padding: 0;
