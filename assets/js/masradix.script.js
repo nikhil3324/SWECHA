@@ -187,7 +187,7 @@ if (target) {
     }
 
     var topInview = new Waypoint.Inview({
-      element: $('.block--shariffsharebuttons, .pager__item'),
+      element: $('.shariff, .pager__item'),
       entered: function (direction) {
         $('.mas-action').fadeIn(400);
         $('.scroll-to-top').show().on('click', function (e) {
