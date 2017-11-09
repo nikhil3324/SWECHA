@@ -110,7 +110,7 @@ set category_icon = [
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
-        Submitted by {{ author_name }} on {{ date }}
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
       </div>
     </footer>
   {% endif %}
