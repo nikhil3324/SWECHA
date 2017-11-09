@@ -336,6 +336,9 @@ body {
     background: none;
     border: 0;
   }
+  .slideout-menu {
+    overflow-y: auto;
+  }
 
   a.navbar-brand {
     margin: 0;
