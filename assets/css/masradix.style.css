@@ -7997,6 +7997,8 @@ body {
     /* position: relative; */
     display: block;
     padding: 14px; }
+  .block--userlogin {
+    display: none; }
   ul.nav li {
     float: left; } }
 
