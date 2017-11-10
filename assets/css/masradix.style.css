@@ -7687,7 +7687,8 @@ ul.log_list .time {
 ul.log_list .count {
   display: inline-block;
   text-align: right;
-  width: 20px; }
+  width: 20px;
+  color: #fff !important; }
 
 .notifications {
   position: fixed;
@@ -8000,6 +8001,8 @@ body {
     border-radius: 0;
     background: none;
     border: 0; }
+  .slideout-menu {
+    overflow-y: auto; }
   a.navbar-brand {
     margin: 0; }
   .navbar-brand img.site-logo {
