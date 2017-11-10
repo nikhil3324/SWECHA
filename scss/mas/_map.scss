@@ -93,39 +93,6 @@ fieldset#edit-field-geolocation-0-map-container div.panel-body, fieldset#edit-fi
   position: relative;
 }
 
-.timecontrol-date.utc {
-  position: fixed;
-  left: 60px;
-  top: 30px;
-  width: 100px;
-  font-size: medium;
-  opacity: 0.6;
-  color: #000;
-  border: 0;
-}
-
-.stuck .timecontrol-date.utc {
-  position: fixed;
-  background: #000;
-  color: #fff;
-  height: 30px;
-  width: 200px;
-  padding: 0 20px;
-  margin: 0 auto;
-  @media (max-width: $screen-md) {
-    font-size: small;
-  }
-  @media (max-width: $screen-md) {
-    font-size: small;
-  }
-}
-
-.leaflet-bar-timecontrol a.timecontrol-date.utc,
- .leaflet-bar-timecontrol a.timecontrol-date.utc:hover {
-    min-width: 120px!important;
-    max-width: 200px!important;
-}
-
 // Timeline makes no sense on smartphone screens.
 // Hiding this feature until there is a better solution for this.
 @media (max-width: $screen-xs) {
