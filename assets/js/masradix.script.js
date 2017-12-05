@@ -227,8 +227,10 @@ if (target) {
 
   // Handle Result filter click.
   $(document).ajaxStop(function () {
-    $('[data-toggle="filter"]').click(function () {
-      $('.view__filters').toggleClass('exposed ajax');
+
+    var refineLink = $('[data-toggle="filter"]');
+    refineLink.off('click').on('click', function(){
+      $('.view-filters').toggleClass('exposed');
     });
 
     if ($('[data-drupal-selector="edit-reset"]')[0]) {
