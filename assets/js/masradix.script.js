@@ -229,13 +229,16 @@ if (target) {
   $(document).ajaxStop(function () {
 
     var refineLink = $('[data-toggle="filter"]');
+    var exposedFilter =  $('.view__filters');
+
     refineLink.off('click').on('click', function(){
       $('.view-filters').toggleClass('exposed');
     });
 
     if ($('[data-drupal-selector="edit-reset"]')[0]) {
-      $('.view__filters').addClass('exposed ajax');
+      exposedFilter.addClass('exposed ajax');
     }
+
     // Add a button to toggle map display;.
     $('#map').once().each(function () {
       // Need this for later.

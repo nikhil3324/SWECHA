@@ -92,7 +92,9 @@ set category_icon = [
 %}
 
 {{ attach_library('classy/node') }}
-<article {{attributes.addClass(classes).addClass('color-' ~ mas_status['color'])}}>
+<article {{attributes.addClass(classes).addClass('color-' ~ mas_status['color']).addClass('contextual-region')}}>
+  {{ title_suffix }}
+
   {% if display_submitted %}
     <footer class="node__meta">
       <div{{ author_attributes.addClass('node__submitted') }}>
@@ -100,24 +102,9 @@ set category_icon = [
       </div>
     </footer>
   {% endif %}
-  <div class="image">
-    {% if content.field_request_image|render %}
-      {{ content.field_request_image }}
-    {% else %}
-      <img src="/{{ base_path ~ directory }}/assets/default_images/default.jpg">
-    {% endif %}
-    {{ title_prefix }}
-    {% if not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-  </div>
-
 
   <div{{ content_attributes.addClass('content') }}>
-    {{ content|without('field_status_notes','field_category','field_request_image') }}
+    {{ content|without('field_status_notes','field_category') }}
   </div>
   <div class="container category-status">
     <div class="service-request__field-status col-sm-{{ cols }} {{ 'color-'  ~  mas_status['color'] }}"><div class="field__item label label-default"><span class="fa {{ mas_status['icon'] }} "></span><div class="field__item label label-default">{{ mas_status['label'] }}</div></div></div>

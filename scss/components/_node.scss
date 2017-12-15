@@ -31,37 +31,25 @@ article.service-request--teaser {
   clear: both;
 }
 
-article.service-request img {
-  opacity: 1;
-  transition: opacity .1s ease-in;
-}
-
 .page--service-request article.service-request {
   background: #fff;
 }
 
-.page--service-request article.service-request .image {
-  float: right;
-  
-  width: 40%;
-}
 
-article.service-request:hover img {
-  opacity: 0.6;
-  transition: opacity .1s ease-in;
-}
+
+
 
 article.service-request footer {
- font-style: italic;
- margin: 10px 0;
- padding: 0;
- color: $gray-light;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 0;
+  color: $gray-light;
 }
 
 article.service-request--teaser .content,
 article.service-request--teaser footer {
   padding: 10px;
-  margin: 0; 
+  margin: 0;
 }
 
 .category-status {
@@ -71,106 +59,87 @@ article.service-request--teaser footer {
 
 .service-request--gallery h2 {
   font-size: medium;
-}
-
-.service-request--gallery img {
-  box-shadow:
-    0 1px 3px rgba(0,0,0, 0.12),
-    0 1px 2px rgba(0,0,0, 0.24);
+  min-height: 200px
 }
 
 
 
+.service-request h2:before {
+  content: "\f030";
+  font-family: FontAwesome;
+  left: 50%;
+  position: absolute;
+  font-size: xx-large;
+  color: #fff;
+  opacity: 0.3;
+  top: 10px
+}
 
 .service-request h2 {
-  height: 155px;
 
-  @media (max-width: $screen-md-min) {
+  font-size: x-small;
+
+  @media (min-width: $screen-lg-min) {
     font-size: x-large;
-    height: 120px;
   }
 
-  @media (max-width: $screen-lg-min) {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     font-size: x-large;
-    height: 129px;
   }
 
-  @media (max-width: $screen-sm-max) {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     font-size: large;
-    height: 150px;
   }
-  @media (max-width: $screen-xs-max) {
+  @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
     font-size: x-small;
-    height: 60px;
   }
-  z-index: 4;
   margin: 0;
-  position: absolute;
-  top: 30px;
   display: block;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+75&0.65+0,0+84 */
-  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.07) 75%, rgba(0,0,0,0) 84%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.07) 75%,rgba(0,0,0,0) 84%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.07) 75%,rgba(0,0,0,0) 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */  color: #fff;
-  color: #fff;
-  width: 60%;
 }
 
-article.service-request--teaser.contextual-region h2 {
-  top: 0;
-}
 
 .service-request h2 a:hover {
   text-decoration: none;
 }
 
 .service-request h4.field__label {
-    margin: 20px 0 0 0;
-    clear: left;
+  margin: 20px 0 0 0;
+  clear: left;
 }
 
 .service-request h2 a {
   color: #fff;
-  margin: 20px 10px;
+  padding: 20px 10px;
   display: block;
 }
 
-article.service-request image {
-  z-index: 3;
-  top: 0;
-  overflow: hidden;
-  position: relative;
-  padding: 0;
-}
-
-article.service-request img {
-    display: block;
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    top: 0px;
-    padding: 0;
-}
-
 .service-request__field-address {
-    padding: 10px 10px 0 10px;
-    float: left;
-    margin: 10px 0;
-    background: $gray-lighter
+  padding: 10px 20px;
 }
 
 .service-request__field-address:before {
-    font: normal normal normal 14px/1 FontAwesome;
-    content: "\f041";
+  font: normal normal normal 18px/1 FontAwesome;
+  content: "\f041";
+}
+.service-request__field-address .field__item {
+  margin: 20px 0;
 }
 .service-request__field-address .field__label {
-    font-size: small;
-    color: $gray-light;
+  font-size: small;
+}
+.service-request__field-address .address .country{
+  display:none;
 }
 
-article.service-request div.col-sm-12,
-article.service-request div.col-sm-6 {
+.page--service-request .service-request__field-request-image {
+  padding: 0;
+  text-align:center;
+  background: $gray-lighter;
+
+}
+.view--requests div.col-sm-6,
+.category-status div.col-sm-12,
+.category-status div.col-sm-6 {
   border-top: 1px solid $gray-light;
   margin: 0;
   min-height: 70px;
@@ -190,7 +159,7 @@ article.service-request div.col-sm-6 {
 
 
 .service-request__field-status-notes {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .service-request__field-status {
@@ -208,7 +177,7 @@ article.service-request div.col-sm-6 {
 
 // Unactive status:
 .service-request__field-status.col-sm-12.color- {
-    display: none;
+  display: none;
 }
 
 
@@ -279,10 +248,10 @@ article .col-sm-6.fa {
 }
 
 .col-sm-12.fa {
-    line-height: 50px;
-    display: block;
-    margin: auto;
-    text-align: center;
+  line-height: 50px;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .list-markers.leaflet-control {
