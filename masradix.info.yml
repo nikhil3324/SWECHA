@@ -5,6 +5,9 @@ core: 8.x
 engine: twig
 type: theme
 base theme: radix
+dependencies:
+  - field_formatter_class
+  - twig_tweak
 
 stylesheets-remove:
   - core/themes/stable/css/system/components/ajax-progress.module.css
