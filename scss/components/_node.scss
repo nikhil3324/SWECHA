@@ -35,10 +35,6 @@ article.service-request--teaser {
   background: #fff;
 }
 
-
-
-
-
 article.service-request footer {
   font-style: italic;
   margin: 10px 0;
@@ -110,7 +106,10 @@ article.service-request--teaser footer {
 .service-request h2 a {
   color: #fff;
   padding: 20px 10px;
-  display: block;
+  display: inline-block;
+  width:100%;
+  height:100%
+
 }
 
 .service-request__field-address {
