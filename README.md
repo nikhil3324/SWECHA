@@ -1,4 +1,5 @@
-# Mark-a-Spot Radix Theme
+# Mark-a-Spot Radix Theme [deprecated]
+This theme has been moved inside 8.4.x of [Mark-a-Spot installation profile](github.com/markaspot/markaspot).
 
 This theme is intended for use with the Mark-a-Spot 3.x distro based on Drupal 8.
 
